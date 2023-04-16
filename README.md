@@ -1,4 +1,4 @@
-# FireBolt-2
+# FireBolt
 
 App wallet for Android with Nostr, Bitcoin and Lightning Network 
 
