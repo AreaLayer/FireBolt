@@ -15,4 +15,4 @@ App wallet for Android with Nostr, Bitcoin and Lightning Network
 
 # Product
 
-In developemtn and soon in Beta phase
+Built on BDK, LDK, HyperCore and Nostr
