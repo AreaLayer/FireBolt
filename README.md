@@ -1,2 +1,18 @@
 # FireBolt-2
- App wallet for Android with Nostr, Bitcoin and Lightning Network 
+
+App wallet for Android with Nostr, Bitcoin and Lightning Network 
+
+
+# Feature
+
+- Lightning Network
+
+- Nostr
+
+- Bitcoin
+
+- No shitcoins or stablecoins
+
+# Product
+
+In developemtn and soon in Beta phase
