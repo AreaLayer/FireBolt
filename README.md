@@ -11,6 +11,8 @@ App wallet for Android  and iOs with Nostr, Bitcoin and Lightning Network
 
 - Bitcoin
 
+- HyperCore (TBA)
+
 - No shitcoins or stablecoins
 
 # Product
