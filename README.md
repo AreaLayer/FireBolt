@@ -17,9 +17,9 @@ App wallet for Android  and iOs with Nostr, HyperCore, Nostr and Lightning Netwo
 
 **⚠️ We recommend using only small amounts.**
 
-[⬇ Android - Download latest APK] Soon
+ Android - Download latest APK (Soon)
 
-[⬇ iPhone - Download latest TestFlight app] Soon
+iPhone - Download latest TestFlight app (Soon)
 
 ---
 
