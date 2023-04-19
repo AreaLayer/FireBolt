@@ -4,11 +4,24 @@ App wallet for Android  and iOs with Nostr, HyperCore, Nostr and Lightning Netwo
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
-    <img alt="bitkit" src="./src/assets/firebolt_logo_readme.png" width="150"></img>
+    <img alt="FireBolt" src="./src/assets/firebolt_logo_readme.png" width="150"></img>
   </a>
 </p>
 
 <h3 align="center">FireBolt</h3>
+
+
+---
+
+**⚠️ Alpha software may put your money at risk.**
+
+**⚠️ We recommend using only small amounts.**
+
+[⬇ Android - Download latest APK] Soon
+
+[⬇ iPhone - Download latest TestFlight app] Soon
+
+---
 
 
 # Feature
