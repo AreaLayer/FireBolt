@@ -10,18 +10,6 @@ App wallet for Android  and iOs with Nostr, HyperCore, Nostr and Lightning Netwo
 
 <h3 align="center">FireBolt</h3>
 
-``mermaid
-stateDiagram
-    wallet: ln wallet
-    bip 39: bip 39
-    hypercore: hypercore
-    nostr: nostr
-
-    bip 39 --> nostr
-    bip 39 --> hypercore
-    nostr --> wallet
-    wallet --> nostr/hypercore
-```
 
 ---
 
@@ -47,6 +35,21 @@ iPhone - Download latest TestFlight app (Soon)
 - HyperCore (TBA)
 
 - No shitcoins or stablecoins
+
+# Diagram
+
+```mermaid
+stateDiagram
+    wallet: ln wallet
+    bip 39: bip 39
+    hypercore: hypercore
+    nostr: nostr
+
+    bip 39 --> nostr
+    bip 39 --> hypercore
+    nostr --> wallet
+    wallet --> nostr/hypercore
+```
 
 # Product
 
