@@ -40,7 +40,7 @@ iPhone - Download latest TestFlight app (Soon)
 Built on BDK, LDK, HyperCore and Nostr
 
 
-``mermaid
+```mermaid
 stateDiagram
     evse1: charge point 1
     evse2: charge point 2
