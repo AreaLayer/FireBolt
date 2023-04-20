@@ -23,9 +23,9 @@ stateDiagram
     nostr: nostr
 
     [*] --> bip 39
-     bip 39 --> nostr
+    bip 39 --> nostr
     bip 39 --> hypercore
-     nostr --> wallet
+    nostr --> wallet
     wallet --> nostr/hypercore
 ```
 
