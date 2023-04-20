@@ -45,8 +45,7 @@ stateDiagram
     hypercore: hypercore
     nostr: nostr
 
-    bip 39 --> nostr
-    bip 39 --> hypercore
+    bip 39 --> nostr/hypercore
     nostr --> wallet
     wallet --> nostr/hypercore
 ```
