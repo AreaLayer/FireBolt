@@ -42,11 +42,6 @@ Built on BDK, LDK, HyperCore and Nostr
 
 ```mermaid
 stateDiagram
-    evse1: charge point 1
-    evse2: charge point 2
-    evse2: charge point 3
-    evse2: charge point 4
-
     wallet: ln wallet
     hypercore: hypercore
     bip 39: bip 39
