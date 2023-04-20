@@ -44,7 +44,6 @@ Built on BDK, LDK, HyperCore and Nostr
 stateDiagram
     wallet: ln wallet
     hypercore: hypercore
-    bip 39: bip 39
     nostr: nostr
 
     [*] --> bip 39
