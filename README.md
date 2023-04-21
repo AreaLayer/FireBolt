@@ -42,11 +42,14 @@ iPhone - Download latest TestFlight app (Soon)
 stateDiagram
     wallet: ln wallet
     bip 39: bip 39
+    bip 32: bip 32
     hypercore: hypercore
     nostr: nostr
 
     bip 39 --> nostr
     bip 39 --> hypercore
+    bip 32 --> nostr
+    bip 32 --> hypercore
     nostr --> wallet
     wallet --> nostr/hypercore
 ```
