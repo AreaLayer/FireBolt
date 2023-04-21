@@ -11,8 +11,9 @@ console.log(`Your testnet wallet seed words are: ${mnemonic}`);
 
 // Derive the private key for the Bitcoin testnet wallet from the seed words
 const seed = bip39.mnemonicToSeedSync(mnemonic);
-const seed = bip.32.mnemonicToSeedSync(mnemonic);
+const seed = bip32.mnemonicToSeedSync(mnemonic);
 const root = bitcoin.bip32.fromSeed(seed, testnet);
+const root = bitcoin.bip38.fromSeed(seed, testnet);
 const path = "m/44'/1'/0'/0/0";
 const path = "m / 0' / 0' /k'";
 const child = root.derivePath(path);
