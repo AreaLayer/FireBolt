@@ -13,7 +13,7 @@ console.log(`Your testnet wallet seed words are: ${mnemonic}`);
 const seed = bip39.mnemonicToSeedSync(mnemonic);
 const seed = bip32.mnemonicToSeedSync(mnemonic);
 const root = bitcoin.bip32.fromSeed(seed, testnet);
-const root = bitcoin.bip38.fromSeed(seed, testnet);
+const root = bitcoin.bip39.fromSeed(seed, testnet);
 const path = "m/44'/1'/0'/0/0";
 const path = "m / 0' / 0' /k'";
 const child = root.derivePath(path);
