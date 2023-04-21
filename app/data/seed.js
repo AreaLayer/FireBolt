@@ -1,16 +1,20 @@
 const bitcoin = require('bitcoinjs-lib');
 const bip39 = require('bip39');
+const bip32 = require('bip32');
 const testnet = bitcoin.networks.testnet;
 
 // Generate a new 24-word mnemonic seed for the Bitcoin testnet wallet
 const mnemonic = bip39.generateMnemonic(256);
+const mnemonic = bip32.generateMnemonic(256);
 
 console.log(`Your testnet wallet seed words are: ${mnemonic}`);
 
 // Derive the private key for the Bitcoin testnet wallet from the seed words
 const seed = bip39.mnemonicToSeedSync(mnemonic);
+const seed = bip.32.mnemonicToSeedSync(mnemonic);
 const root = bitcoin.bip32.fromSeed(seed, testnet);
 const path = "m/44'/1'/0'/0/0";
+const path = "m / 0' / 0' /k'";
 const child = root.derivePath(path);
 const privateKey = child.privateKey.toString('hex');
 const publicKey = child.publicKey.toString('hex');
