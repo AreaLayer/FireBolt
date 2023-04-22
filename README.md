@@ -32,7 +32,9 @@ iPhone - Download latest TestFlight app (Soon)
 
 - Bitcoin
 
-- HyperCore (TBA)
+- HyperCore 
+
+- TBD
 
 - No shitcoins or stablecoins
 
@@ -56,4 +58,4 @@ stateDiagram
 
 # Product
 
-Built on BDK, LDK, HyperCore and Nostr
+Built on BDK, LDK, HyperCore, Nostr and TBD
