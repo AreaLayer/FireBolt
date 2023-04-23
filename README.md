@@ -32,7 +32,9 @@ iPhone - Download latest TestFlight app (Soon)
 
 - Bitcoin
 
-- HyperCore (TBA)
+- HyperCore
+
+- CoinJoin 
 
 - No shitcoins or stablecoins
 
