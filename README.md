@@ -32,9 +32,15 @@ iPhone - Download latest TestFlight app (Soon)
 
 - Bitcoin
 
+ 22388o-patch-2
 - HyperCore 
 
 - TBD
+
+- HyperCore
+
+- CoinJoin 
+>main
 
 - No shitcoins or stablecoins
 
