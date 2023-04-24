@@ -32,9 +32,15 @@ iPhone - Download latest TestFlight app (Soon)
 
 - Bitcoin
 
+ 22388o-patch-2
+- HyperCore 
+
+- TBD
+
 - HyperCore
 
 - CoinJoin 
+>main
 
 - No shitcoins or stablecoins
 
@@ -58,4 +64,4 @@ stateDiagram
 
 # Product
 
-Built on BDK, LDK, HyperCore and Nostr
+Built on BDK, LDK, HyperCore, Nostr and TBD
