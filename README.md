@@ -42,24 +42,6 @@ iPhone - Download latest TestFlight app (Soon)
 
 - No shitcoins or stablecoins
 
-# Diagram
-
-```mermaid
-stateDiagram
-    wallet: ln wallet
-    bip 39: bip 39
-    bip 32: bip 32
-    hypercore: hypercore
-    nostr: nostr
-
-    bip 39 --> nostr
-    bip 39 --> hypercore
-    bip 32 --> nostr
-    bip 32 --> hypercore
-    nostr --> wallet
-    wallet --> nostr/hypercore
-```
-
 # Product
 
-Built on BDK, LDK, HyperCore, Nostr and TBD
+Built on bitcoin-js, lightning-js,  HyperCore, Nostr and TBD
