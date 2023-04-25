@@ -19,12 +19,11 @@ const pubkeyHash = address.toHash160(pubkey);
 const segwitAddress = address.toBase58Check(pubkeyHash, testnet.bech32);
 console.log(`Your Segwit testnet address is: ${segwitAddress}`);
 
-//Create a legact address
+//Create a legacy address
 const { address } = require('bitcoinjs-lib');
 const pubkeyHash = address.toHash160(pubkey);
 const legacyAddress = address.toBase58Check(pubkeyHash, testnet.pubKeyHash);
 console.log(`Your Legacy testnet address is: ${legacyAddress}`);
-
 
 
 // Generate a new 24-word mnemonic seed for the Bitcoin testnet wallet
