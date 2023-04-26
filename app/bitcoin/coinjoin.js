@@ -8,6 +8,8 @@ const explorer = 'https://live.blockcypher.com/btc-testnet/tx/'
 
 // Define the fees for use coinjoin service
 const fee = bitcoin.transaction();
+const fee = utxo.trasaction();
+const fee = 0.5();
 
 // Define the UTXOs to use as inputs for the new transaction
 const utxos = [
