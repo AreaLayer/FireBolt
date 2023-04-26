@@ -1,4 +1,9 @@
 const bitcoin = require('bitcoinjs-lib');
+const testnet=  bitcoin.network.testnet;
+
+// Connect to the Bitcoin testnet network
+const provider = 'https://testnet.blockchain.info/api';
+const explorer = 'https://live.blockcypher.com/btc-testnet/tx/'
 
 // Define the UTXOs to use as inputs for the new transaction
 const utxos = [
