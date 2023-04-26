@@ -1,9 +1,13 @@
 const bitcoin = require('bitcoinjs-lib');
-const testnet=  bitcoin.network.testnet;
+const testnet =  bitcoin.network.testnet;
+const fee = require('coinjoin')
 
 // Connect to the Bitcoin testnet network
 const provider = 'https://testnet.blockchain.info/api';
 const explorer = 'https://live.blockcypher.com/btc-testnet/tx/'
+
+// Define the fees for use coinjoin service
+const fee = bitcoin.transaction();
 
 // Define the UTXOs to use as inputs for the new transaction
 const utxos = [
