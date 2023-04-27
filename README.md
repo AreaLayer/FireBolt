@@ -40,6 +40,8 @@ iPhone - Download latest TestFlight app (Soon)
 
 - CoinJoin 
 
+- Multisig 
+
 - No shitcoins or stablecoins
 
 # Product
