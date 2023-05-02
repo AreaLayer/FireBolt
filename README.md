@@ -46,6 +46,28 @@ iPhone - Download latest TestFlight app (Soon)
 
 - No shitcoins or stablecoins
 
+# Roadmap
+
+- [ ] Multisig
+
+- [ ] CoinJoin Algorithm powered by CoinJoinXT
+
+- [ ] CoinSwap implementation for privacu during mixing
+
+- [ ] UI/UX
+
+- [ ] TBD 
+
+- [ ] PayJoin (BIP-78) integration beta
+
+- [ ] Seed extension via BIP-32
+
+- [x] Backup via BIP-39 via Nostr and Hypercore
+
+- [ ] Nostr and signatures 
+
+- [ ] Beta app
+
 # Product
 
 Built on bitcoin-js, lightning-js,  HyperCore, Nostr and TBD
