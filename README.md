@@ -52,7 +52,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] CoinJoin Algorithm powered by CoinJoinXT
 
-- [ ] CoinSwap implementation for privacu during mixing
+- [ ] CoinSwap implementation for privacy during mixing
 
 - [ ] UI/UX
 
