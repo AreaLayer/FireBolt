@@ -48,6 +48,16 @@ iPhone - Download latest TestFlight app (Soon)
 
 # Roadmap
 
+- [ ] Mainnet
+
+- [X] Testnet
+
+- [X] CoinJoin Fee
+
+- [X] LND integration
+
+- [X] Taproot, Segwit and Legacy
+
 - [ ] Multisig
 
 - [ ] CoinJoin Algorithm powered by CoinJoinXT
