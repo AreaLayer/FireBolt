@@ -1,6 +1,6 @@
 # FireBolt
 
-App wallet for Android  and iOs with Nostr, HyperCore, Nostr and Lightning Network 
+App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network, TBD and CoinJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
@@ -40,7 +40,43 @@ iPhone - Download latest TestFlight app (Soon)
 
 - CoinJoin 
 
+- Multisig 
+
+- PayJoin
+
 - No shitcoins or stablecoins
+
+# Roadmap
+
+- [ ] Mainnet
+
+- [X] Testnet
+
+- [X] CoinJoin Fee
+
+- [X] LND integration
+
+- [X] Taproot, Segwit and Legacy
+
+- [ ] Multisig
+
+- [ ] CoinJoin Algorithm powered by CoinJoinXT
+
+- [ ] CoinSwap implementation for privacy during mixing
+
+- [ ] UI/UX
+
+- [ ] TBD 
+
+- [ ] PayJoin (BIP-78) integration beta
+
+- [ ] Seed extension via BIP-32
+
+- [x] Backup via BIP-39 via Nostr and Hypercore
+
+- [ ] Nostr and signatures 
+
+- [ ] Beta app
 
 # Product
 

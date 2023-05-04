@@ -1,16 +1,44 @@
 const bitcoin = require('bitcoinjs-lib');
 const bip39 = require('bip39');
+const bip32 = require('bip32');
 const testnet = bitcoin.networks.testnet;
+const { Payment } = require('bitcoinjs-lib');
+const { P2WPKH } = Payment;
+const { P2PKH } = Payment;
+const { P2TR } = Payment;
+
+//Create a Taproot address
+const pubkey = Buffer.from('03...', 'hex'); // replace with your public key
+const payment = new Taproot({ pubkey });
+const address = bech32.encode('tb', bech32.toWords(payment.hash));
+console.log(`Your Taproot testnet address is: ${address}`);
+
+//Create a Segwit address
+const { address } = require('bitcoinjs-lib');
+const pubkeyHash = address.toHash160(pubkey);
+const segwitAddress = address.toBase58Check(pubkeyHash, testnet.bech32);
+console.log(`Your Segwit testnet address is: ${segwitAddress}`);
+
+//Create a legacy address
+const { address } = require('bitcoinjs-lib');
+const pubkeyHash = address.toHash160(pubkey);
+const legacyAddress = address.toBase58Check(pubkeyHash, testnet.pubKeyHash);
+console.log(`Your Legacy testnet address is: ${legacyAddress}`);
+
 
 // Generate a new 24-word mnemonic seed for the Bitcoin testnet wallet
 const mnemonic = bip39.generateMnemonic(256);
+const mnemonic = bip32.generateMnemonic(256);
 
 console.log(`Your testnet wallet seed words are: ${mnemonic}`);
 
 // Derive the private key for the Bitcoin testnet wallet from the seed words
 const seed = bip39.mnemonicToSeedSync(mnemonic);
+const seed = bip32.mnemonicToSeedSync(mnemonic);
 const root = bitcoin.bip32.fromSeed(seed, testnet);
+const root = bitcoin.bip39.fromSeed(seed, testnet);
 const path = "m/44'/1'/0'/0/0";
+const path = "m / 0' / 0' /k'";
 const child = root.derivePath(path);
 const privateKey = child.privateKey.toString('hex');
 const publicKey = child.publicKey.toString('hex');
