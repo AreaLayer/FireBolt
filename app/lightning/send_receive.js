@@ -4,6 +4,7 @@ const grpc = lnd.GrpcLoader.load();
 // Replace the values below with your own testnet wallet information
 const macaroon = 'YOUR_MACAROON';
 const tlsCert = 'YOUR_TLS_CERT';
+const tor = 'YOUR_ONION'
 const destinationNode = 'DESTINATION_NODE';
 const invoiceAmount = 1000; // in satoshis
 
