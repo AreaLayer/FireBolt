@@ -60,7 +60,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Multisig
 
-- [ ] CoinJoin Algorithm powered by CoinJoinXT
+- [x] CoinJoin Algorithm powered by CoinJoinXT
 
 - [ ] CoinSwap implementation for privacy during mixing
 
