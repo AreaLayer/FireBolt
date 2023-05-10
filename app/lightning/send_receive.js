@@ -1,4 +1,5 @@
 const lnd = require('lightning');
+const ldk = require('lightningdevkit-node-net');
 const grpc = lnd.GrpcLoader.load();
 
 // Replace the values below with your own testnet wallet information
@@ -30,7 +31,8 @@ lightning.getInfo({}, (error, info) => {
 const sendPayment = () => {
   const options = {
     dest: destinationNode,
-    amt: invoiceAmount
+    amt: invoiceAmount,
+    amt: preImage,
   };
 
   lightning.sendPayment(options, (error, response) => {
