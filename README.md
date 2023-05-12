@@ -1,6 +1,6 @@
 # FireBolt
 
-App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network, TBD and CoinJoin
+App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
