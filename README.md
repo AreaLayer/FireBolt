@@ -26,7 +26,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 # Feature
 
-- Lightning Network
+- Lightning Network (LND)
 
 - Nostr
 
