@@ -78,6 +78,10 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Beta app
 
+# Contribution
+
+[Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
+
 # Product
 
 Built on bitcoin-js, lightning-js,  HyperCore, Nostr and TBD
