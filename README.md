@@ -26,7 +26,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 # Feature
 
-- Lightning Network
+- Lightning Network (LND)
 
 - Nostr
 
@@ -54,6 +54,10 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [X] CoinJoin Fee
 
+- [ ] LSP
+
+- [ ] LDK integration
+
 - [X] LND integration
 
 - [X] Taproot, Segwit and Legacy
@@ -74,7 +78,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [x] Backup via BIP-39 via Nostr and Hypercore
 
-- [ ] Nostr and signatures 
+- [ ] Nostr client and signatures 
 
 - [ ] Beta app
 
