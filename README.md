@@ -88,4 +88,4 @@ iPhone - Download latest TestFlight app (Soon)
 
 # Product
 
-Built on bitcoin-js, lightning-js,  HyperCore, Nostr and TBD
+Built on bitcoin-js, lightning-js,  HyperCore, Nostr, TBD, LDK and BDK
