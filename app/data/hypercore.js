@@ -1,6 +1,8 @@
 // Load the necessary libraries
 const bip39 = require('bip39');
-const  = require('@holepunch/hypercore');
+const hypercore = require('@holepunch/hypercore');
+const hyperdrive = require('@holepunch/hyperdrive');
+const hyperswarm = require('@holepunch/hyperswarm');
 const ram = require('random-access-memory');
 
 // Generate a random mnemonic phrase
