@@ -26,7 +26,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 # Feature
 
-- Lightning Network (LND/LDK)
+- Lightning Network (LND/LDK/CLN)
 
 - Nostr
 
