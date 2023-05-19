@@ -56,9 +56,9 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] LSP
 
-- [x] LDK integration
+- [ ] LDK integration (WIP)
 
-- [ ] CLN integration
+- [ ] CLN integration (WIP)
 
 - [X] LND integration
 
