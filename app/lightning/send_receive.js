@@ -1,6 +1,9 @@
 const lnd = require('lightning');
 const ldk = require('lightningdevkit-node-net');
+const cln = require('elements/lightning');
 const grpc = lnd.GrpcLoader.load();
+const grpc = ldk.GrpcLoader.load();
+const grpc = cln.GrpcLoader.load();
 
 // Replace the values below with your own testnet wallet information
 const macaroon = 'YOUR_MACAROON';
