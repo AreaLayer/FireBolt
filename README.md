@@ -1,6 +1,6 @@
 # FireBolt
 
-App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network, TBD and CoinJoin
+App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
@@ -26,7 +26,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 # Feature
 
-- Lightning Network (LND)
+- Lightning Network (LND/LDK/CLN)
 
 - Nostr
 
@@ -56,7 +56,9 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] LSP
 
-- [ ] LDK integration
+- [ ] LDK integration (WIP)
+
+- [ ] CLN integration (WIP)
 
 - [X] LND integration
 
@@ -82,11 +84,15 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Beta app
 
+22388o-patch-4.1
 # Run App 
 
 Soon
 
+# Contribution
+
+[Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
 
 # Product
 
-Built on bitcoin-js, lightning-js,  HyperCore, Nostr and TBD
+Built on bitcoin-js, lightning-js,  HyperCore, Nostr, TBD, LDK and BDK
