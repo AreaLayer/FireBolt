@@ -82,6 +82,11 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Beta app
 
+# Run App 
+
+Soon
+
+
 # Product
 
 Built on bitcoin-js, lightning-js,  HyperCore, Nostr and TBD
