@@ -1,1 +1,1 @@
-const hyperswarm = require('holepunch/hyperswarm')
+const hyperswarm = require('@holepunch/hyperswarm')
