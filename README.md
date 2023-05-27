@@ -46,6 +46,8 @@ iPhone - Download latest TestFlight app (Soon)
 
 - No shitcoins or stablecoins
 
+- Contact list via Nostr (NPub) and ID (WEB 5) 
+
 # Roadmap
 
 - [ ] Mainnet
@@ -53,6 +55,8 @@ iPhone - Download latest TestFlight app (Soon)
 - [X] Testnet
 
 - [X] CoinJoin Fee
+
+- [ ] Contact list 
 
 - [ ] LSP
 
