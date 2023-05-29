@@ -90,7 +90,6 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Beta app
 
-22388o-patch-4.1
 # Run App 
 
 Soon
