@@ -9,3 +9,8 @@ pub struct Configuration {
     clamp_fee_contribution: bool,
     min_fee_rate: FeeRate,
 }
+
+pub strutc tags 
+e_input
+e_output
+event_relay
