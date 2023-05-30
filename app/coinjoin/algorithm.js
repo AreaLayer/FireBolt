@@ -1,4 +1,6 @@
 const bitcoin = require('bitcoinjs-lib');
+const lightning = require('lightning-js');
+const ldk = require('ldk-node-js');
 
 // Sample participant inputs
 const participant1Input = {
