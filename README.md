@@ -24,7 +24,7 @@ iPhone - Download latest TestFlight app (Soon)
 ---
 
 
-# Feature
+## Feature
 
 - Lightning Network (LND/LDK/CLN)
 
@@ -52,7 +52,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - Contact list via Nostr (NPub) and ID (Web 5) 
 
-# Roadmap
+## Roadmap
 
 - [ ] Mainnet
 
@@ -94,14 +94,14 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Beta app
 
-# Run App 
+## Run App 
 
 Soon
 
-# Contribution
+## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
 
-# Product
+## Product
 
 Built on bitcoin-js, lightning-js,  HyperCore, Nostr, TBD, LDK and BDK
