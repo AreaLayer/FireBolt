@@ -36,7 +36,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - TBD
 
-- HyperCore
+- LSP
 
 - CoinJoin 
 
@@ -46,7 +46,11 @@ iPhone - Download latest TestFlight app (Soon)
 
 - No shitcoins or stablecoins
 
-- Contact list via Nostr (NPub) and ID (WEB 5) 
+- Backup using Nostr keys and BIP-39
+
+- Management Nostr Keys
+
+- Contact list via Nostr (NPub) and ID (Web 5) 
 
 # Roadmap
 
