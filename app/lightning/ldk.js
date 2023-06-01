@@ -1,5 +1,4 @@
-const ldk = ('ldk-node-js')
-const ldk = require('lightningdevkit-node-js');
+const ldk = require('ldk-node-js');
 const grpc = ldk.GrpcLoader.load();
 
 
