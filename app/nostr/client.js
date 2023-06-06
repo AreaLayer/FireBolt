@@ -1,4 +1,5 @@
 const { Keys, Client, Metadata, EventId, PublicKey, EventBuilder } = require("@rust-nostr/nostr-sdk-js");
+const { PrivateKey, BIP39, PublicKey } = require("bitcoin-js");
 
 async function main() {
     let keys = Keys.generate();
