@@ -26,7 +26,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 # Feature
 
-- Lightning Network (LND/LDK/CLN)
+- Lightning Network (LND/LDK/CLN/Greelight)
 
 - Nostr
 
@@ -63,6 +63,8 @@ iPhone - Download latest TestFlight app (Soon)
 - [x] LDK integration 
 
 - [ ] CLN integration (WIP)
+
+- [ ] GrreenLight integration
 
 - [X] LND integration
 
