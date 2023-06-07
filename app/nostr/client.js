@@ -1,4 +1,5 @@
 const { Keys, Client, Metadata, EventId, PublicKey, EventBuilder } = require("@rust-nostr/nostr-sdk-js");
+const {Mnemonic, SeedSync} = require("@bitcoijs/bip39");
 
 async function main() {
     let keys = Keys.generate();
