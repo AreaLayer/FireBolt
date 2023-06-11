@@ -86,6 +86,8 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Seed extension via BIP-32
 
+- [ ] Contact List
+
 - [x] Backup via BIP-39 via Nostr and Hypercore
 
 - [ ] Nostr client and signatures 
