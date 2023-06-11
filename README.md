@@ -60,8 +60,6 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [X] CoinJoin Fee
 
-- [ ] Contact list 
-
 - [ ] LSP
 
 - [x] LDK integration 
