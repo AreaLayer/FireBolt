@@ -51,3 +51,7 @@ const tx = txb.build();
 const serializedTx = tx.toHex();
 
 console.log('CoinJoinXT transaction:', serializedTx);
+
+const AcceptInvoice = {
+txid:
+invoice:
