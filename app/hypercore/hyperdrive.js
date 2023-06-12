@@ -1,17 +1,17 @@
-const hyperdrive = require('@holepunch/hyperdrive')
-const Corestore = require('corestore')
+const hyperdrive = require('@holepunch/hyperdrive');
+const Corestore = require('corestore');
+const firebolt = requrie('backup');
+const firebolt = require('seed');
 
-const store = new Corestore('./backup')
+const store = new Corestore('./backup.js')
 const drive = new Hyperdrive(store)
 
 await drive.put('/backup.js', Buffer.from(''))
-await drive.put('/images/logo.png', Buffer.from('..'))
-await drive.put('/images/old-logo.png', Buffer.from('..'))
 
-const buffer = await drive.get('/blob.txt')
-console.log(buffer) // => <Buffer ..> "example"
+const buffer = await drive.get('/bakcup.js')
+console.log(buffer) // => <backupr ..> "example"
 
-const entry = await drive.entry('/blob.txt')
+const entry = await drive.entry('/backu.js)
 console.log(entry) // => { seq, key, value: { executable, linkname, blob, metadata } }
 
 await drive.del('/images/old-logo.png')
