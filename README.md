@@ -26,7 +26,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 ## Feature
 
-- Lightning Network (LND/LDK/CLN)
+- Lightning Network (LND/LDK/CLN/Greelight)
 
 - Nostr
 
@@ -60,13 +60,13 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [X] CoinJoin Fee
 
-- [ ] Contact list 
-
 - [ ] LSP
 
 - [x] LDK integration 
 
 - [ ] CLN integration (WIP)
+
+- [ ] GrreenLight integration
 
 - [X] LND integration
 
@@ -87,6 +87,8 @@ iPhone - Download latest TestFlight app (Soon)
 - [ ] PayJoin (BIP-78) integration beta
 
 - [ ] Seed extension via BIP-32
+
+- [ ] Contact List
 
 - [x] Backup via BIP-39 via Nostr and Hypercore
 

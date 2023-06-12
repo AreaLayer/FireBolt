@@ -1,10 +1,10 @@
 const hyperdrive = require('@holepunch/hyperdrive')
 const Corestore = require('corestore')
 
-const store = new Corestore('./storage')
+const store = new Corestore('./backup')
 const drive = new Hyperdrive(store)
 
-await drive.put('/blob.txt', Buffer.from('example'))
+await drive.put('/backup.js', Buffer.from(''))
 await drive.put('/images/logo.png', Buffer.from('..'))
 await drive.put('/images/old-logo.png', Buffer.from('..'))
 
