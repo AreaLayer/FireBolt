@@ -96,6 +96,8 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] Beta app
 
+- [ ] PWA
+
 ## Run App 
 
 Soon
