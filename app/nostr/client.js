@@ -1,5 +1,4 @@
 const { Keys, Client, Metadata, EventId, PublicKey, EventBuilder } = require("@rust-nostr/nostr-sdk-js");
- Rsync25-patch-2
 const { PrivateKey, BIP39, PublicKey } = require("bitcoin-js");
 
 const {Mnemonic, SeedSync} = require("@bitcoijs/bip39");
