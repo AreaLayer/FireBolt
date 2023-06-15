@@ -66,7 +66,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - [ ] CLN integration (WIP)
 
-- [ ] GrreenLight integration
+- [ ] GreenLight integration
 
 - [X] LND integration
 
