@@ -1,6 +1,6 @@
 const bitcoin = require('bitcoinjs-lib');
 const testnet = bitcoin.networks.testnet;
-const payjoin = requiere('rust-payjoin');
+const payjoin = requiere('payjoin-lib');
 
 // Replace the values below with your own testnet wallet information
 const privateKey = 'YOUR_PRIVATE_KEY';
