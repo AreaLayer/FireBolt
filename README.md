@@ -1,4 +1,4 @@
-# FireBolt
+# FireBolt ⚡
 
 App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
 
@@ -44,7 +44,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - PayJoin
 
-- No shitcoins or stablecoins
+- Bitcoin-only
 
 - Backup using Nostr keys and BIP-39
 
