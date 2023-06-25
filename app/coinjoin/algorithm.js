@@ -2,6 +2,24 @@ const bitcoin = require('bitcoinjs-lib');
 const lightning = require('lightning-js');
 const ldk = require('ldk-node-js');
 
+
+// Generate a master public key (xpub) for the wallet
+const masterPublicKey = 'xpub...';
+
+// Derive a new child public key for each CoinJoin transaction
+function deriveAddress(index) {
+  const node = bitcoin.bip32.fromBase58(masterPublicKey);
+  const childNode = node.derivePath(`0/${index}`);
+  const publicKey = childNode.publicKey;
+  const address = bitcoin.payments.p2pkh({ pubkey: publicKey }).address;
+  return address;
+}
+
+// Index 
+const coinJoinIndex = 3; // Index of the CoinJoin transaction
+const coinJoinAddress = deriveAddress(coinJoinIndex);
+
+console.log('CoinJoin address:', coinJoinAddress);
 // Sample participant inputs
 const participant1Input = {
   txid: '...',  // Transaction ID of the UTXO
