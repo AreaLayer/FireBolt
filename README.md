@@ -42,9 +42,9 @@ Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed a
 
 The other main features Firebolt supports are as follows:
 
-    📱 Contact list (Nostr and ID)
-    💸 Easy payments
-    🔑 Your keys, your coins
+📱 Contact list via Npub or ID
+🪙 Payments via Lightning Network
+⚛️ Coinjoin and Payjoi for privacy
 
 All these additional features are powered by Npub: a collection of software modules and specifications that complements the Bitcoin and Lightning stacks in the building of peer-to-peer applications, specifically to enable decentralized identities and web-of-trust reputation systems. You can view our JavaScript-based software development kit which has been used for the Firebolt wallet here.
 
