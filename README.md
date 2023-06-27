@@ -48,8 +48,6 @@ The other main features Firebolt supports are as follows:
 
 ⚛️ Coinjoin and Payjoin for privacy
 
-All these additional features are powered by Npub: a collection of software modules and specifications that complements the Bitcoin and Lightning stacks in the building of peer-to-peer applications, specifically to enable decentralized identities with Nostr and ID.
-
 ## Feature
 
 - Lightning Network (LND/LDK/CLN/Greenlight)
