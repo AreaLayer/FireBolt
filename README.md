@@ -36,6 +36,20 @@ Central Banks, inflations and cetralized social media
 
 ## Firebolt's solution
 
+Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. By default, you connect to Area Layer's Electrum-Bitcoin Core server, but you can also connect to your own server. We onboard users to Lightning through our lightning service provider (LSP) Timelight. In the future, we will also enable connections to other LSPs and peers on the network.
+
+Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed and optional password. Lightning channel data is automatically replicated on our backup server. The data is encrypted on the client-side before it is sent to our server to ensure privacy. You can view our code here.
+
+The other main features Firebolt supports are as follows:
+
+    📱 Contact list (Nostr and ID)
+    💸 Easy payments
+    🔑 Your keys, your coins
+
+All these additional features are powered by Npub: a collection of software modules and specifications that complements the Bitcoin and Lightning stacks in the building of peer-to-peer applications, specifically to enable decentralized identities and web-of-trust reputation systems. You can view our JavaScript-based software development kit which has been used for the Firebolt wallet here.
+
+Npub user data is automatically replicated via our seeding server. In this way, user data is always available. In addition, it allows the user to restore all their Npub data from just their BIP-39 seed and optional password.
+
 ## Feature
 
 - Lightning Network (LND/LDK/CLN/Greenlight)
