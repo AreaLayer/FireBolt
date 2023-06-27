@@ -1,4 +1,5 @@
 const payjoin = require('payjoin-lib');
+const bitcoin = require('bitcoinjs-lib');
 const network = bitcoin.network
 
 async function createPayJoinTransaction(privateKey, utxos, payjoinEndpoint) {
