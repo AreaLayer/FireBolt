@@ -22,7 +22,19 @@ App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network,
 iPhone - Download latest TestFlight app (Soon)
 
 ---
+## Overview
 
+Reclaim your self sovereign
+
+Firebolt is a wallet designed by a Bitcoiner for Bitcoiners looking for privacy using Payjoin, Lightning Network, Coinjoin, Bitcoin, Hypercore, Nostr and TBD
+
+Each individual has their own identity using Nostr or ID according to their preference
+
+## The problem
+
+Central Banks, inflations and cetralized social media
+
+## Firebolt's solution
 
 ## Feature
 
@@ -111,7 +123,3 @@ Soon
 ## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
-
-## Product
-
-Built on bitcoin-js, lightning-js,  HyperCore, Nostr, TBD, LDK and BDK
