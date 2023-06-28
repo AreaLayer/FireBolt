@@ -50,7 +50,7 @@ iPhone - Download latest TestFlight app (Soon)
 
 - Management Nostr Keys
 
-- Contact list via Nostr (NPub) and ID (Web 5)
+- Contact list via Nostr (NPub) and DID (Web 5)
 
 ## Coinjoin Demo and PoC
 
