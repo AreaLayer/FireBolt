@@ -1,5 +1,5 @@
 // Firebolt wallet
-const pages = ['home', 'backup', 'checklist', 'contactList', 'pinCover'];
+const pages = ['home', 'backup', 'checklist', 'contactList', 'pinCover', 'Coinjoin', 'send_Receive'];
 
 // Show a page
 function showPage(pageId) {
