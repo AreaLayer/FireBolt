@@ -108,7 +108,7 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [x] CoinJoin Algorithm powered by CoinJoinXT
 
-- [ ] CoinSwap implementation for privacy during mixing
+- [x] CoinSwap implementation for privacy during mixing
 
 - [ ] Coin Select
 
