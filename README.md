@@ -42,7 +42,7 @@ Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed a
 
 The other main features Firebolt supports are as follows:
 
-📱 Contact list via Npub or ID
+📱 Contact list via Npub or DID
 
 🪙 Payments via Lightning Network
 
