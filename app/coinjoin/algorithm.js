@@ -1,7 +1,13 @@
 const bitcoin = require('bitcoinjs-lib');
 const lightning = require('lightning-js');
 const ldk = require('ldk-node-js');
+const testnet = bitcoin.network.testnet;
 
+
+
+// Connect to the Bitcoin testnet network
+const provider = 'https://testnet.blockchain.info/api';
+const explorer = 'https://mempool.space/testnet/tx'
 
 // Generate a master public key (xpub) for the wallet
 const masterPublicKey = 'xpub...';
