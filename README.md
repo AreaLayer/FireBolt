@@ -86,6 +86,8 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [ ] CoinSwap implementation for privacy during mixing
 
+- [ ] Coin Select
+
 - [ ] UI/UX
 
 - [ ] TBD 
