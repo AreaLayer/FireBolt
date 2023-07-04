@@ -5,8 +5,7 @@ const {PubKey} = require('nostr-tools');
 const contact_list = {
   npub: npub
   relay: relay
-  
- conts pubkey = {
+    
   
   
   
