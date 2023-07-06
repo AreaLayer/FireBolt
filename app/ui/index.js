@@ -16,7 +16,7 @@ document.getElementById('createWallet').addEventListener('click', function() {
 });
 
 // Add icons and assets
-  const iconPath = 'path/to/icon.png'; // Replace with the actual path to your icon file
+  const iconPath = 'app/ui/assets/contacts.png'; // Replace with the actual path to your icon file
   const assetPath = 'path/to/asset.png'; // Replace with the actual path to your asset file
 });
 
