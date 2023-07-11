@@ -102,7 +102,7 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [ ] Multisig
 
-- [ ] Miniscript
+- [x] Miniscript
 
 - [x] CoinJoin Algorithm powered by CoinJoinXT
 
