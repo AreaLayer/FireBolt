@@ -112,7 +112,7 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [ ] UI/UX
 
-- [ ] TBD 
+- [x] TBD 
 
 - [x] PayJoin (BIP-78) integration beta
 
