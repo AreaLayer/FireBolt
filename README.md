@@ -90,13 +90,11 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [X] CoinJoin Fee
 
-- [ ] LSP
+- [x] LSP
 
 - [x] LDK integration 
 
-- [ ] CLN integration (WIP)
-
-- [ ] GreenLight integration
+- [x] GreenLight integration
 
 - [X] LND integration
 
@@ -116,9 +114,9 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [ ] TBD 
 
-- [ ] PayJoin (BIP-78) integration beta
+- [x] PayJoin (BIP-78) integration beta
 
-- [ ] Seed extension via BIP-32
+- [x] Seed via BIP-32
 
 - [ ] Contact List
 
