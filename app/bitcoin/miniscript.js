@@ -1,6 +1,6 @@
 const bitcoin = require('bitcoinjs-lib');
 const bitcoinLib = require('bitcoinlib');
-const { Policy, Descriptor, Miniscript } = bitcoinLib;
+const { Policy, Descriptor, Miniscript } = miniscritp-js
 
 // Create a new Miniscript object
 const ms = Miniscript.fromString('thresh(2,pk(A),pk(B),pk(C))');
@@ -30,7 +30,7 @@ const outputScript = bitcoin.script.compile([
 ]);
 
 // Create a CoinJoin transaction
-const coinjoinTx = bitcoinLib.transaction();
+const coinjoin = bitcoin.transaction();
 
 // Add inputs to the CoinJoin transaction
 coinjoinTx.addInput('previousTxId1', 0);
