@@ -1,10 +1,4 @@
-// Function to handle the submission of the form
-function handleFormSubmission(event) {
-  event.preventDefault(); // Prevent the form from being submitted
-
-  // Get the input value from the form
-  const didInput = document.getElementById('didInput');
-  const did = didInput.value;
+const web5 = require('@TBD54566975/web5-js');
 
   // Perform validation on the DID
   const isValid = validateDid(did);
