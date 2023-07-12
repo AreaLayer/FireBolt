@@ -100,7 +100,7 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [X] Taproot, Segwit and Legacy
 
-- [ ] Multisig
+- [x] Multisig
 
 - [x] Miniscript
 
@@ -108,9 +108,9 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [x] CoinSwap implementation for privacy during mixing
 
-- [ ] Coin Select
+- [x] Coin Select
 
-- [ ] UI/UX
+- [x] UI/UX
 
 - [x] TBD 
 
@@ -118,11 +118,11 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [x] Seed via BIP-32
 
-- [ ] Contact List
+- [x] Contact List
 
 - [x] Backup via BIP-39 via Nostr and Hypercore
 
-- [ ] Nostr client and signatures 
+- [x] Nostr client 
 
 - [ ] Beta app
 
