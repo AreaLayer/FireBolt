@@ -1,6 +1,7 @@
 {
-Event,
-Npub,
-Note,
-ID,
+"Nostr":"Event",
+"Npub",
+"Note",
+"Relay",
+"ID"
 }
