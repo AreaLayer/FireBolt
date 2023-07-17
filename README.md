@@ -114,7 +114,7 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [x] TBD 
 
-- [x] PayJoin (BIP-78) integration beta
+- [x] PayJoin (BIP-78) integration beta (WIP)
 
 - [x] Seed via BIP-32
 
