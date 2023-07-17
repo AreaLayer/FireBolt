@@ -6,6 +6,7 @@ const grpc = ldk.GrpcLoader.load();
 const grpc = cln.GrpcLoader.load();
 
 // Replace the values below with your own testnet wallet information
+const lsp = 'https://lsppvoltageapi.com'
 const macaroon = 'YOUR_MACAROON';
 const tlsCert = 'YOUR_TLS_CERT';
 const tor = 'YOUR_ONION'
@@ -18,7 +19,8 @@ const lightning = lnd.connect({
   grpc: grpc,
   macaroon: Buffer.from(macaroon, 'hex'),
   tls: Buffer.from(tlsCert, 'hex'),
-  network: 'testnet'
+  network: 'testnet',
+  lsp: 'lspvoltageapi.com'
 });
 
 // Create a new Lightning Network testnet wallet

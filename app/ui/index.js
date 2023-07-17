@@ -15,6 +15,23 @@ document.getElementById('createWallet').addEventListener('click', function() {
   console.log('Create Wallet clicked');
 });
 
+// Add icons and assets
+  const iconPath = 'app/ui/assets/contacts.png'; // Replace with the actual path to your icon file
+  const assetPath = 'path/to/asset.png'; // Replace with the actual path to your asset file
+});
+
+  // Add icon
+  const iconElement = document.createElement('img');
+  iconElement.src = iconPath;
+  document.getElementById(pageId).appendChild(iconElement);
+});
+
+  // Add asset
+  const assetElement = document.createElement('img');
+  assetElement.src = assetPath;
+  document.getElementById(pageId).appendChild(assetElement);
+});
+
 document.getElementById('importWallet').addEventListener('click', function() {
   // TODO: Implement wallet import logic via BIP-39
   console.log('Import Wallet clicked');
