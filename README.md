@@ -90,41 +90,39 @@ You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-de
 
 - [X] CoinJoin Fee
 
-- [ ] LSP
+- [x] LSP
 
 - [x] LDK integration 
 
-- [ ] CLN integration (WIP)
-
-- [ ] GreenLight integration
+- [x] GreenLight integration
 
 - [X] LND integration
 
 - [X] Taproot, Segwit and Legacy
 
-- [ ] Multisig
+- [x] Multisig
 
-- [ ] Miniscript
+- [x] Miniscript
 
 - [x] CoinJoin Algorithm powered by CoinJoinXT
 
 - [x] CoinSwap implementation for privacy during mixing
 
-- [ ] Coin Select
+- [x] Coin Select
 
-- [ ] UI/UX
+- [x] UI/UX
 
-- [ ] TBD 
+- [x] TBD 
 
-- [ ] PayJoin (BIP-78) integration beta
+- [x] PayJoin (BIP-78) integration beta
 
-- [ ] Seed extension via BIP-32
+- [x] Seed via BIP-32
 
-- [ ] Contact List
+- [x] Contact List
 
 - [x] Backup via BIP-39 via Nostr and Hypercore
 
-- [ ] Nostr client and signatures 
+- [x] Nostr client 
 
 - [ ] Beta app
 
