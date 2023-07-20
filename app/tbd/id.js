@@ -1,24 +1,30 @@
 const web5 = require('@TBD54566975/web5-js');
 
-  // Perform validation on the DID
-  const isValid = validateDid(did);
+async function generateDidKeys() {
+  try {
+    // Generate a key pair using the Elliptic Curve Cryptography (ECC)
+    const keyPair = await crypto.subtle.generateKey(
+      {
+        name: 'ECDSA',
+        namedCurve: 'P-256', // NIST-recommended elliptic curve
+      },
+      true, // Extractable private key
+      ['sign', 'verify'] // Key usages
+    );
 
-  // Display the validation result
-  const validationMessage = document.getElementById('validationMessage');
-  if (isValid) {
-    validationMessage.textContent = 'Valid DID';
-  } else {
-    validationMessage.textContent = 'Invalid DID';
+    // Export the public key in JWK (JSON Web Key) format
+    const publicKeyJWK = await crypto.subtle.exportKey('jwk', keyPair.publicKey);
+
+    // Export the private key in JWK format (for demonstration purposes only)
+    const privateKeyJWK = await crypto.subtle.exportKey('jwk', keyPair.privateKey);
+
+    // Display the generated keys
+    console.log('Public Key (JWK):', JSON.stringify(publicKeyJWK, null, 2));
+    console.log('Private Key (JWK):', JSON.stringify(privateKeyJWK, null, 2));
+  } catch (error) {
+    console.error('Error generating keys:', error);
   }
 }
 
-// Function to validate a DID
-function validateDid(did) {
-  // Add your validation logic here
-  // This is just a basic example
-  return did.startsWith('did:');
-}
-
-/// Function to use a DID
-fuction useDid(did) {
-return did.startsWith('did:);
+// Call the function to generate DID keys
+generateDidKeys();
