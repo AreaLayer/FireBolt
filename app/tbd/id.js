@@ -19,6 +19,6 @@ function validateDid(did) {
   return did.startsWith('did:');
 }
 
-// Add an event listener to the form
-const form = document.getElementById('didForm');
-form.addEventListener('submit', handleFormSubmission);
+/// Function to use a DID
+fuction useDid(did) {
+return did.startsWith('did:);
