@@ -1,6 +1,23 @@
-const ldk = require('ldk-node-js');
-const grpc = ldk.GrpcLoader.load();
+const {
+  LDK,
+  LDKInvoice,
+  LDKPeer,
+  LDKChannel,
+  LDKConfig,
+  LDKCredentials,
+  LDKEvent,
+} = require('@lightningdevkit/ldk-garbagecollected');
 
+// Initialize the LDK with appropriate configuration and credentials
+const config = {
+  // Set your LDK configuration options here
+};
+
+const credentials = {
+  // Set your LDK credentials here
+};
+
+const ldk = new LDK(config, credentials);
 
 // Replace the values below with your own testnet wallet information
 const macaroon = 'YOUR_MACAROON';
