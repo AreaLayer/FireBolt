@@ -33,3 +33,25 @@ const lightning = ldk.connect({
   macaroon: Buffer.from(macaroon, 'hex'),
   tls: Buffer.from(tlsCert, 'hex'),
   network: 'testnet'
+
+
+  // Create an invoice and get the payment request
+const invoice: LDKInvoice = await ldk.createInvoice({ amount: 1000 }); // Amount in satoshis
+console.log('Invoice Payment Request:', invoice.paymentRequest);
+
+// Listen for incoming payments
+ldk.on(/** event **/ LDKEvent.InvoicePaymentSettled, (data) => {
+  console.log('Invoice Payment Settled:', data);
+// Connect to a new peer
+const peerAddress: string = 'peer_node_address';
+await ldk.connectPeer(peerAddress);
+
+// Get a list of connected peers
+const connectedPeers: LDKPeer[] = await ldk.listPeers();
+console.log('Connected Peers:', connectedPeers);
+
+});
+// Listen for LDK events and handle errors
+ldk.on(/** event **/ LDKEvent.Failed, (error) => {
+  console.error('Error:', error);
+});
