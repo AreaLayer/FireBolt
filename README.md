@@ -78,12 +78,6 @@ The other main features Firebolt supports are as follows:
 
 - Contact list via Nostr (NPub) and DID (Web 5)
 
-## Coinjoin Demo and PoC
-
-In this demo, we'll present as can work the Coinjoin on Firebolt.
-
-You can check here: [Coinjoin Demo](https://github.com/AreaLayer/Coinjoin-PoC-demo)
-
 ## Roadmap
 
 - [ ] Mainnet
