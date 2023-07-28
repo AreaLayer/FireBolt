@@ -1,1 +1,34 @@
+{
+  "expo": {
+    "name": "Firebolt",
+    "slug": "",
+    "version": "1.0.6-alpha",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.yourappname",
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.yourappname",
+      "config": {
+        "googleMapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+      }
+    },
+    "platforms": ["ios", "android"],
+    "description": "Your app description here",
+    "extra": {
+      "someCustomConfig": true
+    }
+  }
+}
 
