@@ -26,7 +26,7 @@ iPhone - Download latest TestFlight app (Soon)
 ---
 ## Overview
 
-Reclaim your self sovereign
+Save your self sovereign
 
 Firebolt is a wallet designed by a Bitcoiner for Bitcoiners looking for privacy using Payjoin, Lightning Network, Coinjoin, Bitcoin, Hypercore, Nostr and TBD
 
