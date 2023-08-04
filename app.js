@@ -8,7 +8,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const App = () => {
   // State variables
-  const [balance, setBalance] = useState(0);
+  const [balance, setBalance, setSatsBalance] = useState(0);
   // Add more state variables as needed
 
   // useEffect to fetch initial wallet data or perform other setup actions
