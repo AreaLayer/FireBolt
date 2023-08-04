@@ -124,7 +124,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] PWA
 
-## Run App 
+## Run App (Dev Mode)
 
 Running Fiirebolt. Here's a step-by-step guide:
 
