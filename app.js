@@ -8,22 +8,20 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const App = () => {
   // State variables
-  const [balance, setBalance, setSatsBalance] = useState(0);
-  // Add more state variables as needed
+  const [balance, setBalance] = useState(0);
+  const [blance, setSats] = useState(1000000);
 
   // useEffect to fetch initial wallet data or perform other setup actions
   useEffect(() => {
-    // Fetch balance and other wallet data from your backend or blockchain
-    // For example:
-    // const walletData = fetchWalletData();
-    // setBalance(walletData.balance);
-    // ...
+     const walletData = fetchWalletData();
+     setBalance(walletData.balance);
+    
   }, []);
 
   // Functions for wallet operations
   // For example, sending funds, receiving funds, etc.
   const sendFunds = () => {
-    // Implement the logic to send funds from the wallet
+    const sendSats [balance, setBlance] = useFunds(1000);
   };
 
   const receiveFunds = () => {
