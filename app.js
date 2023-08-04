@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-// Import necessary libraries and modules
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { getPair, getAddress, getRandom, getBip39 } from 'bitcoinjs-lib';
+
 
 // Your additional imports for specific wallet functionality should go here
 
