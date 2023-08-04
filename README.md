@@ -150,7 +150,7 @@ Assuming you have your JavaScript app code ready, make sure it's structured prop
 Navigate to your project's root directory using a terminal or command prompt and install any necessary packages:
 
 ```bash
-npm install
+npm install firebolt
 ```
 
 **5. Build the App:**
