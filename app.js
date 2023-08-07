@@ -1,29 +1,28 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-// Import necessary libraries and modules
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { getPair, getAddress, getRandom, getBip39 } from 'bitcoinjs-lib';
+
 
 // Your additional imports for specific wallet functionality should go here
 
 const App = () => {
   // State variables
   const [balance, setBalance] = useState(0);
-  // Add more state variables as needed
+  const [blance, setSats] = useState(1000000);
 
   // useEffect to fetch initial wallet data or perform other setup actions
   useEffect(() => {
-    // Fetch balance and other wallet data from your backend or blockchain
-    // For example:
-    // const walletData = fetchWalletData();
-    // setBalance(walletData.balance);
-    // ...
+     const walletData = fetchWalletData();
+     setBalance(walletData.balance);
+    
   }, []);
 
   // Functions for wallet operations
   // For example, sending funds, receiving funds, etc.
   const sendFunds = () => {
-    // Implement the logic to send funds from the wallet
+    const sendSats [balance, setBlance] = useFunds(1000);
   };
 
   const receiveFunds = () => {
