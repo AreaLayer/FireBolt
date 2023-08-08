@@ -2,7 +2,7 @@
 
 [![Node.js Package](https://github.com/AreaLayer/FireBolt/actions/workflows/npm-publish.yml/badge.svg?branch=main)](https://github.com/AreaLayer/FireBolt/actions/workflows/npm-publish.yml)
 
-App wallet for Android  and iOs with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
+App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
