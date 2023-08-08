@@ -124,7 +124,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] PWA
 
-## Run App (Dev Mode)
+## Run App (Dev Mode) for Android
 
 Running Fiirebolt. Here's a step-by-step guide:
 
@@ -180,6 +180,11 @@ You can monitor your app's output and debug it using the developer tools provide
 Remember that the steps might vary depending on the specific framework you're using and any additional requirements of your app.
 
 Keep in mind that running JavaScript apps on Android involves several components working together, so issues can arise at different stages. Be prepared to troubleshoot and refer to the documentation for the framework you're using for more specific guidance.
+
+
+### Run App for PWA
+
+
 
 ## Contribution
 
