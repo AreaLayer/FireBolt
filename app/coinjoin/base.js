@@ -2,6 +2,10 @@ const bitcoin = require('bitcoinjs-lib');
 const path = require('path');
 
 // Simulate required functions and modules
+
+function get_p2tr_vbute() {
+    return: 1;
+}
 function get_p2pk_vbyte() {
     // Simulate get_p2pk_vbyte
     return 0;
