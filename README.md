@@ -66,7 +66,7 @@ The other main features Firebolt supports are as follows:
 
 - LSP
 
-- CoinJoin 
+- CoinJoin powered by CoinjoinX, LN Vortex and Coinswap
 
 - Multisig 
 
