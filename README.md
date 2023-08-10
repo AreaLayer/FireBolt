@@ -120,7 +120,9 @@ The other main features Firebolt supports are as follows:
 
 - [x] Backup via BIP-39 via Nostr and Hypercore
 
-- [x] Nostr client 
+- [x] Nostr client
+
+- [ ] Lightning Vortex
 
 - [ ] Beta app
 
