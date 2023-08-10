@@ -1,7 +1,10 @@
 const bitcoin = require('bitcoinjs-lib');
-const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require('./occbase'); // Replace with your relevant imports
+const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require('CoinJoinXT'); 
 
-class OCCClientProtocol {
+
+// Testnet
+const network = bitcoin.network.testnet
+
 
     constructor(factory, wallet) {
         this.wallet = wallet;
