@@ -222,7 +222,7 @@ class Outpoint {
     }
 }
 
-class OCCTemplateTX {
+class TemplateTX {
     constructor(outs_info, ins, pre_tx_balances, min_fee = STATIC_TX_FEE, max_fee = 10 * STATIC_TX_FEE) {
         this.pre_tx_balances = pre_tx_balances;
         this.min_fee = min_fee;
