@@ -1,29 +1,29 @@
 const bitcoin = require('bitcoinjs-lib');
 const { Command, Boolean } = require('twisted.protocols.amp');
-const OCC_SETUP_COMMAND = 'OCCSetup';
-const OCC_KEYS_COMMAND = 'OCCKeys';
-const OCC_SIGS_COMMAND = 'OCCSigs';
-const OCC_SETUP_RESPONSE_COMMAND = 'OCCSetupResponse';
-const OCC_KEYS_RESPONSE_COMMAND = 'OCCKeysResponse';
-const OCC_SIGS_RESPONSE_COMMAND = 'OCCSigsResponse';
+const OC_SETUP_COMMAND = 'OCSetup';
+const OC_KEYS_COMMAND = 'OCKeys';
+const OC_SIGS_COMMAND = 'OCSigs';
+const OC_SETUP_RESPONSE_COMMAND = 'OCSetupResponse';
+const OC_KEYS_RESPONSE_COMMAND = 'OCKeysResponse';
+const OC_SIGS_RESPONSE_COMMAND = 'OCSigsResponse';
 
 class DaemonNotReady extends Error {}
 
-class OCCCommand extends Command {
+class OCCommand extends Command {
     constructor() {
         super();
         this.response = [['accepted', Boolean]];
     }
 }
 
-class OCCSetup extends OCCCommand {
+class OCSetup extends OCCCommand {
     constructor() {
         super();
         this.arguments = [['amtdata', String]];
     }
 }
 
-class OCCKeys extends OCCCommand {
+class OCKeys extends OCCommand {
     constructor() {
         super();
         this.arguments = [
@@ -34,21 +34,21 @@ class OCCKeys extends OCCCommand {
     }
 }
 
-class OCCSigs extends OCCCommand {
+class OCSigs extends OCCCommand {
     constructor() {
         super();
         this.arguments = [['our_sigs', String]];
     }
 }
 
-class OCCSetupResponse extends OCCCommand {
+class OCSetupResponse extends OCCommand {
     constructor() {
         super();
         this.arguments = [['template_ins', String]];
     }
 }
 
-class OCCKeysResponse extends OCCCommand {
+class OCKeysResponse extends OCCommand {
     constructor() {
         super();
         this.arguments = [
@@ -58,7 +58,7 @@ class OCCKeysResponse extends OCCCommand {
     }
 }
 
-class OCCSigsResponse extends OCCCommand {
+class OCSigsResponse extends OCCommand {
     constructor() {
         super();
         this.arguments = [['funding_sigs', String]];
