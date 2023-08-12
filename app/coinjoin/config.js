@@ -10,7 +10,7 @@ console_log_level = INFO
 
 [BLOCKCHAIN]
 blockchain_source = bitcoin-rpc
-network = mainnet
+network = testnet
 rpc_host = localhost
 rpc_port = 8332
 rpc_user = your_rpc_user
@@ -23,7 +23,7 @@ const globalSingleton = {
         get() {},
     },
     homedir: '',
-    config_location: 'config.ini', // Change this to your desired config file name
+    config_location: 'config.firebolt', // Change this to your desired config file name
     bc_interface: null,
     console_log_level: '',
 };
