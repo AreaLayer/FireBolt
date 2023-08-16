@@ -6,7 +6,8 @@ const app = express();
 const port = 3000; // Choose a port number
 
 // Create a new Web5 feed
-const feed = hypercore('./data', { valueEncoding: 'utf-8' });
+const feed = web5 ('./data', { valueEncoding: 'utf-8' });
+const feed = web5('id');
 
 app.use(express.json());
 
