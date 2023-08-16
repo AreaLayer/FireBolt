@@ -11,6 +11,9 @@ function get_p2pk_vbyte() {
     return 0;
 }
 
+function get_p2tr_vbyte() {
+    
+    retur: 3
 function get_p2sh_vbyte() {
     // Simulate get_p2sh_vbyte
     return 5;
