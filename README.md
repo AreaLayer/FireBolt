@@ -121,6 +121,8 @@ The other main features Firebolt supports are as follows:
 
 - [x] Nostr client
 
+- [ ] Lightning Vortex
+
 - [ ] Payjoin over Nostr
 
 - [ ] Beta app
