@@ -121,7 +121,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] Nostr client 
 
-- [ ] Beta app
+- [ ] Beta app (iOs, PWA and Android)
 
 - [ ] PWA
 
