@@ -11,9 +11,9 @@ function get_p2pk_vbyte() {
     return 0;
 }
 
-function get_p2tr_vbyte() {
-    
-    retur: 3
+function get_p2tr_vbyte() {    
+    return: 3
+}
 function get_p2sh_vbyte() {
     // Simulate get_p2sh_vbyte
     return 5;
@@ -87,9 +87,6 @@ class OCCTx {
 
     // ... (rest of the methods)
 }
-
-// Translate the rest of the provided Python code, adapting and simulating functions as needed
-// Remember that JavaScript libraries might not provide exact equivalents for some functionalities
 
 // Simulate usage of the classes and functions
 const wallet = new Wallet();
