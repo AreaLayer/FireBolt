@@ -6,7 +6,7 @@ const {
   LDKConfig,
   LDKCredentials,
   LDKEvent,
-  BOL1T12,
+  BOL1T12Invoice,
 } = require('@lightningdevkit/ldk-garbagecollected');
 
 // Initialize the LDK with appropriate configuration and credentials
