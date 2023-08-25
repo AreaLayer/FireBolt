@@ -125,6 +125,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Payjoin over Nostr
 
+- [ ] BOLT12
+
 - [ ] Beta app
 
 - [ ] PWA
