@@ -127,6 +127,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] BOLT12
 
+- [ ] Taproot Channels 
+
 - [ ] Beta app
 
 - [ ] PWA
