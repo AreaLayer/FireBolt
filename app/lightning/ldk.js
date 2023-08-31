@@ -15,8 +15,6 @@ const config = {
 };
 
 const credentials = {
-  // Set your LDK credentials here
-};
 
 const ldk = new LDK(config, credentials);
 
@@ -42,6 +40,7 @@ console.log('Invoice Payment Request:', invoice.paymentRequest);
 
 // Listen for incoming payments
 ldk.on(/** event **/ LDKEvent.InvoicePaymentSettled, (data) => {
+ldk.on
   console.log('Invoice Payment Settled:', data);
 // Connect to a new peer
 const peerAddress: string = 'peer_node_address';
