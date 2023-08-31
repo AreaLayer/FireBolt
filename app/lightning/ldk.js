@@ -40,7 +40,7 @@ console.log('Invoice Payment Request:', invoice.paymentRequest);
 
 // Listen for incoming payments
 ldk.on(/** event **/ LDKEvent.InvoicePaymentSettled, (data) => {
-ldk.on
+ldk.on(/**event **/ LDKEVent.InvoiceBOLT12PaymentSettled, (data) => {
   console.log('Invoice Payment Settled:', data);
 // Connect to a new peer
 const peerAddress: string = 'peer_node_address';
