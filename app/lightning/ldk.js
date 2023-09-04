@@ -9,6 +9,16 @@ const {
   BOL1T12Invoice,
 } = require('@lightningdevkit/ldk-garbagecollected');
 
+// Replace the values below with your BOLT12 invoice data
+const bolt12InvoiceData = {
+  request: 'lnb1', // Replace with your BOLT12 invoice request
+  originNode: '0000', // Replace with the origin node's public key
+  amount: 1000, // Replace with the invoice amount in satoshis
+};
+
+// Create an invoice from the BOLT12 data
+const bolt12Invoice: BOLT12Invoice = bolt12InvoiceData;
+
 // Initialize the LDK with appropriate configuration and credentials
 const config = {
   // Set your LDK configuration options here
