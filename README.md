@@ -123,9 +123,9 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Lightning Vortex
 
-- [ ] Payjoin over Nostr
+- [x] Payjoin over Nostr
 
-- [ ] BOLT12
+- [x] BOLT12
 
 - [ ] Taproot Channels 
 
