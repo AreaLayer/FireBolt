@@ -44,17 +44,6 @@ const network = bitcoin.networks.testnet;
       return psbt.toBase64();
     }
 
-    async function handleFormSubmit(event) {
-      event.preventDefault();
-      
-      const input = document.getElementById('input').value;
-      const psbtBase64 = await generatePSBT(input);
-
-      const signedPsbtTextarea = document.getElementById('signed-psbt');
-      signedPsbtTextarea.value = psbtBase64;
-
-    }
-
       const sendMessage = async (event) => {
         console.log("sendMessage function called");
         event.preventDefault();
