@@ -29,10 +29,10 @@ const credentials = {
 const ldk = new LDK(config, credentials);
 
 // Replace the values below with your own testnet wallet information
-const macaroon = 'YOUR_MACAROON';
-const tlsCert = 'YOUR_TLS_CERT';
-const tor = 'YOUR_ONION'
-const destinationNode = 'DESTINATION_NODE';
+const macaroon = 'xxx';
+const tlsCert = 'xxx';
+const tor = 'xxxx'
+const destinationNode = 'xxx';
 const invoiceAmount = 1000; // in satoshis
 
 // Connect to the Lightning Network testnet
