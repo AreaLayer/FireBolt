@@ -2,9 +2,11 @@ const nostr = require('nostr-tools');
 const payjoin = require('payjoinjs-lib');
 const bitcoin = require('bitcoinjs-lib');
 
-const NETWORK = bitcoin.networks.testnet;
+const network = bitcoin.networks.testnet;
 
     const relay = NostrTools.relayInit('wss://nos.lol');
+    const relay = NostrTools.relayIniti('wss://relay.damus.io');
+    
       relay.connect();
 
       relay.on('connect', () => {
@@ -20,7 +22,7 @@ const NETWORK = bitcoin.networks.testnet;
     async function generatePSBT(input) {
       const [inputTxId, inputIndex] = input.split(':');
 
-      const psbt = new bitcoin.Psbt({ network: NETWORK, maximumFeeRate: 1000 });
+      const psbt = new bitcoin.Psbt({ network: NETWORK, maximumFeeRate: 100 });
       psbt.addInput({
         hash: inputTxId,
         index: parseInt(inputIndex),
@@ -28,7 +30,7 @@ const NETWORK = bitcoin.networks.testnet;
       });
 
       const outputs = [
-  { 'tb1qwwr95vf488glajmlqcm3fyhplurq8tpk0wjs5x': '0' },
+  { 'tb1q': '0' },
 ];
 
       outputs.forEach(output => {
@@ -93,13 +95,3 @@ const NETWORK = bitcoin.networks.testnet;
         alert(`Failed to send message: ${reason}`);
       });
     };
-
-    function resetFormFields() {
-      document.getElementById('input').value = '';
-      document.getElementById('signed-psbt').value = '';
-      document.getElementById('recipient-id').value = '';
-    }
-
-    document.getElementById('create-psbt').addEventListener('click', handleFormSubmit);
-    document.getElementById('submit-psbt').addEventListener('click', sendMessage);
-    window.addEventListener('load', resetFormFields);
