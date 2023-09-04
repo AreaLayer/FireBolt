@@ -2,7 +2,7 @@ const nostr = require('nostr-tools');
 const payjoin = require('payjoinjs-lib');
 const bitcoin = require('bitcoinjs-lib');
 
-const NETWORK = bitcoin.networks.testnet
+const Network = bitcoin.networks.testnet
 
 async function generatePSBT(input, output, senderSignedPsbt) {
       const [inputTxId, inputIndex] = input.split(':');
@@ -13,6 +13,7 @@ async function generatePSBT(input, output, senderSignedPsbt) {
       senderPsbt.data.inputs.forEach((input, index) => {
         psbt.addInput({
             ...senderPsbt.data.globalMap.unsignedTx.tx.ins[index],
+            ..senderPsbt.data.globalMap.unsigned.npub.ins[index],
             ...input
         });
     });
@@ -32,10 +33,16 @@ async function generatePSBT(input, output, senderSignedPsbt) {
 
     console.log(address);
     console.log(value);
-    
+
+    nostr.addNpub ({
+    address: address,
+    value: value
+    });
+
     psbt.addOutput({
       address: address,
       value: value,
     });
 
     return psbt.toBase64();
+    return. npub.toNpub();
