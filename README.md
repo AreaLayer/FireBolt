@@ -59,9 +59,9 @@ The other main features Firebolt supports are as follows:
 
 - Bitcoin
 
-- HyperCore 
+- Hypercore, Hyperswarm and Hyperdrive
 
-- TBD
+- TBD (Web5)
 
 - LSP
 
