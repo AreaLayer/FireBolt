@@ -34,7 +34,7 @@ async function generatePSBT(input, output, senderSignedPsbt) {
     console.log(address);
     console.log(value);
 
-    nostr.addNpub ({
+    nostr.addId ({
     address: address,
     value: value
     });
@@ -45,4 +45,4 @@ async function generatePSBT(input, output, senderSignedPsbt) {
     });
 
     return psbt.toBase64();
-    return. npub.toNpub();
+    return. npub.toId();
