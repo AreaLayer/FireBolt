@@ -4,12 +4,9 @@ const bitcoin = require('bitcoinjs-lib');
 
 const network = bitcoin.networks.testnet;
 
-    const relay = NostrTools.relayInit('wss://nos.lol');
-    const relay = NostrTools.relayIniti('wss://relay.damus.io');
-    
-      relay.connect();
+      web5.connect();
 
-      relay.on('connect', () => {
+      web5.on('connect', () => {
         console.log(`connected to ${relay.url}`);
       });
       relay.on('error', () => {
