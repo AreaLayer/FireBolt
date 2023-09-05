@@ -18,11 +18,11 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 **⚠️ We recommend using only small amounts.**
 
-- Android - Download latest APK (Soon)
+- **Android - Download latest APK (Soon)**
 
-- iPhone - Download latest TestFlight app (Soon)
+- **iPhone - Download latest TestFlight app (Soon)**
 
-- PWA (Soon)
+- **PWA (Soon)**
 
 ---
 ## Overview
