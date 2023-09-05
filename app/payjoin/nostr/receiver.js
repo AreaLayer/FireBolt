@@ -2,7 +2,7 @@ const nostr = require('nostr-tools');
 const payjoin = require('payjoinjs-lib');
 const bitcoin = require('bitcoinjs-lib');
 
-const Network = bitcoin.networks.testnet
+const NETWORK = bitcoin.networks.testnet
 
 async function generatePSBT(input, output, senderSignedPsbt) {
       const [inputTxId, inputIndex] = input.split(':');
