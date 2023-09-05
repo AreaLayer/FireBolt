@@ -77,7 +77,7 @@ The other main features Firebolt supports are as follows:
 
 - Management Nostr Keys
 
-- Contact list via Nostr (NPub) and DID (Web 5)
+- Contact list via Nostr (NPub) and DID (Web5)
 
 ## Roadmap
 
@@ -111,7 +111,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] TBD 
 
-- [x] PayJoin (BIP-78) integration beta (WIP)
+- [x] PayJoin (BIP-78) integration beta 
 
 - [x] Seed via BIP-32
 
@@ -124,6 +124,8 @@ The other main features Firebolt supports are as follows:
 - [ ] Lightning Vortex
 
 - [x] Payjoin over Nostr
+
+- [ ] Payjoin over Web5
 
 - [x] BOLT12
 
