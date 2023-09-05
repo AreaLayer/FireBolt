@@ -13,7 +13,7 @@ async function generatePSBT(input, output, senderSignedPsbt) {
       senderPsbt.data.inputs.forEach((input, index) => {
         psbt.addInput({
             ...senderPsbt.data.globalMap.unsignedTx.tx.ins[index],
-            ..senderPsbt.data.globalMap.unsigned.npub.ins[index],
+            ...senderPsbt.data.globalMap.unsigned.npub.ins[index],
             ...input
         });
     });
