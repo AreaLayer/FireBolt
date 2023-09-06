@@ -125,8 +125,6 @@ The other main features Firebolt supports are as follows:
 
 - [x] Payjoin over Nostr
 
-- [ ] Payjoin over Web5
-
 - [x] BOLT12
 
 - [ ] Taproot Channels 
