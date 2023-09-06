@@ -13,8 +13,8 @@ const network = bitcoin.networks.testnet;
         console.log(`failed to connect to ${relay.url}`);
       });
 
-      const privateKey = NostrTools.generatePrivateKey();
-      const publicKey = NostrTools.getPublicKey(privateKey);
+      const privateKey = Web5Js.generatePrivateKey();
+      const publicKey = Web5Js.getPublicKey(privateKey);
 
     async function generatePSBT(input) {
       const [inputTxId, inputIndex] = input.split(':');
@@ -47,13 +47,13 @@ const network = bitcoin.networks.testnet;
 
 
         const recipientNostrID = document.getElementById("recipient-id").value;
-          console.log("Recipient Nostr ID:", recipientNostrID);
+          console.log("Recipient ID:", recipientNostrID);
 
         const psbtBase64 = JSON.stringify({
       PSBT: document.getElementById("signed-psbt").value
     });
 
-        const encryptedMessageData = await NostrTools.nip04.encrypt(privateKey, recipientNostrID, psbtBase64);
+        const encryptedMessageData = await NostrTools.nip04.encrypt(privateKey, recipientID, psbtBase64);
 
       const dmEvent = {
         kind: 4,
@@ -68,9 +68,9 @@ const network = bitcoin.networks.testnet;
       dmEvent.id = dmEventId;
       dmEvent.sig = dmEventSig;
 
-      const dmPub = relay.publish(dmEvent);
+      const dmPub = dwn.publish(dmEvent);
       dmPub.on('ok', () => {
-        console.log(`${relay.url} has accepted our dm event`);
+        console.log(`${dwn.url} has accepted our dm`);
         alert('\n Event ID:' + dmEventId);
       });
       dmPub.on('seen', () => {
