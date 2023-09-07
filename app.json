@@ -11,7 +11,7 @@
       "backgroundColor": "#ffffff"
     },
     "android": {
-      "package": "com.yourappname",
+      "package": "com.fireboolt",
       "config": {
         "googleMaps": {
           "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
@@ -19,13 +19,13 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "com.yourappname",
+      "bundleIdentifier": "com.firebolt",
       "config": {
         "googleMapsApiKey": "YOUR_GOOGLE_MAPS_API_KEY"
       }
     },
     "platforms": ["ios", "android"],
-    "description": "Your app description here",
+    "description": "Non custodial wallet with LN, Coinjoin, Payjoin, Nostr and more",
     "extra": {
       "someCustomConfig": true
     }
