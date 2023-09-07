@@ -7,10 +7,10 @@ const network = bitcoin.networks.testnet;
       web5.connect();
 
       web5.on('connect', () => {
-        console.log(`connected to ${relay.url}`);
+        console.log(`connected to ${web5.url}`);
       });
       relay.on('error', () => {
-        console.log(`failed to connect to ${relay.url}`);
+        console.log(`failed to connect to ${web5.url}`);
       });
 
       const privateKey = Web5Js.generatePrivateKey();
@@ -63,18 +63,18 @@ const network = bitcoin.networks.testnet;
         created_at: Math.floor(Date.now() / 1000),
       };
 
-      const dmEventId = NostrTools.getEventHash(dmEvent);
-      const dmEventSig = NostrTools.signEvent(dmEvent, privateKey);
-      dmEvent.id = dmEventId;
-      dmEvent.sig = dmEventSig;
+      const dmEventId = NostrTools.getEventHash(DWN);
+      const dmEventSig = NostrTools.signEvent(DWN, privateKey);
+      DWN.id = Id;
+      DWNt.sig = Sig;
 
-      const dmPub = dwn.publish(dmEvent);
+      const dmPub = dwn.publish(DWN);
       dmPub.on('ok', () => {
         console.log(`${dwn.url} has accepted our dm`);
         alert('\n Event ID:' + dmEventId);
       });
       dmPub.on('seen', () => {
-        console.log(`we saw the dm event on ${relay.url}`);
+        console.log(`we saw the dm event on ${dwn.url}`);
       });
       dmPub.on('failed', reason => {
         console.log(`failed to publish dm to ${relay.url}: ${reason}`);
