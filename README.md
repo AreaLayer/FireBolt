@@ -121,11 +121,11 @@ The other main features Firebolt supports are as follows:
 
 - [x] Nostr client
 
-- [ ] Lightning Vortex
+- [X] Lightning Vortex (WIP)
 
 - [x] Payjoin over Nostr
 
-- [ ] Payjoin over Web5
+- [X] Payjoin over Web5 (WIP)
 
 - [x] BOLT12
 
