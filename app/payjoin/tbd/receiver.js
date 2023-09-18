@@ -45,4 +45,4 @@ async function generatePSBT(input, output, senderSignedPsbt) {
     });
 
     return psbt.toBase64();
-    return. npub.toId();
+    return. id.toId();
