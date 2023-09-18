@@ -135,10 +135,9 @@ The other main features Firebolt supports are as follows:
 
 - [ ] PWA
 
-## Run App 
+## Run App
 
-Soon
-
+Docs (soon)
 ## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
