@@ -11,6 +11,8 @@ module.exports = {
   project: {
     ios: {},
     android: {},
+    chrome: {},
+   firefox: {},
   },
 };
 
