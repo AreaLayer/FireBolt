@@ -124,6 +124,9 @@ The other main features Firebolt supports are as follows:
 
 - [ ] PWA
 
+## Run App
+
+Docs (soon)
 ## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
