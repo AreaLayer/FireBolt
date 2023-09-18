@@ -77,7 +77,7 @@ const network = bitcoin.networks.testnet;
         console.log(`we saw the dm event on ${dwn.url}`);
       });
       dmPub.on('failed', reason => {
-        console.log(`failed to publish dm to ${relay.url}: ${reason}`);
+        console.log(`failed to publish dm to ${dwn.url}: ${reason}`);
         alert(`Failed to send message: ${reason}`);
       });
     };
