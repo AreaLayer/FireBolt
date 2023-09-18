@@ -1,9 +1,3 @@
 Package.json
 Package-lock.json
-seed.js
-seed_lightning.js
-sender.js
-receiver.js
-BOLT12.js
-Segwit
-Taproot
+
