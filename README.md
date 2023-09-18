@@ -125,7 +125,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] Payjoin over Nostr
 
-- [X] Payjoin over Web5 (WIP)
+- [X] Payjoin over Web5 
 
 - [x] BOLT12
 
