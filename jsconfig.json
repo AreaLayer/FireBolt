@@ -1,7 +1,11 @@
 {
 "Nostr":"Event",
-"Npub",
+"Npub":"Event":"Kind:0"
 "Note",
 "Relay",
-"ID"
+"ID",
+"DWN",
+"Payjoin",
+"sender",
+"receiver",
 }
