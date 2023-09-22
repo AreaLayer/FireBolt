@@ -1,0 +1,6 @@
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="app_name">MyNoteApp</string>
+    <string name="note_title_hint">Enter note title</string>
+    <string name="note_content_hint">Enter note content</string>
+</resources>
