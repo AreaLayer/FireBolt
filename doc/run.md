@@ -51,10 +51,6 @@ This starts the Metro bundler, which bundles your JavaScript code and serves it 
 **8. Monitor and Debug:**
 You can monitor your app's output and debug it using the developer tools provided by your chosen framework or by using browser developer tools if your app runs in a WebView.
 
-Remember that the steps might vary depending on the specific framework you're using and any additional requirements of your app.
-
-Keep in mind that running JavaScript apps on Android involves several components working together, so issues can arise at different stages. Be prepared to troubleshoot and refer to the documentation for the framework you're using for more specific guidance.
-
 ## Run App (Dev Mode) for iOS
 
 Running Fiirebolt on iOS. Here's a step-by-step guide:
@@ -107,9 +103,6 @@ This starts the Metro bundler, which bundles your JavaScript code and serves it 
 **8. Monitor and Debug:**
 You can monitor your app's output and debug it using the developer tools provided by your chosen framework or by using browser developer tools if your app runs in a WebView.
 
-Please note that the specific steps may vary depending on the framework you're using and any additional requirements of your app. Running JavaScript apps on iOS involves several components working together, so be prepared to troubleshoot and refer to the documentation for the framework you're using for more specific guidance.
-
-Certainly, here's a guide for running your Progressive Web App (PWA) in development mode:
 
 ## Run PWA (Dev Mode)
 
@@ -151,7 +144,3 @@ To ensure your PWA works well on mobile devices, use your mobile browser or a to
 
 **8. Progressive Enhancement:**
 Consider implementing progressive enhancement techniques to provide a seamless experience on a wide range of devices and network conditions.
-
-Remember that the steps may vary depending on your specific project setup, build tools, and development server. Make sure your PWA adheres to best practices for web performance, security, and accessibility. Additionally, test your PWA on different browsers and devices to ensure compatibility and a smooth user experience.
-
-### Run App for PWA
