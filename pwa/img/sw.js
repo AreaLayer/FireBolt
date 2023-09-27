@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wallet-app-cache-v1';
+const CACHE_NAME = 'wallet-app';
 const urlsToCache = [
   '/',
   '/index.html',
