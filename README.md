@@ -129,7 +129,9 @@ The other main features Firebolt supports are as follows:
 
 - [x] BOLT12
 
-- [ ] Taproot Channels 
+- [ ] Taproot Channels
+  
+- [ ] Finish modules iOs, Androind and PWA with React
 
 - [ ] Beta app (iOs, PWA and Android)
 
