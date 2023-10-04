@@ -38,6 +38,7 @@ const sendPayment = () => {
     dest: destinationNode,
     amt: invoiceAmount,
     amt: preImage,
+    pstr: preImage,
   };
 
   lightning.sendPayment(options, (error, response) => {
