@@ -121,8 +121,6 @@ The other main features Firebolt supports are as follows:
 
 - [x] Nostr client
 
-- [X] Lightning Vortex (WIP)
-
 - [x] Payjoin over Nostr
 
 - [X] Payjoin over Web5 
