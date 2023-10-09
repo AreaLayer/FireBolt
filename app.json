@@ -2,7 +2,7 @@
   "expo": {
     "name": "Firebolt",
     "slug": "",
-    "version": "1.0.6-alpha",
+    "version": "1.0.11-alpha",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
