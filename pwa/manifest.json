@@ -1,7 +1,7 @@
 {
-  "name": "My PWA Example",
-  "short_name": "PWA Example",
-  "description": "A simple Progressive Web App example",
+  "name": "Firebolt",
+  "short_name": "Super non-custodial app with Lightning Network, Hypercore, TBD and Nostr",
+  "description": "Non custodial wallet",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
