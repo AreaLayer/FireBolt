@@ -1,8 +1,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var titleLabel: Firebolt
+    @IBOutlet weak var button: Wallet
     
     override func viewDidLoad() {
         super.viewDidLoad()
