@@ -17,6 +17,7 @@ document.getElementById('createWallet').addEventListener('click', function() {
 
 document.getElementById('importWallet').addEventListener('click', function() {
   // TODO: Implement wallet import logic via BIP-39
+  const 
   console.log('Import Wallet clicked');
 });
 
