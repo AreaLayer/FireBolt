@@ -12,12 +12,13 @@ function showPage(pageId) {
 // Home page
 document.getElementById('createWallet').addEventListener('click', function() {
   // TODO: Implement wallet creation logic
+  const createwallet = {
   console.log('Create Wallet clicked');
 });
 
 document.getElementById('importWallet').addEventListener('click', function() {
   // TODO: Implement wallet import logic via BIP-39
-  const 
+  const importesllet = {
   console.log('Import Wallet clicked');
 });
 
