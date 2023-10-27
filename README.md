@@ -9,7 +9,7 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
   </a>
 </p>
 
-<h3 align="center">FireBolt</h3>
+<h3 align="center">FireBolt⚡</h3>
 
 
 ---
