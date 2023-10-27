@@ -18,6 +18,8 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 **⚠️ We recommend using only small amounts.**
 
+**⚠️ No use this BIP-39 in others wallets**
+
 - **Android - Download latest APK (Soon)**
 
 - **iPhone - Download latest TestFlight app (Soon)**
