@@ -14,11 +14,13 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 ---
 
-**⚠️ Alpha software may put your money at risk.**
+**⚠️ Alpha software may put your money at risk**
 
-**⚠️ We recommend using only small amounts.**
+**⚠️ We recommend using only small amounts**
 
 **⚠️ No use this BIP-39 in others wallets**
+
+**⚠️ Use small amounts for test Coinjoin**
 
 - **Android - Download latest APK (Soon)**
 
