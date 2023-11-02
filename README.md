@@ -139,6 +139,8 @@ The other main features Firebolt supports are as follows:
 
 - [x] PWA (WIP)
 
+- [ ] RBF
+
 ## Run App
 
 Docs (soon)
