@@ -141,6 +141,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] RBF
 
+- [ ] Breez
+
 ## Run App
 
 Docs (soon)
