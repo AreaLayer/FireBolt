@@ -58,6 +58,8 @@ The other main features Firebolt supports are as follows:
 
 ⚛️ Coinjoin and Payjoin for privacy
 
+🫂Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
+
 ## Feature
 
 - Lightning Network (LND/LDK/CLN/Greenlight)
@@ -85,6 +87,9 @@ The other main features Firebolt supports are as follows:
 - Management Nostr Keys
 
 - Contact list via Nostr (NPub) and DID (Web5)
+
+- Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
+
 
 ## Roadmap
 
@@ -145,6 +150,9 @@ The other main features Firebolt supports are as follows:
 - [ ] RBF
 
 - [ ] Breez
+
+- [ ] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
+
 
 ## Run App
 
