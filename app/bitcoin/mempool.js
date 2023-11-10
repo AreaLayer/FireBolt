@@ -6,3 +6,5 @@ const { bitcoin } = mempoolJS();
 // (optional) your custom endpoints
 const { bitcoin } = mempoolJS({
   hostname: 'mempool.space', 
+
+// broadcast transactions
