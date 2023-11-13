@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your PWA Title</title>
+    <!-- Add your meta tags, styles, and other headers here -->
 
+    <!-- Add a manifest file for PWA -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <!-- Your app content goes here -->
+
+    <!-- Include your JavaScript and other assets -->
+    <script src="main.js"></script>
+
+    <!-- Include a service worker for offline functionality -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+</body>
+</html>
