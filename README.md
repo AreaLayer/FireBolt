@@ -165,6 +165,15 @@ The other main features Firebolt supports are as follows:
 ## Run App
 
 Docs (soon)
+
 ## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
+
+
+## Contributors
+
+<a align="center" href="https://github.com/AreaLayer/Firebolt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AreaLayer/Firebolt" />
+</a>
+
