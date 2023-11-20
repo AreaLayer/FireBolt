@@ -153,7 +153,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Breez
 
-- [ ] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
+- [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
 
 - [ ] Neutrino
 
