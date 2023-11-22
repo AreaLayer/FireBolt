@@ -1,5 +1,5 @@
 Name: firebolt
-Type: Binary
+Type: Cryptography, Lightning
 Kind: FOSS
 License: MIT License
 Language: Javascript, Klotin, Rust and Swift
