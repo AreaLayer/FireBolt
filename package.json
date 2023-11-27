@@ -1,8 +1,8 @@
 {
-"name":"FireBolt"
-"version":"1.0.9-alpha"
-"license":"MIT"
-"author": "AreaLayer"
+"name":"FireBolt",
+"version":"1.0.0-beta.rc2",
+"license":"MIT",
+"author": "AreaLayer",
   
 },
 "package"

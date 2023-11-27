@@ -1,6 +1,9 @@
 # FireBolt ⚡
 
 
+[![Bitcoin-only](https://img.shields.io/badge/bitcoin-only-FF9900?logo=bitcoin)](https://twentyone.world)
+[![LN](https://img.shields.io/badge/lightning-792EE5?logo=lightning)](https://mempool.space/lightning)
+
 App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
 
 <p align="center">
@@ -9,14 +12,18 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
   </a>
 </p>
 
-<h3 align="center">FireBolt</h3>
+<h3 align="center">FireBolt⚡</h3>
 
 
 ---
 
-**⚠️ Alpha software may put your money at risk.**
+**⚠️ Alpha software may put your money at risk**
 
-**⚠️ We recommend using only small amounts.**
+**⚠️ We recommend using only small amounts**
+
+**⚠️ No use this BIP-39 in others wallets**
+
+**⚠️ Use small amounts for test Coinjoin**
 
 - **Android - Download latest APK (Soon)**
 
@@ -51,6 +58,8 @@ The other main features Firebolt supports are as follows:
 
 ⚛️ Coinjoin and Payjoin for privacy
 
+🫂Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
+
 ## Feature
 
 - Lightning Network (LND/LDK/CLN/Greenlight)
@@ -78,6 +87,11 @@ The other main features Firebolt supports are as follows:
 - Management Nostr Keys
 
 - Contact list via Nostr (NPub) and DID (Web5)
+
+- Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
+
+- Breez SDK
+
 
 ## Roadmap
 
@@ -129,15 +143,37 @@ The other main features Firebolt supports are as follows:
 
 - [X] Taproot Channels (WIP)
   
-- [ ] Finish modules iOs, Androind and PWA with React
+- [x] Finish modules iOs, Androind and PWA with React (WIP)
 
-- [ ] Beta app (iOs, PWA and Android)
+- [x] Beta app (iOs, PWA and Android) [WIP]
 
-- [ ] PWA
+- [x] PWA (WIP)
+
+- [ ] RBF
+
+- [ ] Breez
+
+- [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
+
+- [ ] Neutrino
+
+- [ ] Hardwallets (Trezor, Bitbox, Ledger)
+
+- [ ] Paynym
+
 
 ## Run App
 
 Docs (soon)
+
 ## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
+
+
+## Contributors
+
+<a align="center" href="https://github.com/AreaLayer/Firebolt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=AreaLayer/Firebolt" />
+</a>
+
