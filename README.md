@@ -34,7 +34,7 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 ---
 ## Overview
 
-Save your self sovereign
+Cypherpunk App
 
 Firebolt is a wallet designed by a Bitcoiner for Bitcoiners looking for privacy using Payjoin, Lightning Network, Coinjoin, Bitcoin, Hypercore, Nostr and TBD
 
@@ -55,6 +55,8 @@ The other main features Firebolt supports are as follows:
 📱 Contact list via Npub or DID
 
 🪙 Payments via Lightning Network
+
+⚡Non custodial via on-chain and Lightninng
 
 ⚛️ Coinjoin and Payjoin for privacy
 
