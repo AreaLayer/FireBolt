@@ -12,7 +12,8 @@ function showPage(pageId) {
 // Home page
 document.getElementById('createWallet').addEventListener('click', function() {
   // TODO: Implement wallet creation logic
-  const 
+  const walet = createwallet;
+  
   console.log('Create Wallet clicked');
 });
 
