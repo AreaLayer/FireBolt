@@ -163,6 +163,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Paynym
 
+- [ ] Complete PRs
+
 
 ## Run App
 
