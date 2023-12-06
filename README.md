@@ -166,6 +166,8 @@ The other main features Firebolt supports are as follows:
 - [ ] Complete PRs
 
 - [ ] Release Beta wallet
+    
+- [ ] Compile code 
 
 
 ## Run App
