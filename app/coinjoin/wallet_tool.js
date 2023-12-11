@@ -8,8 +8,9 @@ function cjxt_single() {
 }
 
 function load_coinjoinxt_config() {
-    // Simulate loading the coinjoinxt config
+    // Loading the coinjoinxt config
     const coinjoinxt_config = new coinjoinxt_config
+    
   
 }
 
