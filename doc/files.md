@@ -1,4 +1,4 @@
-# Files for Firebolt wallet
+# Files for Firebolt wallet ⚡
 
 Discover files present into wallet
 
