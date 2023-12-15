@@ -4,4 +4,22 @@ Discover files present into wallet
 
 ## Files
 
-TBD
+- App
+- Bitcoin
+- Coinjoin
+- Data
+- Hypercore
+- Lightning
+- Nostr
+- Pages
+- Payjoin
+- Rust
+- Server
+- TBD
+- UI
+- Android
+- Components
+- Constants
+- iOs
+- PWA
+- Src
