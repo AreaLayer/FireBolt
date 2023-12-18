@@ -3,7 +3,7 @@ const bitcoin = require('bitcoinjs-lib');
 
 // Simulate the required functions from jmclient and configure modules
 function cjxt_single() {
-    // Simulate the return value of cjxt_single function
+    // The return value of cjxt_single function
     return { homedir: '/path/to/homedir' };
 }
 
@@ -19,10 +19,10 @@ function wallet_tool_main(walletDir) {
     return 'Simulated wallet_tool_main result';
 }
 
-// Simulate Python's optparse library with command line arguments
+// Optparse library with command line arguments
 const optionParser = new OptionParser();
 
-// Simulate Python's optparse options (if any)
+// Optparse options (if any)
 // ...
 
 // Parse command line arguments (simulated in this example)
