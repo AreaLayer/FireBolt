@@ -64,7 +64,7 @@ The other main features Firebolt supports are as follows:
 
 ## Feature
 
-- Lightning Network (LND/LDK/CLN/Greenlight)
+- Lightning Network (LND/LDK/CLN)
 
 - Nostr
 
@@ -93,6 +93,8 @@ The other main features Firebolt supports are as follows:
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
 
 - Breez SDK
+
+- Greenlight
 
 
 ## Roadmap
