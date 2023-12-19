@@ -56,7 +56,7 @@ The other main features Firebolt supports are as follows:
 
 🪙 Payments via Lightning Network
 
-⚡Non custodial via on-chain and Lightninng
+⚡Non custodial via on-chain and Lightning Network
 
 ⚛️ Coinjoin and Payjoin for privacy
 
