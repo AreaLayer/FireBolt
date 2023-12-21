@@ -90,6 +90,8 @@ The other main features Firebolt supports are as follows:
 
 - Management Nostr Keys
 
+- Miniscript
+
 - Contact list via Nostr (NPub) and DID (Web5)
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
