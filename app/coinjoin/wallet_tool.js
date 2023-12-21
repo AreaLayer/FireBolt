@@ -1,3 +1,8 @@
+import { coinjoinXT, Config};
+from '/app/coinjoin';
+
+
+
 const fs = require('fs');
 const bitcoin = require('bitcoinjs-lib');
 
