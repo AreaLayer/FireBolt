@@ -169,6 +169,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Paynym
 
+- [ ] WASM
+
 - [ ] Complete PRs
 
 - [ ] Release Beta wallet
