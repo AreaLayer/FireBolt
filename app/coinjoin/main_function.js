@@ -2,78 +2,81 @@ const bitcoin = require('bitcoinjs-lib');
 const lightning = require('lightning-js');
 const ldk = require('ldk-node-js');
 const testnet = bitcoin.network.testnet;
+const { alice, bob, carol, dave, eve, mallory } = require('./wallets.json')
 
 // Connect to the Bitcoin testnet network
 const provider = 'https://testnet.blockchain.info/api';
 const explorer = 'https://mempool.space/testnet/tx'
 
-// Generate a master public key (xpub) for the wallet
-const masterPublicKey = 'xpub...';
 
-// Derive a new child public key for each CoinJoin transaction
-function deriveAddress(index) {
-  const node = bitcoin.bip32.fromBase58(masterPublicKey);
-  const childNode = node.derivePath(`0/${index}`);
-  const publicKey = childNode.publicKey;
-  const address = bitcoin.payments.p2pkh({ pubkey: publicKey }).address;
-  return address;
-}
+/// Alice to Carol
+const keyPairAlice1 = bitcoin.ECPair.fromWIF(alice[1].wif, network)
+const keyPairCarol1 = bitcoin.ECPair.fromWIF(carol[1].wif, network)
+const keyPairEve1 = bitcoin.ECPair.fromWIF(eve[1].wif, network)
+const keyPairMallory1 = bitcoin.ECPair.fromWIF(mallory[1].wif, network)
 
-// Index 
-const coinJoinIndex = 3; // Index of the CoinJoin transaction
-const coinJoinAddress = deriveAddress(coinJoinIndex);
+// Get TX
+const nonWitnessUtxo =  Buffer.from('TX_HEX', 'hex') 
 
-console.log('CoinJoin address:', coinJoinAddress);
-// Sample participant inputs
-const participant1Input = {
-  txid: '...',  // Transaction ID of the UTXO
-  vout: 0,      // Output index of the UTXO
-  privateKey: '...',  // Private key corresponding to the UTXO
-};
 
-const participant2Input = {
-  txid: '...',
-  vout: 1,
-  privateKey: '...',
-};
+// Each participant signs their input.
+const psbt = new bitcoin.Psbt({network})
+  .addInput({
+    hash: 'TX_ID',
+    index: TX_OUT,
+    nonWitnessUtxo
+  }) 
+  .addInput({
+    hash: 'TX_ID',
+    index: TX_OUT,
+    nonWitnessUtxo
+  })
+  .addInput({
+    hash: 'TX_ID',
+    index: TX_OUT,
+    nonWitnessUtxo
+  })
+  .addInput({
+    hash: 'TX_ID',
+    index: TX_OUT,
+    nonWitnessUtxo
+  })
+  .addOutput({
+    address: bob[1].p2pkh,
+    value: 2e7,
+  }) 
+  .addOutput({
+    address: dave[1].p2pkh,
+    value: 2e7,
+  })
+  .addOutput({
+    address: mallory[2].p2pkh,
+    value: 2e7,
+  })
+  .addOutput({
+    address: alice[2].p2pkh,
+    value: 2e7,
+  })
+  .addOutput({
+    address: eve[1].p2pkh,
+    value: 5e6 - 5e4,
+  }) 
+  .addOutput({
+    address: mallory[1].p2pkh,
+    value: 1e7 - 5e4,
+  })
 
-// Sample outputs
-const output1 = {
-  address: '...',  // Destination address for output 1
-  value: 0.01,     // Value in BTC
-};
+// Finalize PSBT
 
-const output2 = {
-  address: '...',  // Destination address for output 2
-  value: 0.02,
-};
+psbt.finalizeAllInputs()
 
-// Create a new Bitcoin transaction
-const txb = new bitcoin.TransactionBuilder(bitcoin.networks.bitcoin);
 
-// Add participant inputs to the transaction
-txb.addInput(participant1Input.txid, participant1Input.vout);
-txb.addInput(participant2Input.txid, participant2Input.vout);
+console.log('Transaction hexadecimal:')
+console.log(psbt.extractTransaction().toHex())
 
-// Add outputs to the transaction
-txb.addOutput(output1.address, output1.value * 1e8);
-txb.addOutput(output2.address, output2.value * 1e8);
 
-// Sign the inputs with respective private keys
-const keyPair1 = bitcoin.ECPair.fromWIF(participant1Input.privateKey);
-const keyPair2 = bitcoin.ECPair.fromWIF(participant2Input.privateKey);
 
-txb.sign(0, keyPair1, null, null, participant1Input.value);
-txb.sign(1, keyPair2, null, null, participant2Input.value);
 
-// Build the final transaction
-const tx = txb.build();
 
-// Serialize the transaction for broadcasting
-const serializedTx = tx.toHex();
 
-console.log('CoinJoinXT transaction:', serializedTx);
 
-const AcceptInvoice = {
-txid:
-invoice:
