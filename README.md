@@ -163,6 +163,8 @@ The other main features Firebolt supports are as follows:
 
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
 
+- [ ] Submarine Swap
+
 - [ ] Neutrino
 
 - [ ] Hardwallets (Trezor, Bitbox, Ledger)
