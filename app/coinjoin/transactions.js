@@ -1,3 +1,5 @@
 const bitcoin = require('bitcoinjs-lib');
 
-async function trasaction
+async function trasaction = {
+  utxo: uxto,
+  input: input,
