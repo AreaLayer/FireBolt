@@ -17,7 +17,7 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 ---
 
-**⚠️ Alpha software may put your money at risk**
+**⚠️ Beta software may put your money at risk**
 
 **⚠️This wallet is WIP**
 
