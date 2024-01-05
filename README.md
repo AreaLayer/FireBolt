@@ -165,6 +165,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Submarine Swap
 
+- [ ] Backup for TBD keys
+
 - [ ] Neutrino
 
 - [ ] Hardwallets (Trezor, Bitbox, Ledger)
