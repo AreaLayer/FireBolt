@@ -96,8 +96,6 @@ The other main features Firebolt supports are as follows:
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
 
-- Breez SDK
-
 - Greenlight
 
 
@@ -158,8 +156,6 @@ The other main features Firebolt supports are as follows:
 - [x] PWA (WIP)
 
 - [ ] RBF
-
-- [ ] Breez
 
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
 
