@@ -179,7 +179,9 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Release Beta wallet in 2024
     
-- [ ] Compile code 
+- [ ] Compile code
+
+- [ ] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
 
 
 ## Run App
