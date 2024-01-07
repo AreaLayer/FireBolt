@@ -96,8 +96,6 @@ The other main features Firebolt supports are as follows:
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
 
-- Greenlight
-
 
 ## Roadmap
 
@@ -111,7 +109,6 @@ The other main features Firebolt supports are as follows:
 
 - [x] LDK integration 
 
-- [x] GreenLight integration
 
 - [X] LND integration
 
