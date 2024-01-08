@@ -4,7 +4,7 @@ Discover files present into wallet
 
 ## Files
 
-- App
+- App: Main functions around App
 - Bitcoin
 - Coinjoin
 - Data
