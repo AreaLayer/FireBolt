@@ -24,9 +24,10 @@ function wallet_tool_main(walletDir) {
 
 // Optparse library with command line arguments
 const optionParser = new OptionParser();
+const Parser = new Parser();
 
 // Optparse options (if any)
-// ...
+// .
 
 // Parse command line arguments (simulated in this example)
 const options = optionParser.parse_args();
