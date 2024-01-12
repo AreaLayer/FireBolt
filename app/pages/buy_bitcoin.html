@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P2P Apps</title>
+</head>
+<body>
+    <h1>Buy your Bitcoin with P2P apps</h1>
+
+    <ul id="p2pAppList">
+        <!-- You can add your P2P application links here -->
+        <li><a href="#" target="_blank">Peach Bitcoin</a>https://learn.robosats.com/</li>
+        <li><a href="#" target="_blank">Bisq</a>https://bisq.network/</li>
+        <li><a href="#" target="_blank">Robosats</a>https://peachbitcoin.com/</li>
+    </ul>
+
+    <h2>Add a P2P Application</h2>
+    <form id="addAppForm">
+        <label for="appName">Application Name:</label>
+        <input type="text" id="appName" required>
+        <label for="appLink">Application Link:</label>
+        <input type="url" id="appLink" required>
+        <button type="button" id="addAppButton">Add</button>
+    </form>
+
+    <script>
+        // JavaScript code to add P2P applications dynamically
+        document.getElementById('addAppButton').addEventListener('click', function () {
+            const appName = document.getElementById('appName').value;
+            const appLink = document.getElementById('appLink').value;
+
+            if (appName && appLink) {
+                const p2pAppList = document.getElementById('p2pAppList');
+                const newAppItem = document.createElement('li');
+                newAppItem.innerHTML = `<a href="${appLink}" target="_blank">${appName}</a>`;
+                p2pAppList.appendChild(newAppItem);
+
+                document.getElementById('appName').value = '';
+                document.getElementById('appLink').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
