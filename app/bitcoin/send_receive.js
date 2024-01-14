@@ -13,6 +13,8 @@ const destinationAddress = 'DESTINATION_ADDRESS';
 const provider = 'https://testnet.blockchain.info/api';
 const explorer = 'https://live.blockcypher.com/btc-testnet/tx/';
 const NETWORK = bitcoin.networks.testnet;
+const provider = 'https://mainnet.blockchain.info/api';
+const explorer = 'https://live.blockcypher.com/btc-mainnet/tx/';
 
 // Create a new Bitcoin testnet wallet
 const wallet = new bitcoin.ECPair.fromPrivateKey(Buffer.from(privateKey, 'hex'), { network: testnet });

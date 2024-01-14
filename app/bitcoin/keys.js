@@ -16,7 +16,7 @@ const redeemScript = bitcoin.script.multisig.output.encode(2, [pubKey1, pubKey2,
 // Generate a P2SH address from the redeem script
 const multisigAddress = bitcoin.payments.p2sh({
   redeem: { output: redeemScript, network: bitcoin.networks.bitcoin },
-  network: bitcoin.testnet.bitcoin
+  network: bitcoin.networks.bitcoin
 }).address;
 
 console.log('Multisig Address:', multisigAddress);
