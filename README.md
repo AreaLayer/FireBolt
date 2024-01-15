@@ -17,7 +17,9 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 ---
 
-**⚠️ Alpha software may put your money at risk**
+**⚠️ Beta software may put your money at risk**
+
+**⚠️This wallet is WIP**
 
 **⚠️ We recommend using only small amounts**
 
@@ -56,7 +58,7 @@ The other main features Firebolt supports are as follows:
 
 🪙 Payments via Lightning Network
 
-⚡Non custodial via on-chain and Lightninng
+⚡Non custodial via on-chain and Lightning Network
 
 ⚛️ Coinjoin and Payjoin for privacy
 
@@ -64,7 +66,7 @@ The other main features Firebolt supports are as follows:
 
 ## Feature
 
-- Lightning Network (LND/LDK/CLN/Greenlight)
+- Lightning Network (LND/LDK/CLN)
 
 - Nostr
 
@@ -88,11 +90,11 @@ The other main features Firebolt supports are as follows:
 
 - Management Nostr Keys
 
+- Miniscript
+
 - Contact list via Nostr (NPub) and DID (Web5)
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
-
-- Breez SDK
 
 
 ## Roadmap
@@ -107,7 +109,6 @@ The other main features Firebolt supports are as follows:
 
 - [x] LDK integration 
 
-- [x] GreenLight integration
 
 - [X] LND integration
 
@@ -153,9 +154,11 @@ The other main features Firebolt supports are as follows:
 
 - [ ] RBF
 
-- [ ] Breez
-
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
+
+- [ ] Submarine Swap
+
+- [ ] Backup for TBD keys
 
 - [ ] Neutrino
 
@@ -163,11 +166,15 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Paynym
 
+- [ ] WASM
+
 - [ ] Complete PRs
 
-- [ ] Release Beta wallet
+- [ ] Release Beta wallet in 2024
     
-- [ ] Compile code 
+- [ ] Compile code
+
+- [ ] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
 
 
 ## Run App
