@@ -1,6 +1,5 @@
 const bitcoin = require('bitcoinjs-lib');
-const bitcoinLib = require('bitcoinlib');
-const { Policy, Descriptor, Miniscript } = miniscript
+const { Policy, Descriptor, Miniscript } = require ('miniscriptjs-lib');
 
 // Create a new Miniscript object
 const ms = Miniscript.fromString('thresh(2,pk(A),pk(B),pk(C))');

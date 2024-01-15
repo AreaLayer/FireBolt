@@ -7,10 +7,9 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| alpha-v1.0.8 | :white_check_mark: |
-| alpha-v1.0.9 |  :white_check_mark: |
-| beta-v1.0.0 | 
-main
+| alpha-v1.0.10 |  :white_check_mark: |
+| beta-v1.0.0 | ❎
+
 ## Reporting a Vulnerability
 
 Use this section to tell people how to report a vulnerability.
