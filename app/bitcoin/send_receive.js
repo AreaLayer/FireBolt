@@ -10,6 +10,9 @@ const publicKey = 'YOUR_PUBLIC_KEY';
 const destinationAddress = 'DESTINATION_ADDRESS';
 
 // Connect to the Bitcoin testnet network
+const provider = 'https://testnet.blockchain.info/api';
+const explorer = 'https://live.blockcypher.com/btc-testnet/tx/';
+const NETWORK = bitcoin.networks.testnet;
 const provider = 'https://mainnet.blockchain.info/api';
 const explorer = 'https://live.blockcypher.com/btc-mainnet/tx/';
 
