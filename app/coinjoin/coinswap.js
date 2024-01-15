@@ -1,9 +1,9 @@
 const bitcoin = require('bitcoinjs-lib');
-const firebolt = require('algorithm');
+const firebolt = require('main_function');
 const axios = require('axios');
 
 // Bitcoin network configuration
-const network = bitcoin.testnet.bitcoin;
+const network = bitcoin.networks.testnet;
 
 // Generate a new Bitcoin address
 function generateAddress() {

@@ -144,3 +144,7 @@ To ensure your PWA works well on mobile devices, use your mobile browser or a to
 
 **8. Progressive Enhancement:**
 Consider implementing progressive enhancement techniques to provide a seamless experience on a wide range of devices and network conditions.
+
+## Run App (User mode)
+
+Soon
