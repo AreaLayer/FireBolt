@@ -10,7 +10,8 @@ const explorer = 'https://mempool.space/testnet/tx'
 
 // TODO PTG function
 
-const KeyPair
+const TX
+const TX
 
 /// Alice to Carol
 const keyPairAlice1 = bitcoin.ECPair.fromWIF(alice[1].wif, network)
