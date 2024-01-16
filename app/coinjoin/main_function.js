@@ -73,6 +73,7 @@ psbt.finalizeAllInputs()
 
 console.log('Transaction hexadecimal:')
 console.log(psbt.extractTransaction().toHex())
+console.log(taproot.extractTransaction().toHex())
 
 
 
