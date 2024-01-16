@@ -12,6 +12,7 @@ const explorer = 'https://mempool.space/testnet/tx'
 
 const TX = bitcoin.tx.
 const TX = bitcoin.tx.
+const TX
 
 /// Alice to Carol
 const keyPairAlice1 = bitcoin.ECPair.fromWIF(alice[1].wif, network)
