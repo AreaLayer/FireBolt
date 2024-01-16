@@ -8,6 +8,9 @@ const { alice, bob, carol, dave, eve, mallory } = require('./wallets.json')
 const provider = 'https://testnet.blockchain.info/api';
 const explorer = 'https://mempool.space/testnet/tx'
 
+// TODO PTG function
+
+const KeyPair
 
 /// Alice to Carol
 const keyPairAlice1 = bitcoin.ECPair.fromWIF(alice[1].wif, network)
