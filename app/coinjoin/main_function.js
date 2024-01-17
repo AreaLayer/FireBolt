@@ -20,10 +20,11 @@ return (satoshis_to_btc);
 
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
-    // Placeholder logic for determining dynamic fee
-    // You might fetch this from an API, analyze recent transactions, etc.
-    return 5000;  // Placeholder value for dynamic fee (in satoshis)
-}
+  tx.AddInput(input_value, 0);
+  tx.AddOutput(output_value, 0);
+  tx.feeInput(fee_value);
+  
+    return 5000; 
 const transactionAmount = 0.1;  
     
 // Placeholder Bitcoin address for sender and recipient
