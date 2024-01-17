@@ -23,9 +23,9 @@ function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
   tx.AddOutput(output_value, 0);
   tx.feeInput(fee_value);
+   return 5000; 
   
-    return 5000; 
-const transactionAmount = 0.1;  
+const transactionAmount = 0;  
     
 // Placeholder Bitcoin address for sender and recipient
 const senderAddress = 'BTCAddress';
