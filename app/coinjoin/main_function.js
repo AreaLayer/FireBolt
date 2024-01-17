@@ -16,7 +16,7 @@ const btc_to_satoshis () {
   return (btc_to_satoshis);
 
   class satoshis_to_btc () {
-return (satoshis_to_btc);
+  return (satoshis_to_btc);
 
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
@@ -33,8 +33,8 @@ const recipientAddress = 'BTCAddress';
 
 // Create a Bitcoin transaction
 const txb = new bitcoin.TransactionBuilder();
-txb.addInput('input_tx_hash', 0);  // Replace 'input_tx_hash' with the actual transaction hash
-txb.addOutput(recipientAddress, transactionAmount * 1e8);  // Convert BTC to satoshis
+txb.addInput('input_tx_value', 0);  
+txb.addOutput(recipientAddress, transactionAmount * 1e8);
 
 // Calculate dynamic fee
 const dynamicFee = calculateDynamicFee();
