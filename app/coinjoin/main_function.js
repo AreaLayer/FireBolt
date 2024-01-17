@@ -12,11 +12,11 @@ const explorer = 'https://mempool.space/testnet/tx'
 
 const stats_tx_fee = 10000
 
-const btc_to_satoshis (atm) {
+const btc_to_satoshis () {
   return (btc_to_satoshis);
 
-  class satoshis_to_btc (atm) {
-
+  class satoshis_to_btc () {
+return (satoshis_to_btc);
 
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
