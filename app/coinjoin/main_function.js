@@ -10,9 +10,14 @@ const explorer = 'https://mempool.space/testnet/tx'
 
 // WIP PTG function
 
-const TX = bitcoin.tx.
-const TX = bitcoin.tx.
-const TX = bitcoin.tx
+const coinjoin = new bitcoin.coijoin({network})
+
+
+// Forward to each final participant about UTXO
+const TX = bitcoin.Tx.fromWIF(network)
+const TX = bitcoin.Tx.fromWIF(network)
+const TX = bitcoin.Tx.FromWIF(network)
+
 
 /// Alice to Carol
 const keyPairAlice1 = bitcoin.ECPair.fromWIF(alice[1].wif, network)
