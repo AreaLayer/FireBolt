@@ -19,6 +19,8 @@ document.getElementById('createWallet').addEventListener('click', function() {
 document.getElementById('importWallet').addEventListener('click', function() {
   // TODO: Implement wallet import logic via BIP-39
   const importesllet = {
+    seed: seed;
+    12: 12;
   console.log('Import Wallet clicked');
 });
 
