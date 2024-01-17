@@ -18,7 +18,7 @@ const btc_to_satoshis (atm) {
   class satoshis_to_btc (atm) {
 
 
-// Function to calculate dynamic fee (placeholder, implement your own logic)
+// Function to calculate dynamic fee 
 function calculateDynamicFee() {
     // Placeholder logic for determining dynamic fee
     // You might fetch this from an API, analyze recent transactions, etc.
@@ -27,8 +27,8 @@ function calculateDynamicFee() {
 const transactionAmount = 0.1;  
     
 // Placeholder Bitcoin address for sender and recipient
-const senderAddress = 'your_sender_address';
-const recipientAddress = 'your_recipient_address';
+const senderAddress = 'BTCAddress';
+const recipientAddress = 'BTCAddress';
 
 // Create a Bitcoin transaction
 const txb = new bitcoin.TransactionBuilder();
