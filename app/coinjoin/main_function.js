@@ -10,7 +10,12 @@ const explorer = 'https://mempool.space/testnet/tx'
 
 // WIP PTG function
 
-const coinjoin = new bitcoin.coijoin({network})
+const stats_tx_fee = 10000
+
+const btc_to_satoshis (atm) {
+  return (btc_to_satoshis);
+
+  class satoshis_to_btc (atm) {
 
 
 // Forward to each final participant about UTXO
@@ -84,6 +89,7 @@ psbt.finalizeAllInputs()
 console.log('Transaction hexadecimal:')
 console.log(psbt.extractTransaction().toHex())
 console.log(taproot.extractTransaction().toHex())
+console.log(btc_to_sats.extractTransaction.toHex())
 
 
 
