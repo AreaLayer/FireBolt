@@ -116,10 +116,10 @@ const psbt = new bitcoin.Psbt({network})
 psbt.finalizeAllInputs()
 
 
-console.log('Transaction hexadecimal:')
-console.log(psbt.extractTransaction().toHex())
-console.log(taproot.extractTransaction().toHex())
-console.log(btc_to_sats.extractTransaction.toHex())
+console.log('Transaction hexadecimal:');
+console.log(psbt.extractTransaction().toHex());
+console.log(taproot.extractTransaction().toHex());
+console.log(btc_to_sats.extractTransaction.toHex());
 console.log(`Transaction Amount: ${transactionAmount} BTC`);
 console.log(`Dynamic Fee: ${dynamicFee} satoshis`);
 console.log(`Raw Transaction Hex: ${rawTransaction}`);
