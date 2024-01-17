@@ -18,6 +18,36 @@ const btc_to_satoshis (atm) {
   class satoshis_to_btc (atm) {
 
 
+// Function to calculate dynamic fee (placeholder, implement your own logic)
+function calculateDynamicFee() {
+    // Placeholder logic for determining dynamic fee
+    // You might fetch this from an API, analyze recent transactions, etc.
+    return 5000;  // Placeholder value for dynamic fee (in satoshis)
+}
+const transactionAmount = 0.1;  
+    
+// Placeholder Bitcoin address for sender and recipient
+const senderAddress = 'your_sender_address';
+const recipientAddress = 'your_recipient_address';
+
+// Create a Bitcoin transaction
+const txb = new bitcoin.TransactionBuilder();
+txb.addInput('input_tx_hash', 0);  // Replace 'input_tx_hash' with the actual transaction hash
+txb.addOutput(recipientAddress, transactionAmount * 1e8);  // Convert BTC to satoshis
+
+// Calculate dynamic fee
+const dynamicFee = calculateDynamicFee();
+
+// Add dynamic fee to transaction output
+txb.addOutput(senderAddress, dynamicFee);
+
+// Sign the transaction (you need private key for signing)
+// txb.sign(0, privateKey);  // Uncomment and replace privateKey with the actual private key
+
+// Get the serialized transaction hex
+const rawTransaction = txb.build().toHex();
+
+
 // Forward to each final participant about UTXO
 const TX = bitcoin.Tx.fromWIF(network)
 const TX = bitcoin.Tx.fromWIF(network)
@@ -90,7 +120,9 @@ console.log('Transaction hexadecimal:')
 console.log(psbt.extractTransaction().toHex())
 console.log(taproot.extractTransaction().toHex())
 console.log(btc_to_sats.extractTransaction.toHex())
-
+console.log(`Transaction Amount: ${transactionAmount} BTC`);
+console.log(`Dynamic Fee: ${dynamicFee} satoshis`);
+console.log(`Raw Transaction Hex: ${rawTransaction}`);
 
 
 
