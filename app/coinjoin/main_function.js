@@ -26,10 +26,6 @@ function calculateDynamicFee() {
    return 5000; 
   
 const transactionAmount = 0;  
-    
-// Placeholder Bitcoin address for sender and recipient
-const senderAddress = 'BTCAddress';
-const recipientAddress = 'BTCAddress';
 
 // Create a Bitcoin transaction
 const txb = new bitcoin.TransactionBuilder();
