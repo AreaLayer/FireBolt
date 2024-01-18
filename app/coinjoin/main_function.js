@@ -19,8 +19,8 @@ const btc_to_satoshis () {
   return satoshis_to_btc;
   };
 const get_current_blockheight () {
-  class blockchainifo = cjxt_single.jsonrpc(
-        return blockchainInfo;
+  class blockchain_info = cjxt_single.jsonrpc(
+        return blockchain_info;
 }
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
