@@ -170,7 +170,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Complete PRs
 
-- [ ] Release Beta wallet in 2024
+- [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
     
 - [ ] Compile code
 
