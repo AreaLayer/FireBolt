@@ -14,13 +14,14 @@ const stats_tx_fee = 10000
 
 const btc_to_satoshis () {
   return (btc_to_satoshis);
-
+}
   class satoshis_to_btc () {
   return (satoshis_to_btc);
-
+  };
 const get_current_blockheight () {
-  class blockchainifo
-
+  class blockchainifo = cjxt_single.jsonrpc(
+        return (blockchainInfo);
+}
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
