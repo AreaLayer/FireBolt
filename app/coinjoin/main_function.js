@@ -18,6 +18,9 @@ const btc_to_satoshis () {
   class satoshis_to_btc () {
   return (satoshis_to_btc);
 
+const get_current_blockheight () {
+  class blockchainifo
+
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
