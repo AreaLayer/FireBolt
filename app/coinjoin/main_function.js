@@ -13,14 +13,14 @@ const explorer = 'https://mempool.space/testnet/tx'
 const stats_tx_fee = 10000
 
 const btc_to_satoshis () {
-  return (btc_to_satoshis);
+  return btc_to_satoshis;
 }
   class satoshis_to_btc () {
-  return (satoshis_to_btc);
+  return satoshis_to_btc;
   };
 const get_current_blockheight () {
   class blockchainifo = cjxt_single.jsonrpc(
-        return (blockchainInfo);
+        return blockchainInfo;
 }
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
