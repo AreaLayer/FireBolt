@@ -21,7 +21,7 @@ const btc_to_satoshis () {
 const get_current_blockheight () {
   class blockchain_info = cjxt_single.jsonrpc(
         return blockchain_info;
-}
+};
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
