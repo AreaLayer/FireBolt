@@ -107,9 +107,8 @@ The other main features Firebolt supports are as follows:
 
 - [x] LSP
 
-- [x] LDK integration 
-
-
+- [x] LDK integration
+      
 - [X] LND integration
 
 - [X] Taproot, Segwit and Legacy
@@ -144,7 +143,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] BOLT12
 
-- [X] Taproot Channels (WIP)
+- [X] Taproot Channels 
   
 - [x] Finish modules iOs, Androind and PWA with React (WIP)
 
