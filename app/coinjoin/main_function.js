@@ -22,7 +22,8 @@ const get_current_blockheight () {
   class blockchain_info = cjxt_single.jsonrpc
         return blockchain_info;
 const msig_data_pubkeys() {
-  multisig_script
+class  multisig_script = cjxt_single
+  
 };
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
