@@ -21,9 +21,11 @@ const btc_to_satoshis () {
 const get_current_blockheight () {
   class blockchain_info = cjxt_single.jsonrpc
         return blockchain_info;
+}
 const msig_data_pubkeys() {
 class  multisig_script = cjxt_single
-  
+       return musig_data_pubkeys;
+}
 };
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
