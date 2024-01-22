@@ -35,6 +35,7 @@ function calculateDynamicFee() {
    return 5000; 
   
 const transactionAmount = 0;  
+const transacionCjxtRounds = 3
 
 // Create a Bitcoin transaction
 const txb = new bitcoin.TransactionBuilder();
