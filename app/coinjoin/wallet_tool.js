@@ -18,6 +18,7 @@ function load_coinjoinxt_config() {
     
   
 }
+function lightning_tool(walletDir) {
 
 function wallet_tool_main(walletDir) {
     const walletDir = path.join(cjxt_single().homedir, 'wallets');
