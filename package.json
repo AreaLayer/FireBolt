@@ -5,10 +5,10 @@
 "author": "AreaLayer",
   
 },
-"package"
-"bitcoin-js"
-"lightning-js"
-"coinjoin-demo"
+"package":
+"bitcoin-js":
+"lightning-js":
+"coinjoinjsxt":
 },
 "scripts"
 },
