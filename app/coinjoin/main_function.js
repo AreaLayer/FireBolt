@@ -2,7 +2,7 @@ const bitcoin = require('bitcoinjs-lib');
 const lightning = require('lightning-js');
 const ldk = require('ldk-node-js');
 const testnet = bitcoin.network.testnet;
-const { alice, bob, carol, dave, eve, mallory } = require('./wallets.json')
+const { Round1, Round2, Round3,Round4, Round5 } = require('./wallets.json')
 
 // Connect to the Bitcoin testnet network
 const provider = 'https://testnet.blockchain.info/api';
