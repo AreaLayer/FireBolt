@@ -8,7 +8,7 @@ const { Round1, Round2, Round3,Round4, Round5 } = require('./wallets.json')
 const provider = 'https://testnet.blockchain.info/api';
 const explorer = 'https://mempool.space/testnet/tx'
 
-// WIP PTG function
+// PTG function
 
 const stats_tx_fee = 10000
 
