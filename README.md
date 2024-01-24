@@ -123,8 +123,6 @@ The other main features Firebolt supports are as follows:
 
 - [x] Coin Select
 
-- [x] UI/UX
-
 - [x] TBD 
 
 - [x] PayJoin (BIP-78) integration beta 
