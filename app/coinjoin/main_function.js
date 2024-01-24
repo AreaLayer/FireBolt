@@ -64,10 +64,10 @@ const TX = bitcoin.Tx.FromWIF(network)
 
 
 /// Alice to Carol
-const keyPairAlice1 = bitcoin.ECPair.fromWIF(alice[1].wif, network)
-const keyPairCarol1 = bitcoin.ECPair.fromWIF(carol[1].wif, network)
-const keyPairEve1 = bitcoin.ECPair.fromWIF(eve[1].wif, network)
-const keyPairMallory1 = bitcoin.ECPair.fromWIF(mallory[1].wif, network)
+const keyPairRound1 = bitcoin.ECPair.fromWIF(round[1].wif, network)
+const keyPairRound2 = bitcoin.ECPair.fromWIF(round[1].wif, network)
+const keyPairRound3 = bitcoin.ECPair.fromWIF(round[1].wif, network)
+const keyPairRound4 = bitcoin.ECPair.fromWIF(round[1].wif, network)
 
 // Get TX
 const nonWitnessUtxo =  Buffer.from('TX_HEX', 'hex') 
