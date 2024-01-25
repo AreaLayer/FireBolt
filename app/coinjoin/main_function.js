@@ -5,7 +5,7 @@ const testnet = bitcoin.network.testnet;
 const { Round1, Round2, Round3,Round4, Round5 } = require('./wallets.json')
 
 // Connect to the Bitcoin testnet network
-const provider = 'https://testnet.mempoo.space/api';
+const provider = 'https://testnet.mempool.space/api';
 const explorer = 'https://mempool.space/testnet/tx'
 
 // PTG function
@@ -29,6 +29,7 @@ class  multisig_script = cjxt_single
 const NN_script_from_pubkeys() {
   return N_script_from_pubkeys;
 };
+const 
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
