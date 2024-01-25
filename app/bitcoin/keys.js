@@ -1,4 +1,4 @@
-const {PrivateKey, Random, PublicKey} = require('bitcoinlib');
+const {PrivateKey, Random, PublicKey} = require('bitcoinlib-js');
 
 // Generate three key pairs
 const key1 = bitcoin.ECPair.makeRandom();
