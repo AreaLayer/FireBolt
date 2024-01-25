@@ -179,6 +179,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Unit Tests
 
+- [ ] Code will converted to React Native
+
 
 ## Run App
 
