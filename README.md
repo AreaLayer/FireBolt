@@ -190,6 +190,9 @@ Docs (soon)
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
 
+## React Native and Cross Platform
+
+[App](https://github.com/AreaLayer/firebolt-react-native)
 
 ## Contributors
 
