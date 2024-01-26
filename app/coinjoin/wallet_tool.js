@@ -1,6 +1,7 @@
 const {CoinjoinXT, Wallet} = require('wallet-toolsjs');
 const fs = require('fs');
 const {PrivateKey,PublicKey,WalletDir} = require('bitcoinjs-lib');
+const {ChannelIfo,Peer} = require('ldk-garbagecollected');
 
 // Simulate the required functions from jmclient and configure modules
 function cjxt_single() {
@@ -12,7 +13,8 @@ function cjxt_single() {
 function load_coinjoinxt_config() {
     // Loading the coinjoinxt config
     const coinjoinDir= path.join(cjxt_single().homedir, 'wallets');
-    const coinjoinxt_config = new coinjoinxt_config
+    const coinjoinxt_config = new coinjoinxt_config;
+    const lightning_config = new lightning_confing;
     
   
 }
