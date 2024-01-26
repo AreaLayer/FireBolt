@@ -179,7 +179,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Unit Tests
 
-- [x] [Code will converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
+- [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
 
 ## Run App
