@@ -48,7 +48,7 @@ Central Banks, inflations and cetralized social media
 
 ## Firebolt's solution
 
-Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. By default, you connect to Area Layer's Electrum-Bitcoin Core server, but you can also connect to your own server. We onboard users to Lightning through our lightning service provider (LSP) Timelight.
+Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. 
 
 Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed and optional password. Lightning channels data is only saved in our sever if you use our Lightning Node, if not we'll not save your lightning channel data
 
