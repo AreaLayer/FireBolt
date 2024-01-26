@@ -1,8 +1,6 @@
-import { coinjoinXT, Config};
-from '/app/coinjoin';
-
+const {CoinjoinXT, Wallet} = require('wallet-toolsjs');
 const fs = require('fs');
-const bitcoin = require('bitcoinjs-lib');
+const {PrivateKey,PublicKey,WalletDir} = require('bitcoinjs-lib');
 
 // Simulate the required functions from jmclient and configure modules
 function cjxt_single() {
