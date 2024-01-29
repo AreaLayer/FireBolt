@@ -37,7 +37,28 @@ const PTG() {
     'is_confirmed', 'is_broadcast', 'spending_tx'
 ];
 };
-const 
+class YourClassName {
+    constructor(txtemplate, wallet, n_counterparties, n, locktime = null, keyset = null) {
+
+        if (!(wallet instanceof Wallet)) {
+            throw new Error("Wallet must be an instance of Wallet");
+        }
+
+        if (!(txtemplate instanceof OCCTemplateTX)) {
+            throw new Error("txtemplate must be an instance of OCCTemplateTX");
+        }
+
+        if (![n_counterparties, n].every(x => Number.isInteger(x))) {
+            throw new Error("n_counterparties and n must be integers");
+        }
+
+        this.txtemplate = txtemplate;
+        this.wallet = wallet;
+        this.n_counterparties = n_counterparties;
+        this.n = n;
+        this.locktime = locktime;
+        this.keyset = keyset;
+      
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
