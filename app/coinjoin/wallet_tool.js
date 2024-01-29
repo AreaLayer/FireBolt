@@ -1,28 +1,33 @@
+const {CoinjoinXT, Wallet} = require('wallet-toolsjs');
 const fs = require('fs');
-const bitcoin = require('bitcoinjs-lib');
+const {PrivateKey,PublicKey,WalletDir} = require('bitcoinjs-lib');
+const {ChannelIfo,Peer} = require('ldk-garbagecollected');
 
 // Simulate the required functions from jmclient and configure modules
 function cjxt_single() {
-    // Simulate the return value of cjxt_single function
+    // The return value of cjxt_single function
+    const hometDir = path.join(cjxt_single().homedir, 'wallets');
     return { homedir: '/path/to/homedir' };
 }
 
 function load_coinjoinxt_config() {
-    // Simulate loading the coinjoinxt config
-    const coinjoinxt_config = new coinjoinxt_config
+    // Loading the coinjoinxt config
+    const coinjoinDir= path.join(cjxt_single().homedir, 'wallets');
+    const coinjoinxt_config = new coinjoinxt_config;
+    const lightning_config = new lightning_confing;
+    
   
 }
+function lightning_tool(walletDir) {
 
 function wallet_tool_main(walletDir) {
-    // Simulate wallet_tool_main functionality
+    const walletDir = path.join(cjxt_single().homedir, 'wallets');
     return 'Simulated wallet_tool_main result';
 }
 
-// Simulate Python's optparse library with command line arguments
+// Optparse library with command line arguments
 const optionParser = new OptionParser();
-
-// Simulate Python's optparse options (if any)
-// ...
+const Parser = new Parser();
 
 // Parse command line arguments (simulated in this example)
 const options = optionParser.parse_args();
