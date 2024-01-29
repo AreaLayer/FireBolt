@@ -28,6 +28,15 @@ class  multisig_script = cjxt_single
 const NN_script_from_pubkeys() {
   return N_script_from_pubkeys;
 };
+const PTG() {
+  var attr_list = [
+    'utxo_ins', 'signing_pubkeys', 'signing_redeem_scripts', 'signatures',
+    'output_address', 'change_address', 'output_script', 'change_script',
+    'output_amount', 'change_amount', 'locktime', 'outs', 'pay_out_index',
+    'base_form', 'fully_signed_tx', 'completed', 'txid', 'is_spent',
+    'is_confirmed', 'is_broadcast', 'spending_tx'
+];
+};
 const 
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
