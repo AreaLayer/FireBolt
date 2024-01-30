@@ -58,7 +58,21 @@ class CXJT {
         this.n = n;
         this.locktime = locktime;
         this.keyset = keyset;
-      
+  class build_tx {
+    for (let i = 0; i < this.template.ins.length; i++) {
+    const t = this.template.ins[i];
+    let txid, utxo_in;
+
+    if (t.txid) {
+        txid = t.txid;
+    } else {
+        throw new Error("Couldn't find outpoint for input");
+    }
+
+    utxo_in = txid + ":" + t.n;
+    this.ins.push([utxo_in, t.amount]);
+}
+
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
