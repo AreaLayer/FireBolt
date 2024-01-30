@@ -37,15 +37,15 @@ const PTG() {
     'is_confirmed', 'is_broadcast', 'spending_tx'
 ];
 };
-class YourClassName {
+class CXJT {
     constructor(txtemplate, wallet, n_counterparties, n, locktime = null, keyset = null) {
 
         if (!(wallet instanceof Wallet)) {
             throw new Error("Wallet must be an instance of Wallet");
         }
 
-        if (!(txtemplate instanceof OCCTemplateTX)) {
-            throw new Error("txtemplate must be an instance of OCCTemplateTX");
+        if (!(txtemplate instanceof TX)) {
+            throw new Error("txtemplate must be an instance of TX");
         }
 
         if (![n_counterparties, n].every(x => Number.isInteger(x))) {
