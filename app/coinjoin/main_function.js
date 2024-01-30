@@ -58,6 +58,7 @@ class CXJT {
         this.n = n;
         this.locktime = locktime;
         this.keyset = keyset;
+    };
   class build_tx {
     for (let i = 0; i < this.template.ins.length; i++) {
     const t = this.template.ins[i];
