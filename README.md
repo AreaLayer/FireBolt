@@ -8,7 +8,7 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
-    <img alt="FireBolt" src="./src/assets/firebolt_logo_readme.png" width="150"></img>
+    <img alt="FireBolt" src="./asset/firebolt_logo_readme.png" width="150"></img>
   </a>
 </p>
 
