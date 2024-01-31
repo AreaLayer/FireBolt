@@ -1,5 +1,5 @@
 // Define the cache name and the files to cache
-const CACHE_NAME = 'my-pwa-cache-v1';
+const CACHE_NAME = 'firebolt-beta';
 const cacheUrls = [
     '/',
     '/index.html',

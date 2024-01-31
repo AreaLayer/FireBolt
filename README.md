@@ -8,7 +8,7 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
-    <img alt="FireBolt" src="./src/assets/firebolt_logo_readme.png" width="150"></img>
+    <img alt="FireBolt" src="./src/asset/firebolt_logo_readme.png" width="150"></img>
   </a>
 </p>
 
@@ -48,7 +48,7 @@ Central Banks, inflations and cetralized social media
 
 ## Firebolt's solution
 
-Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. By default, you connect to Area Layer's Electrum-Bitcoin Core server, but you can also connect to your own server. We onboard users to Lightning through our lightning service provider (LSP) Timelight.
+Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. 
 
 Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed and optional password. Lightning channels data is only saved in our sever if you use our Lightning Node, if not we'll not save your lightning channel data
 
@@ -78,7 +78,7 @@ The other main features Firebolt supports are as follows:
 
 - LSP
 
-- [CoinJoin powered by CoinjoinXT, LN Vortex and Coinswap](https://github.com/AreaLayer/CoinjoinXT)
+- [CoinJoin powered by CoinjoinXT, Lightning Network, Taproot and Coinswap](https://github.com/AreaLayer/CoinjoinXT)
 
 - Multisig 
 
@@ -107,9 +107,8 @@ The other main features Firebolt supports are as follows:
 
 - [x] LSP
 
-- [x] LDK integration 
-
-
+- [x] LDK integration
+      
 - [X] LND integration
 
 - [X] Taproot, Segwit and Legacy
@@ -123,8 +122,6 @@ The other main features Firebolt supports are as follows:
 - [x] CoinSwap implementation for privacy during mixing
 
 - [x] Coin Select
-
-- [x] UI/UX
 
 - [x] TBD 
 
@@ -144,7 +141,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] BOLT12
 
-- [X] Taproot Channels (WIP)
+- [X] Taproot Channels 
   
 - [x] Finish modules iOs, Androind and PWA with React (WIP)
 
@@ -170,11 +167,19 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Complete PRs
 
-- [ ] Release Beta wallet in 2024
+- [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
     
 - [ ] Compile code
 
+- [ ] Compile Android Files
+
+- [ ] UI design
+
 - [ ] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
+
+- [ ] Unit Tests
+
+- [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
 
 ## Run App
@@ -185,6 +190,9 @@ Docs (soon)
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
 
+## React Native and Cross Platform
+
+[App](https://github.com/AreaLayer/firebolt-react-native)
 
 ## Contributors
 

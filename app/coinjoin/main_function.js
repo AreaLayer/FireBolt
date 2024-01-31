@@ -42,27 +42,27 @@ const psbt = new bitcoin.Psbt({network})
     nonWitnessUtxo
   })
   .addOutput({
-    address: bob[1].p2pkh,
+    address: bob[1].p2tr,
     value: 2e7,
   }) 
   .addOutput({
-    address: dave[1].p2pkh,
+    address: dave[1].p2tr,
     value: 2e7,
   })
   .addOutput({
-    address: mallory[2].p2pkh,
+    address: mallory[2].p2tr,
     value: 2e7,
   })
   .addOutput({
-    address: alice[2].p2pkh,
+    address: alice[2].p2tr,
     value: 2e7,
   })
   .addOutput({
-    address: eve[1].p2pkh,
+    address: eve[1].p2tr,
     value: 5e6 - 5e4,
   }) 
   .addOutput({
-    address: mallory[1].p2pkh,
+    address: mallory[1].p2tr,
     value: 1e7 - 5e4,
   })
 
@@ -73,6 +73,7 @@ psbt.finalizeAllInputs()
 
 console.log('Transaction hexadecimal:')
 console.log(psbt.extractTransaction().toHex())
+console.log(taproot.extractTransaction().toHex())
 
 
 
