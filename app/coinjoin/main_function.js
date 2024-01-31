@@ -146,9 +146,9 @@ if (insouts === "ins") {
     // we can set the signing redeem script
     const tp = this.template.ins[idx].spk_type;
 
-    if (tp === "p2sh-p2wpkh") {
+    if (tp === "p2tr-p2wsh") {
         // only one signer: apply immediately
-        this.signing_redeem_scripts[idx] = btc.pubkey_to_p2sh_p2wpkh_script(key);
+        this.signing_redeem_scripts[idx] = btc.pubkey_to_p2tr_p2wsh_script(key);
     } else if (tp === "NN") {
         // do we have N signers?
         if (Object.keys(this.keys["ins"][idx]).length === this.n_counterparties) {
