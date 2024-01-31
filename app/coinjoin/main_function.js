@@ -78,12 +78,12 @@ class CXJT {
     const t = this.template.outs[i];
 
     if (t.spk_type === "p2tr-p2tr") {
-        const address = btc.pubkey_to_p2tr_p2tr_address(
+        const address = btc.pubkey_to_p2tr_address(
             this.keys["outs"][i][t.counterparty],
             get_p2sh_vbyte()
         );
         this.outs.push({
-            "address": address,
+            "address": t.address,
             "value": t.amount,
         });
     } else if (t.spk_type === "NN") {
@@ -92,14 +92,14 @@ class CXJT {
             throw new Error("Incomplete key data to construct outputs");
         }
 
-        const address = btc.pubkeys_to_p2wsh_address(
+        const address = btc.pubkeys_to_p2tr_address(
             Object.values(this.keys["outs"][i]),
             { vbyte: 100 }
         );
 
         this.outs.push({
-            "address": address,
-            "value": t.amount
+            "address": t.address,
+            "value": t.amount,
         });
     }
 }
