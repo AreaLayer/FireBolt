@@ -73,6 +73,36 @@ class CXJT {
     utxo_in = txid + ":" + t.n;
     this.ins.push([utxo_in, t.amount]);
 }
+  class build_output {
+    for (let i = 0; i < this.template.outs.length; i++) {
+    const t = this.template.outs[i];
+
+    if (t.spk_type === "p2tr-p2tr") {
+        const address = btc.pubkey_to_p2tr_p2tr_address(
+            this.keys["outs"][i][t.counterparty],
+            get_p2sh_vbyte()
+        );
+        this.outs.push({
+            "address": address,
+            "value": t.amount,
+        });
+    } else if (t.spk_type === "NN") {
+        // Check if all the necessary keys are available
+        if (!Object.keys(this.keys["outs"][i]).every(j => j in this.keys["outs"][i])) {
+            throw new Error("Incomplete key data to construct outputs");
+        }
+
+        const address = btc.pubkeys_to_p2wsh_address(
+            Object.values(this.keys["outs"][i]),
+            { vbyte: 100 }
+        );
+
+        this.outs.push({
+            "address": address,
+            "value": t.amount
+        });
+    }
+}
 
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
