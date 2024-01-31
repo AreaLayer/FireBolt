@@ -139,7 +139,26 @@ for (const to of this.template.outs) {
 }
 class apply_key {
   constructor(self, key, insouts, idx, cpr) {
-    
+    this.keys[insouts][idx][cpr] = key;
+
+if (insouts === "ins") {
+    // if all keys are available for this input,
+    // we can set the signing redeem script
+    const tp = this.template.ins[idx].spk_type;
+
+    if (tp === "p2sh-p2wpkh") {
+        // only one signer: apply immediately
+        this.signing_redeem_scripts[idx] = btc.pubkey_to_p2sh_p2wpkh_script(key);
+    } else if (tp === "NN") {
+        // do we have N signers?
+        if (Object.keys(this.keys["ins"][idx]).length === this.n_counterparties) {
+            this.signing_redeem_scripts[idx] = NN_script_from_pubkeys(
+                Object.values(this.keys["ins"][idx])
+            );
+        }
+    }
+}
+
   
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
