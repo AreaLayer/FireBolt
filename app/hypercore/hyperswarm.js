@@ -19,6 +19,5 @@ await discovery.flushed() // Waits for the topic to be fully announced on the DH
 swarm2.join(topic, { server: false, client: true })
 await swarm2.flush() // Waits for the swarm to connect to pending peers.
 
-// After this point, both client and server should have connections
 
 

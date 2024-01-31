@@ -1,6 +1,7 @@
 {
   "name": "Firebolt",
   "short_name": "Firebolt",
+  "version":"1.0.0.rc6",
   "start_url": "fireboltwallet.co",
   "display": "standalone",
   "background_color": "#ffffff",

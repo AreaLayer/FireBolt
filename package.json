@@ -1,14 +1,14 @@
 {
 "name":"FireBolt",
-"version":"1.0.0-beta.rc1",
+"version":"1.0.0-beta.rc6",
 "license":"MIT",
 "author": "AreaLayer",
   
 },
-"package"
-"bitcoin-js"
-"lightning-js"
-"coinjoin-demo"
+"package":
+"bitcoin-js":
+"lightning-js":
+"coinjoinjsxt":
 },
 "scripts"
 },
