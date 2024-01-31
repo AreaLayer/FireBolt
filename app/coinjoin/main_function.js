@@ -137,7 +137,10 @@ this.txid = btc.txhash(btc.serialize(dtx));
 for (const to of this.template.outs) {
     to.txid = this.txid;
 }
-
+class apply_key {
+  constructor(self, key, insouts, idx, cpr) {
+    
+  
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
