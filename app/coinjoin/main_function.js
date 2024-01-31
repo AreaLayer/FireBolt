@@ -103,6 +103,40 @@ class CXJT {
         });
     }
 }
+class mktx {
+this.build_ins_from_template();
+this.build_outs_from_template();
+
+if (!(this.ins.length && this.outs.length)) {
+    throw new Error("Invalid inputs or outputs");
+}
+
+this.base_form = btc.mktx(this.ins.map(x => x[0]), this.outs);
+const dtx = btc.deserialize(this.base_form);
+
+if (this.locktime) {
+    dtx["ins"][0]["sequence"] = 0;
+    dtx["locktime"] = this.locktime;
+}
+
+for (let i = 0; i < dtx["ins"].length; i++) {
+    const inp = dtx["ins"][i];
+    const sti = this.template.ins[i];
+
+    if (sti.spk_type === "p2sh-p2wpkh") {
+        inp["script"] = "16" + btc.pubkey_to_p2tr_script(
+            this.keys["ins"][i][sti.counterparty]
+        );
+    } else if (sti.spk_type === "NN") {
+        inp["script"] = "";
+    }
+}
+
+this.txid = btc.txhash(btc.serialize(dtx));
+
+for (const to of this.template.outs) {
+    to.txid = this.txid;
+}
 
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
