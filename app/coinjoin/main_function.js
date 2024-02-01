@@ -428,6 +428,22 @@ deserialize(d) {
         return false;
     }
 }
+class Outpoint {
+    constructor(n, counterparty, amount = null, txobj = null, txid = null) {
+        this.txobj = txobj;
+        this.n = n;
+        // Used for pre-existing outpoints (inflows/promises)
+        this.txid = txid;
+        this.spk_type = (counterparty === -1) ? "NN" : "p2sh-p2wpkh";
+        this.counterparty = counterparty;
+        this.amount = (typeof amount === 'number') ? btc_to_satoshis(amount) : amount;
+    }
+
+    toString() {
+        return `Outpoint: ${this.n} ${this.counterparty} ${this.spk_type} ${this.amount}`;
+    }
+}
+
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
