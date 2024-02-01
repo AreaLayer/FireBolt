@@ -316,6 +316,41 @@ include_signature(in_index, cp, sig) {
 
     return false;
 }
+  class fully_signed() {
+    if (this.completed.every(x => x === true)) {
+    return true;
+} else {
+    return false;
+}
+class attach_signatures() {
+  if (!this.fully_signed()) {
+    throw new Error("Transaction is not fully signed");
+}
+
+this.fully_signed_tx = JSON.parse(JSON.stringify(this.base_form));
+
+for (let idx = 0; idx < this.ins.length; idx++) {
+    const tp = this.template.ins[idx].spk_type;
+
+    if (tp === "NN") {
+        this.fully_signed_tx = btc.apply_p2wsh_multisignatures(
+            this.fully_signed_tx,
+            idx,
+            this.signing_redeem_scripts[idx],
+            this.signatures[idx]
+        );
+    } else if (tp === "p2sh-p2wpkh") {
+        const k = this.keys["ins"][idx][Object.keys(this.keys["ins"][idx])[0]];
+        const dtx = btc.deserialize(this.fully_signed_tx);
+
+        dtx["ins"][idx]["script"] = "16" + btc.pubkey_to_p2re_p2wsh_script(k);
+        dtx["ins"][idx]["txinwitness"] = [this.signatures[idx][0], k];
+
+        this.fully_signed_tx = btc.serialize(dtx);
+    } else {
+        throw new Error("Invalid script type: " + tp);
+    }
+}
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
