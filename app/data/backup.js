@@ -14,7 +14,7 @@ function getSeedFromMnemonic(mnemonic) {
 // Function to create a Bitcoin key pair from a seed
 function getBitcoinKeyPairFromSeed(seed) {
   const root = bitcoin.bip32.fromSeed(Buffer.from(seed, 'hex'));
-  const child = root.derivePath("m/44'/0'/0'/0/0"); // Support Taproot and Segwit backup
+  const child = root.derivePath("m / 0' / 0' /k"); // Support Taproot and Segwit backup
   const keyPair = bitcoin.ECPair.fromPrivateKey(child.privateKey);
   return keyPair;
 }
