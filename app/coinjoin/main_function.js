@@ -339,7 +339,7 @@ for (let idx = 0; idx < this.ins.length; idx++) {
             this.signing_redeem_scripts[idx],
             this.signatures[idx]
         );
-    } else if (tp === "p2sh-p2wpkh") {
+    } else if (tp === "p2sh-p2wsh") {
         const k = this.keys["ins"][idx][Object.keys(this.keys["ins"][idx])[0]];
         const dtx = btc.deserialize(this.fully_signed_tx);
 
@@ -351,6 +351,31 @@ for (let idx = 0; idx < this.ins.length; idx++) {
         throw new Error("Invalid script type: " + tp);
     }
 }
+class txid() {
+  constructor(self) {
+  }
+   if (!this.fully_signed_tx) {
+    throw new Error("Transaction is not fully signed");
+}
+
+this.txid = btc.txhash(this.fully_signed_tx);
+}
+  class push() {
+    constructor(self) {
+    }
+    if (!this.fully_signed()) {
+    throw new Error("Transaction is not fully signed");
+}
+
+this.attach_signatures();
+this.set_txid();
+
+if (!cjxt_single().bc_interface.pushtx(this.fully_signed_tx)) {
+    return ["Failed to push transaction, id: " + this.txid, false];
+} else {
+    return [this.txid, true];
+}
+  }
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
