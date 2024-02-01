@@ -157,7 +157,100 @@ if (insouts === "ins") {
             );
         }
     }
+};
+class signature_form { 
+  constructor(self, index) {
+    if (!this.signing_redeem_scripts[index]) {
+    throw new Error("Signing redeem script not available");
 }
+
+return btc.segwit_signature_form(
+    btc.deserialize(this.base_form),
+    index,
+    this.signing_redeem_scripts[index],
+    this.ins[index][1]
+);
+  }
+}
+class singanture_index {
+  constructor(self, in_index) {
+    // The pubkey we're signing against
+const pub = this.keys["ins"][in_index][this.n];
+
+// The wallet holds the keys for p2sh-p2wpkh addresses directly.
+// For p2wsh addresses, we must use the pubkey to construct
+// the corresponding p2sh-p2wpkh address in the wallet to extract
+// the key.
+const addr = this.wallet.pubkey_to_address(pub);
+const privkey = this.wallet.get_key_from_addr(addr);
+
+// Check whether we are multi-signing or single-signing
+const tp = this.template.ins[in_index].spk_type;
+
+if (tp === "p2sh-p2wpkh") {
+    // The main (non-multisig) signing algo(s) return a signed
+    // tx, not a signature; extract from the temporary tx
+    const txwithsig = btc.deserialize(
+        this.wallet.sign(this.base_form, in_index, privkey, this.ins[in_index][1])
+    );
+
+    // Txinwitness field is [sig, pub]
+    const sig = txwithsig["ins"][in_index]["txinwitness"][0];
+
+    // Verification check
+    const scriptCode =
+        "76a914" + btc.hash160(Buffer.from(pub, 'hex')).toString('hex') + "88ac";
+
+    if (!btc.verify_tx_input(
+        this.base_form,
+        in_index,
+        scriptCode,
+        sig,
+        pub,
+        'deadbeef',
+        this.ins[in_index][1]
+    )) {
+        throw new Error("Transaction input verification failed");
+    }
+
+    this.signatures[in_index] = [sig];
+    this.completed[in_index] = true;
+} else if (tp === "NN") {
+    if (this.signatures[in_index].length === 0) {
+        this.signatures[in_index] = new Array(this.n_counterparties).fill(null);
+    }
+
+    const sig = btc.p2wsh_multisign(
+        this.base_form,
+        in_index,
+        this.signing_redeem_scripts[in_index],
+        privkey,
+        this.ins[in_index][1]
+    );
+
+    if (!btc.verify_tx_input(
+        this.base_form,
+        in_index,
+        this.signng_redeem_scripts[in_index],
+        sig,
+        pub,
+        'deadbeef',
+        this.ins[in_index][1]
+    )) {
+        throw new Error("Transaction input verification failed");
+    }
+
+    // Note that it's OK to use this.n as the explicit list index
+    // here, as we always do N of N multisig.
+    this.signatures[in_index][this.n] = sig;
+
+    if (this.signatures[in_index].every(x => x)) {
+        this.completed[in_index] = true;
+    }
+}
+
+// In some cases, the sig is used by the caller (to send to counterparty)
+return sig;
 
   
 // Function to calculate dynamic fee 
