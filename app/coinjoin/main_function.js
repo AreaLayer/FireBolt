@@ -376,6 +376,58 @@ if (!cjxt_single().bc_interface.pushtx(this.fully_signed_tx)) {
     return [this.txid, true];
 }
   }
+toString() {
+    // Convenience function for showing tx in the current
+    // state in a human-readable form. This is not an object
+    // serialization (see serialize).
+    const msg = [];
+    let tx = this.base_form;
+
+    if (!this.fully_signed_tx) {
+        msg.push("Not fully signed");
+        msg.push("Signatures: " + JSON.stringify(this.signatures));
+
+        if (this.txid) {
+            msg.push("Txid: " + this.txid);
+        }
+    } else {
+        msg.push("Fully signed.");
+
+        if (this.txid) {
+            msg.push("Txid: " + this.txid);
+        }
+
+        tx = this.fully_signed_tx;
+    }
+
+    msg.push(tx);
+    const dtx = btc.deserialize(tx);
+
+    return JSON.stringify(dtx, null, 4) + "\n" + msg.join("\n");
+}
+
+serialize() {
+    const serialized = {};
+
+    for (const v of this.attr_list) {
+        serialized[v] = this[v];
+    }
+
+    return serialized;
+}
+
+deserialize(d) {
+    try {
+        for (const v of this.attr_list) {
+            this[v] = d[v];
+        }
+
+        return true;
+    } catch (error) {
+        console.error("Failed to deserialize OCCTx object");
+        return false;
+    }
+}
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
