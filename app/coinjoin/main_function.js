@@ -443,7 +443,92 @@ class Outpoint {
         return `Outpoint: ${this.n} ${this.counterparty} ${this.spk_type} ${this.amount}`;
     }
 }
+class OCCTemplateTX {
+    constructor(outsInfo, ins, preTxBalances, minFee = STATIC_TX_FEE, maxFee = 10 * STATIC_TX_FEE) {
+        this.preTxBalances = preTxBalances;
+        this.minFee = minFee;
+        this.maxFee = maxFee;
+        this.ins = ins;
+        this.outs = [];
+        this.totalPayable = 0;
+        this.generateOutpoints(outsInfo);
+        this.validateBalance();
+        this.calculatePostTxBalance();
+    }
 
+    generateOutpoints(outsInfo) {
+        const totalInputAmount = this.ins.reduce((sum, input) => sum + input.amount, 0);
+        this.totalPayable = totalInputAmount - this.minFee;
+
+        if (outsInfo.every(x => x instanceof Outpoint)) {
+            this.outs = outsInfo;
+        } else {
+            if (!outsInfo.some(x => x[2] === -1)) {
+                const ratioTotal = outsInfo.reduce((sum, x) => sum + x[3], 0);
+                const amts = outsInfo.map(a => Math.round((a[3] * this.totalPayable) / ratioTotal));
+                const amtTweak = this.totalPayable - amts.reduce((sum, x) => sum + x, 0);
+
+                this.outs = outsInfo.map((oi, i) => {
+                    const amtPrime = (i === 0) ? amts[i] + amtTweak : amts[i];
+                    return new Outpoint(oi[1], oi[2], amtPrime, this);
+                });
+
+                return;
+            }
+
+            let usedTotal = 0;
+            for (const oi of outsInfo) {
+                if (oi[2] === -1) {
+                    continue;
+                }
+                this.outs.push(new Outpoint(oi[1], oi[2], oi[3], this));
+                usedTotal += oi[3];
+            }
+
+            const remainingTotal = this.totalPayable - usedTotal;
+            if (outsInfo.some(x => x[2] === -1)) {
+                assert(remainingTotal > 0); 
+            } else {
+                assert(remainingTotal === 0);
+            }
+
+            const ratioTotal = outsInfo.filter(x => x[2] === -1).reduce((sum, x) => sum + x[3], 0);
+            for (const oi of outsInfo) {
+                if (oi[2] !== -1) {
+                    continue;
+                }
+                const amt = Math.round((oi[3] * remainingTotal) / ratioTotal);
+                this.outs.push(new Outpoint(oi[1], oi[2], amt, this));
+            }
+        }
+    }
+
+    validateBalance() {
+        assert(this.outs.reduce((sum, a) => sum + a.amount, 0) <= this.ins.reduce((sum, a) => sum + a.amount, 0));
+        assert(this.outs.every(a => a.amount > 0));
+    }
+
+    calculatePostTxBalance() {
+        this.postTxBalances = this.preTxBalances.map(pre => pre);
+
+        for (let i = 0; i < this.preTxBalances.length; i++) {
+            for (const inp of this.ins) {
+                if (inp.counterparty === i) {
+                    this.postTxBalances[i] -= inp.amount;
+                }
+            }
+
+            for (const o of this.outs) {
+                const outFrac = Decimal(o.amount) / Decimal(this.totalPayable);
+                const fee = Math.round(outFrac * this.minFee);
+
+                if (o.counterparty === i) {
+                    this.postTxBalances[i] += o.amount - fee;
+                }
+            }
+        }
+    }
+}
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
