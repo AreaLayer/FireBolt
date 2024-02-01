@@ -252,7 +252,70 @@ if (tp === "p2sh-p2wpkh") {
 // In some cases, the sig is used by the caller (to send to counterparty)
 return sig;
 
-  
+  class include_signature {
+    constructor(self, in_index, cp, sig) {
+    }
+    // For receiving counterparty signatures, either
+// on promise inputs or NN multisigs. If valid,
+// mark that index as completed if appropriate,
+// and return true. If invalid, return false.
+include_signature(in_index, cp, sig) {
+    const tp = this.template.ins[in_index].spk_type;
+    const pub = this.keys["ins"][in_index][cp];
+
+    if (tp === "NN") {
+        if (this.signatures[in_index].length === 0) {
+            this.signatures[in_index] = new Array(this.n_counterparties).fill(null);
+        }
+
+        const sigform = this.signature_form(in_index);
+
+        if (!btc.verify_tx_input(
+            this.base_form,
+            in_index,
+            this.signing_redeem_scripts[in_index],
+            sig,
+            this.keys["ins"][in_index][cp],
+            'deadbeef',
+            this.ins[in_index][1]
+        )) {
+            console.error("Error in include_signature: signature invalid: " + sig);
+            return false;
+        } else {
+            this.signatures[in_index][cp] = sig;
+
+            if (this.signatures[in_index].every(x => x)) {
+                this.completed[in_index] = true;
+            }
+
+            return true;
+        }
+    } else if (tp === "p2sh-p2wpkh") {
+        // Counterparty's promise signature
+        // Verification check
+        const scriptCode =
+            "76a914" + btc.hash160(Buffer.from(pub, 'hex')).toString('hex') + "88ac";
+
+        if (!btc.verify_tx_input(
+            this.base_form,
+            in_index,
+            scriptCode,
+            sig,
+            pub,
+            'deadbeef',
+            this.ins[in_index][1]
+        )) {
+            console.error("Error in include_signature: signature invalid: " + sig);
+            return false;
+        } else {
+            this.signatures[in_index] = [sig];
+            this.completed[in_index] = true;
+            return true;
+        }
+    }
+
+    return false;
+}
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
