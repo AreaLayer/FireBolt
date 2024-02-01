@@ -1,4 +1,4 @@
-const {PrivateKey, PublicKey, UTXO = require('bitcoinjs-lib');
+const {PrivateKey, PublicKey, UTXO} = require('bitcoinjs-lib');
 const testnet = bitcoin.networks.testnet;
 const payjoin = requiere('payjoin-lib');
 const keypair = ECPair.makeRandom({ network });
