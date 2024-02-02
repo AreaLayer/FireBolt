@@ -676,7 +676,7 @@ class OCCTemplate {
 
         for (const tx of this.txs) {
             for (const to of tx.outs) {
-                if (to.spk_type === "p2sh-p2wpkh" && to.counterparty !== counterparty) {
+                if (to.spk_type === "p2tr-p2wsh" && to.counterparty !== counterparty) {
                     continue;
                 }
                 total++;
