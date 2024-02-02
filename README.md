@@ -173,12 +173,14 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Compile Android Files
 
-- [ ] UI design
+- [x] UI design
 
 - [ ] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
 
 - [ ] Unit Tests
-
+    
+- [ ] PTG complete integration
+  
 - [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
 
