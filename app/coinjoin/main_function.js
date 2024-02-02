@@ -992,4 +992,10 @@ console.log(btc_to_sats.extractTransaction.toHex());
 console.log(`Transaction Amount: ${transactionAmount} BTC`);
 console.log(`Dynamic Fee: ${dynamicFee} satoshis`);
 console.log(`Raw Transaction Hex: ${rawTransaction}`);
+console.log
+console.log
+console.log
+console.log
+console.log
+console.log
 
