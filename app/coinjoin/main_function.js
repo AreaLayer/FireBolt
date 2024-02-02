@@ -529,6 +529,23 @@ class OCCTemplateTX {
         }
     }
 }
+containsPromise() {
+    // Return true if at least 1 of the inputs
+    // is a UTXO provided by a counterparty under exclusive
+    // ownership (a "promise"); these require backouts.
+    return this.ins.some(x => x.counterparty !== -1);
+}
+
+coOwnedOutputs() {
+    // Return true if at least 1 of the outputs is
+    // based on an N of N multisig between all participants.
+    return this.outs.filter(x => x.counterparty === -1);
+}
+
+toString() {
+    // Human-readable representation.
+    return `Transaction: pre-tx balances: ${this.preTxBalances}\ninputs: ${this.ins}, outputs ${this.outs}\npost-tx balances: ${this.postTxBalances}`;
+}
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
