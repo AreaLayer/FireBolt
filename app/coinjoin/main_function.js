@@ -694,6 +694,201 @@ class OCCTemplate {
         return total;
     }
 }
+class OCCTemplate {
+    // ... (previous code)
+
+    get ourKeys() {
+        // This will simply source N new addresses from mixdepth 1,
+        // external branch (the branch for receiving), and return the
+        // pubkeys with the addresses
+        const ourAddresses = Array.from({ length: this.n }, () => wallet.getExternalAddr(1));
+        const ourPubkeys = ourAddresses.map(addr => btc.privkeyToPubkey(wallet.getKeyFromAddr(addr)));
+        return { pubkeys: ourPubkeys, addresses: ourAddresses };
+    }
+
+    getUTXOsFromWallet(wallet, amtData, sourceMixdepth = 0) {
+        // Retrieve utxos of specified range, from mixdepth 0 (source of funds)
+        // Returns a tuple per utxo: (hash, value, pubkey, index). Each utxo's
+        // value is in the range specified by that entry in amtData, which must
+        // be a list of tuples (min, max) each in satoshis.
+
+        const utxosAvailable = wallet.getUtxosByMixdepth()[sourceMixdepth];
+        cjxtlog.info("These utxos available: " + JSON.stringify(utxosAvailable));
+
+        const utxosUsed = amtData.map(ad => {
+            let utxoCandidate = null;
+            for (const [k, avd] of Object.entries(utxosAvailable)) {
+                const [hsh, idx] = k.split(':');
+                const val = satoshisToBtc(avd.value);
+
+                if (val >= ad[0] && val <= ad[1]) {
+                    const pub = btc.privkeyToPubkey(wallet.getKeyFromAddr(avd.address));
+
+                    if (!utxoCandidate) {
+                        utxoCandidate = { hash: hsh, value: val, pubkey: pub, index: parseInt(idx) };
+                    } else {
+                        // If the new candidate is closer to the center
+                        // of the range, replace the old one
+                        if (Math.abs(val - (ad[0] + ad[1]) / 2.0) < Math.abs(utxoCandidate.value - (ad[0] + ad[1]) / 2.0)) {
+                            utxoCandidate = { hash: hsh, value: val, pubkey: pub, index: parseInt(idx) };
+                        }
+                    }
+                }
+            }
+
+            return utxoCandidate;
+        });
+
+        if (utxosUsed.length < amtData.length) {
+            return [false, "Could not find utxos in range"];
+        } else {
+            return [utxosUsed, "OK"];
+        }
+    }
+
+    createRealTxsFromTemplate(wallet, template, ncp, cp, lt) {
+        const realTxs = template.txs.map(tx => new OCCTx(tx, wallet, ncp, cp));
+        const realBackoutTxs = template.backoutTxs.map(tx => new OCCTx(tx, wallet, ncp, cp, { locktime: lt }));
+
+        return [realTxs, realBackoutTxs];
+    }
+
+}
+function applyKeysToTemplate(wallet, template, realtxs, realbackouttxs, promiseIns, keys, ncp, cp) {
+    // Step 1 as above
+    const promiseInsCopy = [...promiseIns];
+    const keysCopy = [...keys];
+    for (let i = 0; i < template.txs.length; i++) {
+        // first apply the keys for promises
+        for (let j = 0; j < template.txs[i].ins.length; j++) {
+            const tin = template.txs[i].ins[j];
+            if (tin.counterparty === cp) {
+                realtxs[i].applyKey(promiseInsCopy.shift(), "ins", j, cp);
+            }
+        }
+    }
+
+    // Step 2 and 2a as above
+    for (let i = 0; i < template.txs.length; i++) {
+        for (let j = 0; j < template.txs[i].outs.length; j++) {
+            const to = template.txs[i].outs[j];
+            if (to.spkType === "NN") {
+                const workingKey = keysCopy.shift();
+                realtxs[i].applyKey(workingKey, "outs", j, cp);
+
+                // search for the inpoint of the *next* transaction (TODO: assumption)
+                for (let k = 0; k < template.txs[i + 1].ins.length; k++) {
+                    const tin = template.txs[i + 1].ins[k];
+                    if (tin.amount === to.amount && tin.spkType === "NN") {
+                        realtxs[i + 1].applyKey(workingKey, "ins", k, cp);
+                    }
+                }
+
+                // do the same for any backout txs
+                // TODO: stupid assumption of matching amount, as no other
+                // current way of finding backout's parents
+                for (let l = 0; l < template.backoutTxs.length; l++) {
+                    const btx = template.backoutTxs[l];
+                    for (let k = 0; k < btx.ins.length; k++) {
+                        const tin = btx.ins[k];
+                        if (tin.amount === to.amount) {
+                            realbackouttxs[l].applyKey(workingKey, "ins", k, cp);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Step 3 above
+    for (let i = 0; i < template.txs.length; i++) {
+        for (let j = 0; j < template.txs[i].outs.length; j++) {
+            const to = template.txs[i].outs[j];
+            if (to.spkType === "p2tr-p2wsh" && to.counterparty === cp) {
+                realtxs[i].applyKey(keysCopy.shift(), "outs", j, cp);
+            }
+        }
+    }
+
+    // Step 4 above
+    for (let i = 0; i < template.backoutTxs.length; i++) {
+        for (let j = 0; j < template.backoutTxs[i].outs.length; j++) {
+            const to = template.backoutTxs[i].outs[j];
+            if (to.counterparty === cp) {
+                realbackouttxs[i].applyKey(keysCopy.shift(), "outs", j, cp);
+            }
+        }
+    }
+
+    return [realtxs, realbackouttxs];
+}
+class DummyWallet {
+    constructor(vals) {
+        this.vals = vals;
+    }
+
+    getUtXOsByMixDepth() {
+        return {
+            0: {
+                "aa".repeat(32) + ":0": {
+                    'address': '1Abc',
+                    'value': this.vals[0]
+                },
+                "bb".repeat(32) + ":1": {
+                    'address': '1Def',
+                    'value': this.vals[1]
+                },
+                "cc".repeat(32) + ":2": {
+                    'address': '1Ghi',
+                    'value': this.vals[2]
+                }
+            }
+        };
+    }
+
+    getKeyFromAddr(addr) {
+        const privs = [(x + 1).toString().repeat(64) + "01" for x in range(3)];
+        if (addr[1] === "A") {
+            return privs[0];
+        } else if (addr[1] === "D") {
+            return privs[1];
+        } else {
+            return privs[2];
+        }
+    }
+}
+
+function getTemplateDataset(intendedIns, templateInputs, counterpartyIns) {
+    const Round1InTotal = templateInputs.reduce((acc, x) => acc + btcToSatoshis(x[1]), 0);
+    const Round2InTotal = counterpartyIns.reduce((acc, x) => acc + btcToSatoshis(x[1]), 0);
+    const Round1Tweak = aliceInTotal - intendedIns[0].reduce((acc, x) => acc + x, 0);
+    const Round2Tweak = bobInTotal - intendedIns[1].reduce((acc, x) => acc + x, 0);
+
+    return {
+        "n": 2,
+        "N": 5,
+        "out_list": [
+            [0, 0, -1, 1.0], [1, 0, 0, 80000000 + aliceTweak], [1, 1, -1, 2], [1, 2, -1, 1],
+            [2, 0, 1, 20000000], [2, 1, 0, 20000000], [2, 2, -1, 1],
+            [3, 0, 1, 60000000 + bobTweak], [3, 1, -1, 1], [4, 0, 0, 3],
+            [4, 1, 1, 3], [4, 2, 1, 4]
+        ],
+        "inflows": [
+            [0, 0, templateInputs[0][1], templateInputs[0][0], templateInputs[0][3]],
+            [0, 1, counterpartyIns[0][1], counterpartyIns[0][0], counterpartyIns[0][3]],
+            [2, 0, templateInputs[1][1], templateInputs[1][0], templateInputs[1][3]],
+            [3, 1, counterpartyIns[1][1], counterpartyIns[1][0], counterpartyIns[1][3]]
+        ]
+    };
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        DummyWallet,
+        getTemplateDataset
+    };
+}
+
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
