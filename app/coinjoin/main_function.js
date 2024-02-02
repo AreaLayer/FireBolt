@@ -776,7 +776,7 @@ function applyKeysToTemplate(wallet, template, realtxs, realbackouttxs, promiseI
                 const workingKey = keysCopy.shift();
                 realtxs[i].applyKey(workingKey, "outs", j, cp);
 
-                // search for the inpoint of the *next* transaction (TODO: assumption)
+                // search for the inpoint of the *next* transaction (assumption)
                 for (let k = 0; k < template.txs[i + 1].ins.length; k++) {
                     const tin = template.txs[i + 1].ins[k];
                     if (tin.amount === to.amount && tin.spkType === "NN") {
@@ -785,7 +785,7 @@ function applyKeysToTemplate(wallet, template, realtxs, realbackouttxs, promiseI
                 }
 
                 // do the same for any backout txs
-                // TODO: stupid assumption of matching amount, as no other
+                // assumption of matching amount, as no other
                 // current way of finding backout's parents
                 for (let l = 0; l < template.backoutTxs.length; l++) {
                     const btx = template.backoutTxs[l];
@@ -992,9 +992,4 @@ console.log(btc_to_sats.extractTransaction.toHex());
 console.log(`Transaction Amount: ${transactionAmount} BTC`);
 console.log(`Dynamic Fee: ${dynamicFee} satoshis`);
 console.log(`Raw Transaction Hex: ${rawTransaction}`);
-
-
-
-
-
 
