@@ -165,7 +165,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] WASM
 
-- [ ] Complete PRs
+- [z] Complete PRs (WIP)
 
 - [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
     
