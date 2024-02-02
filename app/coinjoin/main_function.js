@@ -543,8 +543,32 @@ coOwnedOutputs() {
 }
 
 toString() {
-    // Human-readable representation.
+    // Tx to mix
     return `Transaction: pre-tx balances: ${this.preTxBalances}\ninputs: ${this.ins}, outputs ${this.outs}\npost-tx balances: ${this.postTxBalances}`;
+}
+class OCCTemplate {
+    constructor(templateDataSet) {
+        // Number of counterparties
+        this.n = templateDataSet.n;
+        // Number of transactions
+        this.N = templateDataSet.N;
+        // This lists the output indices for each transaction which are to be
+        // co-owned outputs and their relative proportions
+        // (Tx number, index, Counterparty number, amount fraction)
+        // -1 is used for the counterparty number when the output is co-owned by all.
+        this.outList = templateDataSet.out_list;
+        // Inflows have structure: (tx number, counterparty, value in satoshis,
+        // hash, and index)
+        this.inflows = templateDataSet.inflows;
+
+        // Process:
+        // Loop starting at 0 for N transactions
+        // For 0, we construct a transaction with inputs all Outpoints from
+        // inflows for index 0.
+        this.fundingIns = this.inflows
+            .filter(x => x[0] === 0)
+            .map(x => new Outpoint(x[4], x[1], x[2], null, x[3]));
+    }
 }
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
