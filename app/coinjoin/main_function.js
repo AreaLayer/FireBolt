@@ -611,7 +611,7 @@ class OCCTemplate {
 
         for (let i = 1; i < this.N; i++) {
             // source the inputs from: the inflow list, and the co-owned outpoints of the previous
-            // transaction (TODO this is a restriction in the model)
+            // transaction (This is a restriction in the model)
             const ourInflows = this.inflows
                 .filter(x => x[0] === i)
                 .map(x => new Outpoint(x[4], x[1], x[2], null, x[3]));
