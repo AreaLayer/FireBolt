@@ -570,6 +570,130 @@ class OCCTemplate {
             .map(x => new Outpoint(x[4], x[1], x[2], null, x[3]));
     }
 }
+containsPromise() {
+    // Return true if at least 1 of the inputs
+    // is a UTXO provided by a counterparty under exclusive
+    // ownership (a "promise"); these require backouts.
+    return this.ins.some(x => x.counterparty !== -1);
+}
+
+coOwnedOutputs() {
+    // Return true if at least 1 of the outputs is
+    // based on an N of N multisig between all participants.
+    return this.outs.filter(x => x.counterparty === -1);
+}
+
+toString() {
+    // Human-readable representation.
+    return `Transaction: pre-tx balances: ${this.preTxBalances}\ninputs: ${this.ins}, outputs ${this.outs}\npost-tx balances: ${this.postTxBalances}`;
+}
+class OCCTemplate {
+    constructor(templateDataSet) {
+        this.n = templateDataSet.n;
+        this.N = templateDataSet.N;
+        this.outList = templateDataSet.out_list;
+        this.inflows = templateDataSet.inflows;
+        this.txs = [];
+
+        // Loop starting at 0 for N transactions
+        // For 0, construct a transaction with inputs all Outpoints from inflows for index 0.
+        const fundingIns = this.inflows
+            .filter(x => x[0] === 0)
+            .map(x => new Outpoint(x[4], x[1], x[2], null, x[3]));
+
+        const fundingTx = new OCCTemplateTX(
+            this.outList.filter(x => x[0] === 0),
+            fundingIns,
+            [0, 0]
+        );
+
+        this.txs.push(fundingTx);
+
+        for (let i = 1; i < this.N; i++) {
+            // source the inputs from: the inflow list, and the co-owned outpoints of the previous
+            // transaction (TODO this is a restriction in the model)
+            const ourInflows = this.inflows
+                .filter(x => x[0] === i)
+                .map(x => new Outpoint(x[4], x[1], x[2], null, x[3]));
+
+            const ourOutputsInfo = this.outList.filter(x => x[0] === i);
+            const ourCoOwnedInputs = this.txs[i - 1].outs.filter(x => x.spk_type === "NN");
+
+            const newTx = new OCCTemplateTX(
+                ourOutputsInfo,
+                ourCoOwnedInputs.concat(ourInflows),
+                this.txs[i - 1].postTxBalances
+            );
+
+            this.txs.push(newTx);
+        }
+
+        // Automatically generate a second list of transactions: backout transactions
+        // Find all txs in this.txs that have at least one outpoint that is not "NN".
+        // Create a backout tx consuming the *previous* tx's NN outpoints.
+        // Assign the balances in proportion to each party's owed coins.
+
+        this.backoutTxs = [];
+
+        for (let i = 0; i < this.txs.length - 1; i++) {
+            const currentTx = this.txs[i + 1];
+
+            if (currentTx.containsPromise()) {
+                const backoutOuts = [];
+                const backoutIns = this.txs[i].coOwnedOutputs();
+
+                // Outputs pay to each counterparty what they are owed.
+                // Take the sum of the value of the outpoints being consumed.
+                // Subtract the fee. -> X.
+                // Take the proportions of what each party is owed.
+                // For each party j, assign an outpoint of value X*proportion_j
+
+                let idx = 0;
+                const X = backoutIns.reduce((sum, x) => sum + x.amount, 0);
+                const totalOwed = this.txs[i].postTxBalances.reduce((sum, owed) => sum + owed, 0);
+
+                for (let j = 0; j < this.n; j++) {
+                    const owed = this.txs[i].postTxBalances[j];
+                    const prop = new Decimal(owed).dividedBy(totalOwed);
+                    const fee = Math.round(new Decimal(STATIC_TX_FEE).dividedBy(this.n));
+
+                    const adjustedX = X - fee;
+                    const assignedRedemption = Math.round(new Decimal(adjustedX).times(prop));
+
+                    if (assignedRedemption > 0) {
+                        backoutOuts.push(new Outpoint(idx, j, assignedRedemption));
+                        idx++;
+                    }
+                }
+
+                this.backoutTxs.push(new OCCTemplateTX(backoutOuts, backoutIns, this.txs[i].postTxBalances));
+            }
+        }
+    }
+
+    keysNeeded(counterparty) {
+        let total = 0;
+
+        for (const tx of this.txs) {
+            for (const to of tx.outs) {
+                if (to.spk_type === "p2sh-p2wpkh" && to.counterparty !== counterparty) {
+                    continue;
+                }
+                total++;
+            }
+        }
+
+        for (const tx of this.backoutTxs) {
+            for (const to of tx.outs) {
+                if (to.counterparty === counterparty) {
+                    total++;
+                }
+            }
+        }
+
+        return total;
+    }
+}
 // Function to calculate dynamic fee 
 function calculateDynamicFee() {
   tx.AddInput(input_value, 0);
