@@ -175,7 +175,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] UI design
 
-- [ ] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
+- [x] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
 
 - [ ] Unit Tests
     
