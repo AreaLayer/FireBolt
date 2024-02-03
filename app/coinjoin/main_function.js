@@ -34,11 +34,11 @@ const PTG() {
     'output_address', 'change_address', 'output_script', 'change_script',
     'output_amount', 'change_amount', 'locktime', 'outs', 'pay_out_index',
     'base_form', 'fully_signed_tx', 'completed', 'txid', 'is_spent',
-    'is_confirmed', 'is_broadcast', 'spending_tx'
+    'is_confirmed', 'is_broadcast', 'spending_tx', 'amount', 'paymentfee', 'balance',
 ];
 };
 class CXJT {
-    constructor(txtemplate, wallet, n_counterparties, n, locktime = null, keyset = null) {
+    constructor(tx, wallet, n_counterparties, n, locktime = null, keyset = null) {
 
         if (!(wallet instanceof Wallet)) {
             throw new Error("Wallet must be an instance of Wallet");
