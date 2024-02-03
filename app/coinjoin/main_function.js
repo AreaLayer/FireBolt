@@ -290,7 +290,7 @@ include_signature(in_index, cp, sig) {
 
             return true;
         }
-    } else if (tp === "p2sh-p2wpkh") {
+    } else if (tp === "p2tr-p2wsh") {
         // Counterparty's promise signature
         // Verification check
         const scriptCode =
@@ -434,7 +434,7 @@ class Outpoint {
         this.n = n;
         // Used for pre-existing outpoints (inflows/promises)
         this.txid = txid;
-        this.spk_type = (counterparty === -1) ? "NN" : "p2sh-p2wpkh";
+        this.spk_type = (counterparty === -1) ? "NN" : "p2tr-p2wsh";
         this.counterparty = counterparty;
         this.amount = (typeof amount === 'number') ? btc_to_satoshis(amount) : amount;
     }
@@ -695,9 +695,8 @@ class OCCTemplate {
     }
 }
 class OCCTemplate {
-    // ... (previous code)
-
-    get ourKeys() {
+    
+  get ourKeys() {
         // This will simply source N new addresses from mixdepth 1,
         // external branch (the branch for receiving), and return the
         // pubkeys with the addresses
