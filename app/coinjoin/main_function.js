@@ -52,7 +52,7 @@ class CXJT {
             throw new Error("n_counterparties and n must be integers");
         }
 
-        this.txtemplate = txtemplate;
+        this.tx = tx;
         this.wallet = wallet;
         this.n_counterparties = n_counterparties;
         this.n = n;
@@ -619,7 +619,7 @@ class OCCTemplate {
             const ourOutputsInfo = this.outList.filter(x => x[0] === i);
             const ourCoOwnedInputs = this.txs[i - 1].outs.filter(x => x.spk_type === "NN");
 
-            const newTx = new OCCTemplateTX(
+            const newTx = new TX(
                 ourOutputsInfo,
                 ourCoOwnedInputs.concat(ourInflows),
                 this.txs[i - 1].postTxBalances
@@ -694,7 +694,7 @@ class OCCTemplate {
         return total;
     }
 }
-class OCCTemplate {
+class OCCKeys {
     
   get ourKeys() {
         // This will simply source N new addresses from mixdepth 1,
