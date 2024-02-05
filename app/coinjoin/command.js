@@ -1,29 +1,29 @@
-const bitcoin = require('bitcoinjs-lib');
+const {Keys,Sigs } = require('bitcoinjs-lib');
 const { Command, Boolean } = require('twisted.protocols.amp');
-const OC_SETUP_COMMAND = 'OCSetup';
-const OC_KEYS_COMMAND = 'OCKeys';
-const OC_SIGS_COMMAND = 'OCSigs';
-const OC_SETUP_RESPONSE_COMMAND = 'OCSetupResponse';
-const OC_KEYS_RESPONSE_COMMAND = 'OCKeysResponse';
-const OC_SIGS_RESPONSE_COMMAND = 'OCSigsResponse';
+const OC_SETUP_COMMAND = 'Setup';
+const OC_KEYS_COMMAND = 'Keys';
+const OC_SIGS_COMMAND = 'Sigs';
+const OC_SETUP_RESPONSE_COMMAND = 'SetupResponse';
+const OC_KEYS_RESPONSE_COMMAND = 'KeysResponse';
+const OC_SIGS_RESPONSE_COMMAND = 'SigsResponse';
 
 class DaemonNotReady extends Error {}
 
-class OCCommand extends Command {
+class Command extends Command {
     constructor() {
         super();
         this.response = [['accepted', Boolean]];
     }
 }
 
-class OCSetup extends OCCCommand {
+class Setup extends OCCCommand {
     constructor() {
         super();
         this.arguments = [['amtdata', String]];
     }
 }
 
-class OCKeys extends OCCommand {
+class Keys extends Command {
     constructor() {
         super();
         this.arguments = [
@@ -34,21 +34,21 @@ class OCKeys extends OCCommand {
     }
 }
 
-class OCSigs extends OCCCommand {
+class Sigs extends OCCCommand {
     constructor() {
         super();
         this.arguments = [['our_sigs', String]];
     }
 }
 
-class OCSetupResponse extends OCCommand {
+class SetupResponse extends OCCommand {
     constructor() {
         super();
         this.arguments = [['template_ins', String]];
     }
 }
 
-class OCKeysResponse extends OCCommand {
+class KeysResponse extends OCCommand {
     constructor() {
         super();
         this.arguments = [
@@ -58,7 +58,7 @@ class OCKeysResponse extends OCCommand {
     }
 }
 
-class OCSigsResponse extends OCCommand {
+class SigsResponse extends OCCommand {
     constructor() {
         super();
         this.arguments = [['funding_sigs', String]];
@@ -66,22 +66,22 @@ class OCSigsResponse extends OCCommand {
 }
 
 const commands = {
-    [OCC_SETUP_COMMAND]: OCCSetup,
-    [OCC_KEYS_COMMAND]: OCCKeys,
-    [OCC_SIGS_COMMAND]: OCCSigs,
-    [OCC_SETUP_RESPONSE_COMMAND]: OCCSetupResponse,
-    [OCC_KEYS_RESPONSE_COMMAND]: OCCKeysResponse,
-    [OCC_SIGS_RESPONSE_COMMAND]: OCCSigsResponse,
+    [SETUP_COMMAND]: Setup,
+    [KEYS_COMMAND]: Keys,
+    [SIGS_COMMAND]: Sigs,
+    [SETUP_RESPONSE_COMMAND]: SetupResponse,
+    [KEYS_RESPONSE_COMMAND]: KeysResponse,
+    [SIGS_RESPONSE_COMMAND]: SigsResponse,
 };
 
 module.exports = {
     DaemonNotReady,
-    OCCSetup,
-    OCCKeys,
-    OCCSigs,
-    OCCSetupResponse,
-    OCCKeysResponse,
-    OCCSigsResponse,
+    Setup,
+    Keys,
+    Sigs,
+    SetupResponse,
+    KeysResponse,
+    SigsResponse,
     commands,
 };
 

@@ -1,5 +1,5 @@
 const bitcoin = require('bitcoinjs-lib');
-const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require('CoinJoinXT'); 
+const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require('main_function'); 
 
 
 // Testnet
@@ -58,7 +58,7 @@ const network = bitcoin.network.testnet
             this.template_inputs,
             this.counterparty_ins
         );
-        this.template = new OCCTemplate(template_data_set);
+        this.template = new Data(template_data_set);
         // pre-choose our keys for template
         // how many keys do we need?
         const nkeys_us = this.template.keys_needed(0);
@@ -92,14 +92,14 @@ const network = bitcoin.network.testnet
     }
 }
 
-class OCCClientProtocolFactory {
+class ClientProtocolFactory {
 
     constructor(wallet) {
         this.wallet = wallet;
     }
 
     buildProtocol() {
-        return new OCCClientProtocol(this, this.wallet);
+        return new ClientProtocol(this, this.wallet);
     }
 }
 
