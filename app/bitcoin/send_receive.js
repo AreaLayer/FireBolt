@@ -1,4 +1,4 @@
-const bitcoin = require('bitcoinjs-lib');
+const {PrivateKey, PublicKey, UTXO} = require('bitcoinjs-lib');
 const testnet = bitcoin.networks.testnet;
 const payjoin = requiere('payjoin-lib');
 const keypair = ECPair.makeRandom({ network });
@@ -7,7 +7,6 @@ const tweakedSigner = tweakSigner(keypair, { network });
 // Replace the values below with your own testnet wallet information
 const privateKey = 'YOUR_PRIVATE_KEY';
 const publicKey = 'YOUR_PUBLIC_KEY';
-const destinationAddress = 'DESTINATION_ADDRESS';
 
 // Connect to the Bitcoin testnet network
 const provider = 'https://testnet.blockchain.info/api';

@@ -4,7 +4,7 @@
 [![Bitcoin-only](https://img.shields.io/badge/bitcoin-only-FF9900?logo=bitcoin)](https://twentyone.world)
 [![LN](https://img.shields.io/badge/lightning-792EE5?logo=lightning)](https://mempool.space/lightning)
 
-App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
+App wallet for Android, iOs and PWA with Nostr, Nostr, Lightning Network,CoinJoin and PayJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
@@ -54,7 +54,7 @@ Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed a
 
 The other main features Firebolt supports are as follows:
 
-📱 Contact list via Npub or DID
+📱 Contact list via Npub
 
 🪙 Payments via Lightning Network
 
@@ -66,15 +66,11 @@ The other main features Firebolt supports are as follows:
 
 ## Feature
 
-- Lightning Network (LND/LDK/CLN)
+- Lightning Network (LDK)
 
 - Nostr
 
 - Bitcoin
-
-- Hypercore, Hyperswarm and Hyperdrive
-
-- TBD (Web5)
 
 - LSP
 
@@ -92,7 +88,7 @@ The other main features Firebolt supports are as follows:
 
 - Miniscript
 
-- Contact list via Nostr (NPub) and DID (Web5)
+- Contact list via Nostr (NPub)
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
 
@@ -137,8 +133,6 @@ The other main features Firebolt supports are as follows:
 
 - [x] Payjoin over Nostr
 
-- [X] Payjoin over Web5 
-
 - [x] BOLT12
 
 - [X] Taproot Channels 
@@ -155,17 +149,13 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Submarine Swap
 
-- [ ] Backup for TBD keys
-
 - [ ] Neutrino
 
 - [ ] Hardwallets (Trezor, Bitbox, Ledger)
 
 - [ ] Paynym
 
-- [ ] WASM
-
-- [ ] Complete PRs
+- [x] Complete PRs (WIP)
 
 - [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
     
@@ -173,12 +163,14 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Compile Android Files
 
-- [ ] UI design
+- [x] UI design
 
-- [ ] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
+- [x] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
 
 - [ ] Unit Tests
-
+    
+- [x] PTG complete integration
+  
 - [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
 

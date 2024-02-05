@@ -1,4 +1,4 @@
-const bitcoin = require('bitcoinjs-lib');
+const {PubKey, Address, Path, Mnemomnic} = require('bitcoinjs-lib');
 const bip39 = require('bip39');
 const bip32 = require('bip32');
 const testnet = bitcoin.networks.testnet;
