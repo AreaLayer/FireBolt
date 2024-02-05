@@ -187,7 +187,7 @@ const privkey = this.wallet.get_key_from_addr(addr);
 // Check whether we are multi-signing or single-signing
 const tp = this.template.ins[in_index].spk_type;
 
-if (tp === "p2sh-p2wpkh") {
+if (tp === "p2tr-p2wsh") {
     // The main (non-multisig) signing algo(s) return a signed
     // tx, not a signature; extract from the temporary tx
     const txwithsig = btc.deserialize(
@@ -443,7 +443,7 @@ class Outpoint {
         return `Outpoint: ${this.n} ${this.counterparty} ${this.spk_type} ${this.amount}`;
     }
 }
-class OCCTemplateTX {
+class TX {
     constructor(outsInfo, ins, preTxBalances, minFee = STATIC_TX_FEE, maxFee = 10 * STATIC_TX_FEE) {
         this.preTxBalances = preTxBalances;
         this.minFee = minFee;
