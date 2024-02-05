@@ -993,8 +993,11 @@ console.log(`Dynamic Fee: ${dynamicFee} satoshis`);
 console.log(`Raw Transaction Hex: ${rawTransaction}`);
 console.log(cxjt.extracTransactionn().toHex());
 console.log(tx.extractTransaction().toHex());
-console.log
-console.log
-console.log
-console.log
+console.log(output.extractTransaction().toHex());
+console.log(input.extractTansaction().toHex());
+console.log(utxo.extractTransaction().toHex());
+console.log(balance.extratracTransaction.toHex());
+console.log(paymentfee.extratracTransaction.toHex());
+console.log(coinjoinfee.extratracTransaction.toHex());
+
 
