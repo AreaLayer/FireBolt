@@ -1,4 +1,4 @@
-const bitcoin = require('bitcoinjs-lib');
+const {UTXOs, Address, Radom, Payments} = require('bitcoinjs-lib');
 const firebolt = require('main_function');
 const axios = require('axios');
 
