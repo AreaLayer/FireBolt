@@ -66,15 +66,11 @@ The other main features Firebolt supports are as follows:
 
 ## Feature
 
-- Lightning Network (LND/LDK/CLN)
+- Lightning Network (LDK)
 
 - Nostr
 
 - Bitcoin
-
-- Hypercore, Hyperswarm and Hyperdrive
-
-- TBD (Web5)
 
 - LSP
 
@@ -92,7 +88,7 @@ The other main features Firebolt supports are as follows:
 
 - Miniscript
 
-- Contact list via Nostr (NPub) and DID (Web5)
+- Contact list via Nostr (NPub)
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
 
@@ -136,8 +132,6 @@ The other main features Firebolt supports are as follows:
 - [x] Nostr client
 
 - [x] Payjoin over Nostr
-
-- [X] Payjoin over Web5 
 
 - [x] BOLT12
 
