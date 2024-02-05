@@ -546,7 +546,7 @@ toString() {
     // Tx to mix
     return `Transaction: pre-tx balances: ${this.preTxBalances}\ninputs: ${this.ins}, outputs ${this.outs}\npost-tx balances: ${this.postTxBalances}`;
 }
-class OCCTemplate {
+class Data {
     constructor(templateDataSet) {
         // Number of counterparties
         this.n = templateDataSet.n;
@@ -587,7 +587,7 @@ toString() {
     // Human-readable representation.
     return `Transaction: pre-tx balances: ${this.preTxBalances}\ninputs: ${this.ins}, outputs ${this.outs}\npost-tx balances: ${this.postTxBalances}`;
 }
-class OCCTemplate {
+class DataSet {
     constructor(templateDataSet) {
         this.n = templateDataSet.n;
         this.N = templateDataSet.N;
@@ -694,7 +694,7 @@ class OCCTemplate {
         return total;
     }
 }
-class OCCKeys {
+class Keys {
     
   get ourKeys() {
         // This will simply source N new addresses from mixdepth 1,
