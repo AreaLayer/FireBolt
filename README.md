@@ -4,7 +4,7 @@
 [![Bitcoin-only](https://img.shields.io/badge/bitcoin-only-FF9900?logo=bitcoin)](https://twentyone.world)
 [![LN](https://img.shields.io/badge/lightning-792EE5?logo=lightning)](https://mempool.space/lightning)
 
-App wallet for Android, iOs and PWA with Nostr, Nostr, Lightning Network,CoinJoin and PayJoin
+App wallet for Android, iOs and PWA with Nostr,Lightning Network,CoinJoin and PayJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
@@ -50,7 +50,7 @@ Central Banks, inflations and cetralized social media
 
 Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. 
 
-Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed and optional password. Lightning channels data is only saved in our sever if you use our Lightning Node, if not we'll not save your lightning channel data
+Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed and optional password. Lightning channels data is only saved in third party if you use Lightning Node.
 
 The other main features Firebolt supports are as follows:
 
