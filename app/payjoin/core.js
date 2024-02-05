@@ -1,4 +1,5 @@
 const payjoin = require('payjoin-client');
+const {client, request, wallet} = require('payjoin-client');
 const bitcoin = require('bitcoinjs-lib');
 const network = bitcoin.networks.testnet;
 
