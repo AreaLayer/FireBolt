@@ -17,6 +17,23 @@ const btc_to_satoshis () {
   class satoshis_to_btc () {
   return satoshis_to_btc;
   };
+
+class CoinJoinRound {
+  constructor(inputs, outputs) {
+    this.inputs = inputs;
+    this.outputs = outputs;
+  }
+
+  rbf(transaction, feeRate) {
+    // Modify the transaction to increase fees
+    // Calculate the new fee based on the fee rate
+    const currentFee = transaction.calculateFee();
+    const newFee = currentFee * feeRate;
+    transaction.modifyFee(newFee);
+    // Broadcast the modified transaction
+    transaction.broadcast();
+  }
+}
 const get_current_blockheight () {
   class blockchain_info = cjxt_single.jsonrpc
         return blockchain_info;
