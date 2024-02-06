@@ -4,11 +4,11 @@
 [![Bitcoin-only](https://img.shields.io/badge/bitcoin-only-FF9900?logo=bitcoin)](https://twentyone.world)
 [![LN](https://img.shields.io/badge/lightning-792EE5?logo=lightning)](https://mempool.space/lightning)
 
-App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Network, TBD, CoinJoin and PayJoin
+App wallet for Android, iOs and PWA with Nostr,Lightning Network,CoinJoin and PayJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
-    <img alt="FireBolt" src="./src/assets/firebolt_logo_readme.png" width="150"></img>
+    <img alt="FireBolt" src="./src/asset/firebolt_logo_readme.png" width="150"></img>
   </a>
 </p>
 
@@ -38,9 +38,9 @@ App wallet for Android, iOs and PWA with Nostr, HyperCore, Nostr, Lightning Netw
 
 Cypherpunk App
 
-Firebolt is a wallet designed by a Bitcoiner for Bitcoiners looking for privacy using Payjoin, Lightning Network, Coinjoin, Bitcoin, Hypercore, Nostr and TBD
+Firebolt is a wallet designed by a Bitcoiner for Bitcoiners looking for privacy using Payjoin, Lightning Network, Coinjoin, Bitcoin and Nostr
 
-Each individual has their own identity using Nostr or TBD according to their preference
+Each individual has their own identity using Nostr
 
 ## The problem
 
@@ -48,13 +48,13 @@ Central Banks, inflations and cetralized social media
 
 ## Firebolt's solution
 
-Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. By default, you connect to Area Layer's Electrum-Bitcoin Core server, but you can also connect to your own server. We onboard users to Lightning through our lightning service provider (LSP) Timelight.
+Firebolt offers a Bitcoin wallet that supports both on-chain and lightning transactions. The application runs a custom, non-routing Lightning node created with the Lightning Development Kit on the user's mobile phone. 
 
-Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed and optional password. Lightning channels data is only saved in our sever if you use our Lightning Node, if not we'll not save your lightning channel data
+Users can back up their Bitcoin and Lightning keys with a standard BIP-39 seed and optional password. Lightning channels data is only saved in third party if you use Lightning Node.
 
 The other main features Firebolt supports are as follows:
 
-📱 Contact list via Npub or DID
+📱 Contact list via Npub
 
 🪙 Payments via Lightning Network
 
@@ -66,19 +66,15 @@ The other main features Firebolt supports are as follows:
 
 ## Feature
 
-- Lightning Network (LND/LDK/CLN)
+- Lightning Network (LDK)
 
 - Nostr
 
 - Bitcoin
 
-- Hypercore, Hyperswarm and Hyperdrive
-
-- TBD (Web5)
-
 - LSP
 
-- [CoinJoin powered by CoinjoinXT, LN Vortex and Coinswap](https://github.com/AreaLayer/CoinjoinXT)
+- [CoinJoin powered by CoinjoinXT, Lightning Network, Taproot and Coinswap](https://github.com/AreaLayer/CoinjoinXT)
 
 - Multisig 
 
@@ -92,7 +88,7 @@ The other main features Firebolt supports are as follows:
 
 - Miniscript
 
-- Contact list via Nostr (NPub) and DID (Web5)
+- Contact list via Nostr (NPub)
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
 
@@ -101,50 +97,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Mainnet
 
-- [X] Testnet
-
-- [X] CoinJoin Fee
-
-- [x] LSP
-
-- [x] LDK integration 
-
-
-- [X] LND integration
-
-- [X] Taproot, Segwit and Legacy
-
-- [x] Multisig
-
-- [x] Miniscript
-
-- [x] CoinJoin Algorithm powered by CoinJoinXT
-
-- [x] CoinSwap implementation for privacy during mixing
-
-- [x] Coin Select
-
-- [x] UI/UX
-
-- [x] TBD 
-
-- [x] PayJoin (BIP-78) integration beta 
-
-- [x] Seed via BIP-32
-
-- [x] Contact List
-
-- [x] Backup via BIP-39 via Nostr and Hypercore
-
-- [x] Nostr client
-
-- [x] Payjoin over Nostr
-
-- [X] Payjoin over Web5 
-
-- [x] BOLT12
-
-- [X] Taproot Channels (WIP)
+- [X] Taproot Channels 
   
 - [x] Finish modules iOs, Androind and PWA with React (WIP)
 
@@ -158,23 +111,29 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Submarine Swap
 
-- [ ] Backup for TBD keys
-
 - [ ] Neutrino
 
 - [ ] Hardwallets (Trezor, Bitbox, Ledger)
 
 - [ ] Paynym
 
-- [ ] WASM
+- [x] Complete PRs (WIP)
 
-- [ ] Complete PRs
-
-- [ ] Release Beta wallet in 2024
+- [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
     
 - [ ] Compile code
 
-- [ ] Fix Web5, Nostr, Lightning and Bitcoin cross libraries
+- [ ] Compile Android Files
+
+- [x] UI design
+
+- [x] Fix Nostr, Lightning and Bitcoin cross libraries
+
+- [ ] Unit Tests
+    
+- [x] PTG complete integration
+  
+- [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
 
 ## Run App
@@ -185,6 +144,9 @@ Docs (soon)
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
 
+## React Native and Cross Platform
+
+[App](https://github.com/AreaLayer/firebolt-react-native)
 
 ## Contributors
 

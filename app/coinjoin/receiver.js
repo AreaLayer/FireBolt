@@ -1,7 +1,7 @@
 const bitcoin = require('bitcoinjs-lib');
-const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require('./occbase'); // Replace with your relevant imports
+const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require('/main_function');
 
-class OCCServerProtocol {
+class ServerProtocol {
 
     constructor(factory, wallet) {
         this.factory = factory;

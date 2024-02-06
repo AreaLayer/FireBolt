@@ -2,7 +2,7 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs');
 const { JsonRpc } = require('jsonrpc-bidirectional');
-const { BitcoinCoreInterface, RegtestBitcoinCoreInterface } = require('your-blockchain-interface-module'); // Replace with your actual blockchain interface module
+const { BitcoinCoreInterface, RegtestBitcoinCoreInterface } = require('bitcoinjs-lib');
 
 const defaultConfig = `
 [LOGGING]

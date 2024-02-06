@@ -1,12 +1,15 @@
 const bitcoin = require('bitcoinjs-lib');
 
 async function trasaction = {
-  utxo: uxto,
+  utxo: utxo,
   input: input,
   output: output,
 
-
+}
 async function validation = {
-
-
-async function lightning = {
+    utxo: utxo,
+    confirmaton: confirmation,
+    input: output,
+    output: output,
+    p2tr: p2tr,
+}

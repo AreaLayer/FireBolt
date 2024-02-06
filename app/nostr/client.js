@@ -1,7 +1,7 @@
 const { Keys, Client, Metadata, EventId, PublicKey, EventBuilder } = require("@rust-nostr/nostr-sdk-js");
-const { PrivateKey, BIP39, PublicKey } = require("bitcoin-js");
+const { PrivateKey, BIP39, PublicKey } = require("bitcoinjs-lib");
 
-const {Mnemonic, SeedSync} = require("@bitcoijs/bip39");
+const {Mnemonic, SeedSync} = require("@bitcoinjs-lib/bip39");
  main
 
 async function main() {
