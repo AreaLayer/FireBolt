@@ -105,7 +105,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] PWA (WIP)
 
-- [ ] RBF
+- [x] RBF
 
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
 
