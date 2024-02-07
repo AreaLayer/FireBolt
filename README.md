@@ -96,8 +96,6 @@ The other main features Firebolt supports are as follows:
 ## Roadmap
 
 - [ ] Mainnet
-
-- [X] Taproot Channels 
   
 - [x] Finish modules iOs, Androind and PWA with React (WIP)
 
@@ -134,8 +132,7 @@ The other main features Firebolt supports are as follows:
 
 ## Run App
 
-Docs (soon)
-
+[Run](https://github.com/AreaLayer/FireBolt/blob/main/doc/run.md)
 ## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
