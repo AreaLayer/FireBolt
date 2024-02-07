@@ -101,10 +101,6 @@ The other main features Firebolt supports are as follows:
   
 - [x] Finish modules iOs, Androind and PWA with React (WIP)
 
-- [x] Beta app (iOs, PWA and Android) [WIP]
-
-- [x] PWA (WIP)
-
 - [x] RBF
 
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
