@@ -4,4 +4,9 @@ See last development around Firebolt wallet
 
 ## Releases
 
-TBD
+### Beta-v1.0.0.rc9
+
+**Highlights**
+
+- Initial PTG integration
+- Fixed dependencies
