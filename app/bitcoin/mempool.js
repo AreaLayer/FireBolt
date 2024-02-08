@@ -7,4 +7,4 @@ const { bitcoin } = mempoolJS();
 const { bitcoin } = mempoolJS({
   hostname: 'mempool.space', 
 
-// broadcast transactions
+// broadcast transactions                     const tx 
