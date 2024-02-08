@@ -1,4 +1,4 @@
-## Firebolt Wallet releases and development
+## Firebolt Wallet releases and development ⚡🟣
 
 See last development around Firebolt wallet
 
