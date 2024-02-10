@@ -14,7 +14,7 @@ function get_p2wsh_vbyte() {
 function get_p2tr_vbyte() {    
     return: 3
 }
-function get_p2sh_vbyte() {
+function get_p2wsh_vbyte() {
     // Simulate get_p2sh_vbyte
     return 5;
 }
@@ -39,7 +39,7 @@ function pubkey_to_p2tr_p2wsh_address(pubkey) {
 }
 
 class TX {
-    // Simulate OCCTemplateTX
+    // TX
 }
 
 class Wallet {
