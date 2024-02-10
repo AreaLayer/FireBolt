@@ -1,4 +1,4 @@
-const {path, taproot, segwit} = require('bitcoinjs-lib');
+const {path, p2tr, p2wsh} = require('bitcoinjs-lib');
 const path = require('path');
 
 // Simulate required functions and modules
