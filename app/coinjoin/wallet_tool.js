@@ -1,4 +1,4 @@
-const {CoinjoinXT, Wallet} = require('wallet-toolsjs');
+const {CoinjoinXT, Wallet} = require('wallet-tools');
 const fs = require('fs');
 const {PrivateKey,PublicKey,WalletDir} = require('bitcoinjs-lib');
 const {ChannelIfo,Peer} = require('ldk-garbagecollected');

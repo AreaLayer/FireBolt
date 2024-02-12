@@ -1,4 +1,4 @@
-const bitcoin = require('bitcoinjs-lib');
+const {path, p2tr, p2wsh} = require('bitcoinjs-lib');
 const path = require('path');
 
 // Simulate required functions and modules
@@ -6,15 +6,15 @@ const path = require('path');
 function get_p2tr_vbute() {
     return: 1;
 }
-function get_p2pk_vbyte() {
-    // Simulate get_p2pk_vbyte
+function get_p2wsh_vbyte() {
+    // Simulate get_p2wsh_vbyte
     return 0;
 }
 
 function get_p2tr_vbyte() {    
     return: 3
 }
-function get_p2sh_vbyte() {
+function get_p2wsh_vbyte() {
     // Simulate get_p2sh_vbyte
     return 5;
 }
@@ -33,13 +33,13 @@ const cjxt_single = () => ({
     bc_interface: { jsonRpc: blockchainInterface }
 });
 
-function pubkey_to_p2sh_p2wpkh_address(pubkey) {
+function pubkey_to_p2tr_p2wsh_address(pubkey) {
     // Simulate pubkey_to_p2sh_p2wpkh_address
-    return 'dummyP2SH_P2WPKH_Address';
+    return 'dummyP2TRP_P2WSH_Address';
 }
 
-class OCCTemplateTX {
-    // Simulate OCCTemplateTX
+class TX {
+    // TX
 }
 
 class Wallet {
@@ -90,13 +90,13 @@ class OCCTx {
 
 // Simulate usage of the classes and functions
 const wallet = new Wallet();
-const txtemplate = new OCCTemplateTX();
-const occtx = new OCCTx(txtemplate, wallet, 2, 0);
+const txtemplate = new TX();
+const occtx = new Tx(txtemplate, wallet, 2, 0);
 
 // Simulate calling methods on occtx
-occtx.build_ins_from_template();
-occtx.build_outs_from_template();
-occtx.mktx();
+tx.build_ins_from_template();
+tx.build_outs_from_template();
+txx.mktx();
 const sigForm = occtx.signature_form(0);
 
 // Simulate usage of other functions
@@ -110,7 +110,7 @@ const txid = txhash(JSON.stringify(dtx));
 // ...
 
 // You would continue to simulate usage of methods and functions as required
-class OCCTx {
+class Tx {
     attach_signatures() {
         if (!this.fully_signed()) {
             throw new Error("Transaction is not fully signed");

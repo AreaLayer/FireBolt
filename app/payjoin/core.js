@@ -1,6 +1,7 @@
-const payjoin = require('payjoin-lib');
+const payjoin = require('payjoin-client');
+const {client, request, wallet} = require('payjoin-client');
 const bitcoin = require('bitcoinjs-lib');
-const network = bitcoin.network
+const network = bitcoin.networks.testnet;
 
 async function createPayJoinTransaction(privateKey, utxos, payjoinEndpoint) {
   // Fetch the latest transaction fee rate
