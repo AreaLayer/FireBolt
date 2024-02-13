@@ -7,4 +7,7 @@
 ## Rsync25
 
 - Github: @Rsync25
-- Twitter: @Rsync25
+- X: @Rsync25
+
+
+## Anon devs and public devs
