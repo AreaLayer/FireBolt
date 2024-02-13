@@ -13,8 +13,8 @@ blockchain_source = bitcoin-rpc
 network = testnet
 rpc_host = localhost
 rpc_port = 8332
-rpc_user = your_rpc_user
-rpc_password = your_rpc_password
+rpc_user = 
+rpc_password = 
 `;
 
 const globalSingleton = {
