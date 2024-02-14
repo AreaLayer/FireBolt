@@ -1,5 +1,5 @@
 const payjoin = require('payjoin-client');
-const {client, request, wallet} = require('payjoin-client');
+const {Client, Request, Wallet} = require('payjoin-client');
 const nostr = require('nostr-tools');
 const bitcoin = require('bitcoinjs-lib');
 
