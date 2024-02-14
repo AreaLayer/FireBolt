@@ -44,7 +44,7 @@ class TX {
 
 class Wallet {
     constructor() {
-        // Simulate Wallet
+        // Simulate Wallet                       const 
     }
 
     pubkey_to_address(pubkey) {
