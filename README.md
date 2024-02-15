@@ -117,8 +117,6 @@ The other main features Firebolt supports are as follows:
     
 - [ ] Compile code
 
-- [ ] Compile Android Files
-
 - [x] UI design
 
 - [x] Fix Nostr, Lightning and Bitcoin cross libraries
