@@ -121,7 +121,7 @@ The other main features Firebolt supports are as follows:
 
 - [x] Fix Nostr, Lightning and Bitcoin cross libraries
 
-- [ ] Unit Tests with Coinjoin 
+- [ ] Unit Tests with Coinjoin and PayJoin 
     
 - [x] PTG complete integration
   
