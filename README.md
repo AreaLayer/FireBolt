@@ -92,6 +92,10 @@ The other main features Firebolt supports are as follows:
 
 - Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats)
 
+- RBF
+
+- User friendly
+
 
 ## Roadmap
 
@@ -99,7 +103,7 @@ The other main features Firebolt supports are as follows:
   
 - [x] Finish modules Android with React (WIP)
 
-- [x] RBF
+- [x] RBF (WIP)
 
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
 
