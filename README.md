@@ -129,7 +129,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] BIP-329
     
-- [x] PTG complete integration
+- [x] PTG complete integration (CoinjoinXT)
   
 - [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
