@@ -27,7 +27,7 @@ App wallet for Android, iOs and PWA with Nostr,Lightning Network,CoinJoin and Pa
 
 **⚠️ Use small amounts for test Coinjoin**
 
-- **Android - Download latest APK (Soon)**
+- **Android - Download latest APK (TBA)**
 
 - **iPhone - Download latest TestFlight app (Soon)**
 
