@@ -1,3 +1,4 @@
+const backup = require('backup');
 const bitcoin = require('bitcoinjs-lib');
 const bip39 = require('bip39');
 
