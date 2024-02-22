@@ -3,7 +3,7 @@ const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require
 
 
 // Testnet
-const network = bitcoin.network.testnet
+const network = bitcoin.network.testnet;
 
 
     constructor(factory, wallet) {
