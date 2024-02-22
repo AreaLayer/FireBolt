@@ -13,14 +13,11 @@ const network = bitcoin.network.testnet;
 
     checkClientResponse(response) {
         if (!response.hasOwnProperty('accepted') || !response.accepted) {
-            // Unintended client shutdown cannot be tested easily in twisted
             process.exit(1); // Consider using an appropriate exit code
         }
     }
 
     defaultErrback(failure) {
-        // see testing note above
-        // Handle errors appropriately, e.g., log and exit
     }
 
     defaultCallbacks(promise) {
@@ -33,8 +30,6 @@ const network = bitcoin.network.testnet;
     }
 
     async clientStart() {
-        // First step: set template, set range required to request from counterparty
-        // choose our ins for template
         const amtdata = [[0.8, 1.2], [0.2, 0.4]];
         try {
             this.template_inputs = await get_utxos_from_wallet(this.wallet, amtdata);
