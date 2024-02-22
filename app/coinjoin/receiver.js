@@ -83,10 +83,6 @@ class ServerProtocol {
         return { accepted: true };
     }
 
-    // Implement other methods similarly
-
-    // ...
-
 }
 
 class ServerProtocolFactory {
@@ -96,15 +92,18 @@ class ServerProtocolFactory {
     }
 
     buildProtocol() {
-        return new OCCServerProtocol(this, this.wallet);
+        return new ServerProtocol(this, this.wallet);
     }
 }
 
 // Replace this function with your appropriate setup
 function start_daemon(host, port, factory) {
     // Implement your daemon setup and start logic here
-    // constructor(host) {
+    constructor(host) {
+        this.host = host;
 }
+    buildProtocol(){
+        return new DaemonProtool(this.this.host);
 
 // Main execution
 // Implement the loading of configuration, wallet, and daemon here
