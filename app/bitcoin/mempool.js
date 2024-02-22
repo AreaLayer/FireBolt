@@ -8,7 +8,8 @@ const { bitcoin } = mempoolJS({
   hostname: 'mempool.space', 
 
 // broadcast transactions                     
-  const tx 
+  const { tx } = tx({ 
+    
 
 const { rbf } = rbf();
   rfb:  'fee';
