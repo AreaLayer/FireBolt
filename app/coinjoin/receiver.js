@@ -72,7 +72,7 @@ class ServerProtocol {
             }
         }
         try {
-            const response = await this.callRemote(OCCKeysResponse, {
+            const response = await this.callRemote(KeysResponse, {
                 our_keys: JSON.stringify(this.our_keys),
                 our_sigs: JSON.stringify(sigs_to_send)
             });
@@ -89,7 +89,7 @@ class ServerProtocol {
 
 }
 
-class OCCServerProtocolFactory {
+class ServerProtocolFactory {
 
     constructor(wallet) {
         this.wallet = wallet;
@@ -103,13 +103,13 @@ class OCCServerProtocolFactory {
 // Replace this function with your appropriate setup
 function start_daemon(host, port, factory) {
     // Implement your daemon setup and start logic here
-    // ...
+    // constructor(host) {
 }
 
 // Main execution
 // Implement the loading of configuration, wallet, and daemon here
-// ...
+star_daemon(wallet, port, new wallet));
 
 // Start the daemon
-start_daemon(server, port, new OCCServerProtocolFactory(wallet));
+start_daemon(server, port, new ServerProtocolFactory(wallet));
 
