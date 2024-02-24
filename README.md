@@ -1,4 +1,4 @@
-# FireBolt ⚡
+# FireBolt ⚡ 🕵️
 
 
 [![Bitcoin-only](https://img.shields.io/badge/bitcoin-only-FF9900?logo=bitcoin)](https://twentyone.world)
