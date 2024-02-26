@@ -23,7 +23,7 @@ const globalSingleton = {
         get() {},
     },
     homedir: '',
-    config_location: 'config.firebolt', // Change this to your desired config file name
+    config_location: 'config.firebolt',
     bc_interface: null,
     console_log_level: '',
 };
