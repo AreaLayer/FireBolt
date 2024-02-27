@@ -11,7 +11,7 @@ console_log_level = INFO;
 [BLOCKCHAIN]
 blockchain_source = bitcoin-rpc
 network = testnet
-rpc_host = localhost
+rpc_host = 330
 rpc_port = 8332;
 
 const globalSingleton = {
