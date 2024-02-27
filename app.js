@@ -5,7 +5,6 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { getPair, getAddress, getRandom, getBip39 } from 'bitcoinjs-lib';
 
 
-// Your additional imports for specific wallet functionality should go here
 
 const App = () => {
   // State variables
