@@ -104,47 +104,6 @@ This starts the Metro bundler, which bundles your JavaScript code and serves it 
 You can monitor your app's output and debug it using the developer tools provided by your chosen framework or by using browser developer tools if your app runs in a WebView.
 
 
-## Run PWA (Dev Mode)
-
-Running your Progressive Web App (PWA) in development mode. Here's a step-by-step guide:
-
-**1. Install Required Software:**
-Before you start, ensure you have the following software installed on your computer:
-
-- Node.js: Required to run JavaScript code on your computer.
-- A modern web browser (e.g., Google Chrome or Mozilla Firefox) with developer tools.
-
-**2. Create Your PWA:**
-Assuming you have your PWA code ready, make sure it follows the PWA guidelines for a reliable, installable, and engaging web app. Ensure your PWA is registered as a service worker to enable offline access and caching.
-
-**3. Install Required Packages:**
-Navigate to your project's root directory using a terminal or command prompt and install any necessary packages, such as a build tool or a development server if your project requires it. For instance:
-
-```bash
-npm install webpack-dev-server --save-dev
-```
-
-**4. Build and Serve Your PWA:**
-Depending on your project setup, you may need to build your PWA for development. Use the appropriate build tool or bundler (e.g., Webpack, Parcel, or Rollup) and a development server to serve your PWA locally. Here's an example using webpack-dev-server:
-
-```bash
-npx webpack-dev-server --mode development
-```
-
-This command will build and serve your PWA on a local development server.
-
-**5. Access Your PWA:**
-Open your web browser and navigate to the address provided by your development server, typically `http://localhost:8080` or another port specified during setup.
-
-**6. Monitor and Debug:**
-Use the developer tools provided by your web browser to monitor your PWA's output, inspect elements, and debug JavaScript code. Pay attention to any errors or warnings in the console.
-
-**7. Test on Mobile Devices:**
-To ensure your PWA works well on mobile devices, use your mobile browser or a tool like the "Device Mode" in Chrome DevTools to simulate various mobile devices and screen sizes.
-
-**8. Progressive Enhancement:**
-Consider implementing progressive enhancement techniques to provide a seamless experience on a wide range of devices and network conditions.
-
 ## Run App (User mode)
 
 Soon
