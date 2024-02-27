@@ -6,7 +6,7 @@ const { BitcoinCoreInterface, RegtestBitcoinCoreInterface } = require('bitcoinjs
 
 const defaultConfig = `
 [LOGGING]
-console_log_level = INFO
+console_log_level = INFO;
 
 [BLOCKCHAIN]
 blockchain_source = bitcoin-rpc
