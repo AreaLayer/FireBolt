@@ -8,7 +8,7 @@ const network = bitcoin.networks.testnet;
 // Generate a new Bitcoin address
 function generateAddress() {
   const keyPair = bitcoin.ECPair.makeRandom({ network });
-  const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey, network });
+  const { address } = bitcoin.payments.p2tr({ pubkey: keyPair.publicKey, network });
 
   return { address, privateKey: keyPair.toWIF() };
 }
