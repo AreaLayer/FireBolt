@@ -1,5 +1,5 @@
 import { NostrSigner } from '@nostr-connect/connect';
-import { getPublicKey, signEvent, nip06 } from 'nostr-tools';
+import { getPublicKey, signEvent, nip06, nip05 } from 'nostr-tools';
 
 const sk = nip06.privateKeyFromSeedWords(myWords);
 
