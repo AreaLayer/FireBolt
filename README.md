@@ -133,6 +133,8 @@ The other main features Firebolt supports are as follows:
   
 - [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
+- [ ] Integration with Peach APIs
+
 
 ## Run App
 
