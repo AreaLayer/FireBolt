@@ -4,6 +4,13 @@ See last development around Firebolt wallet
 
 ## Releases
 
+
+### Beta-v1.0.0.rc11
+
+**Highlights**
+
+- Fixed dependencies
+
 ### Beta-v1.0.0.rc10
 
 **Highlights**
