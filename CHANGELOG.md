@@ -9,7 +9,8 @@ See last development around Firebolt wallet
 
 **Highlights**
 
-- Fixed dependencies
+ - Fixed dependencies
+ - Contacts List for Nostr (WIP)
 
 ### Beta-v1.0.0.rc10
 
