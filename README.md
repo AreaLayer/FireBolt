@@ -44,7 +44,7 @@ Each individual has their own identity using Nostr
 
 ## The problem
 
-Central Banks, inflations and cetralized social media
+Central Banks and cetralized social media
 
 ## Firebolt's solution
 
