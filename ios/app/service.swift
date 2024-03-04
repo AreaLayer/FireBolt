@@ -1,4 +1,4 @@
-import CoinjoinTS
+import MainFunction
 
 class CoinjoinService {
     let coinjoin = Coinjoin()
