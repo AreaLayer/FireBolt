@@ -101,7 +101,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Mainnet
   
-- [x] Finish modules Android with React (WIP)
+- [x] Finish modules Android and Swift (WIP)
 
 - [x] RBF (WIP)
 
