@@ -96,6 +96,7 @@ The other main features Firebolt supports are as follows:
 
 - User friendly
 
+- Android and Swift
 
 ## Roadmap
 
