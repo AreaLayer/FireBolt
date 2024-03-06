@@ -12,6 +12,7 @@ class ViewController: UIViewController {
             // Update UI with transactions on the main thread
             DispatchQueue.main.async {
                 // Update UI
+                class CJXT
             }
         }
 
