@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch {
             val transactions = coinjoinService.getCoinjoinTransactions()
             // Update UI with transactions
+            val cjxt
         }
 
         findViewById<Button>(R.id.createTransactionButton).setOnClickListener {
