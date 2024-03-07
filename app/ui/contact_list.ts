@@ -9,3 +9,6 @@ nsece: string,
 hex: string,
 }
 class relay = {
+relay: string,
+relay: 'relay.damus.io',
+}
