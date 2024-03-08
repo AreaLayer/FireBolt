@@ -2,7 +2,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import com.yourpackagename.coinjointest.CoinjoinService
+import com.coinjointest.coinjointest.CoinjoinService
 
 class MainActivity : AppCompatActivity() {
     private val coinjoinService = CoinjoinService()
