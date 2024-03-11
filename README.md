@@ -136,6 +136,8 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Integration with Peach APIs
 
+- [ ] Set final LSP (Breez, Voltage or Zeus)
+
 
 ## Run App
 
