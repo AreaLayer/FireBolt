@@ -683,7 +683,7 @@ class DataSet {
                     }
                 }
 
-                this.backoutTxs.push(new OCCTemplateTX(backoutOuts, backoutIns, this.txs[i].postTxBalances));
+                this.backoutTxs.push(new TX(backoutOuts, backoutIns, this.txs[i].postTxBalances));
             }
         }
     }
@@ -762,15 +762,15 @@ class Keys {
         }
     }
 
-    createRealTxs(wallet, template, ncp, cp, lt) {
-        const realTxs = template.txs.map(tx => new OCCTx(tx, wallet, ncp, cp));
+    createRealTxs(wallet, ncp, cp, lt) {
+        const realTxs = template.txs.map(tx => new Tx(tx, wallet, ncp, cp));
         const realBackoutTxs = template.backoutTxs.map(tx => new OCCTx(tx, wallet, ncp, cp, { locktime: lt }));
 
         return [realTxs, realBackoutTxs];
     }
 
 }
-function applyKeys(wallet, template, realtxs, realbackouttxs, promiseIns, keys, ncp, cp) {
+function applyKeys(wallet, realtxs, realbackouttxs, promiseIns, keys, ncp, cp) {
     // Step 1 as above
     const promiseInsCopy = [...promiseIns];
     const keysCopy = [...keys];
@@ -785,16 +785,16 @@ function applyKeys(wallet, template, realtxs, realbackouttxs, promiseIns, keys, 
     }
 
     // Step 2 and 2a as above
-    for (let i = 0; i < template.txs.length; i++) {
-        for (let j = 0; j < template.txs[i].outs.length; j++) {
-            const to = template.txs[i].outs[j];
+    for (let i = 0; i < txs.length; i++) {
+        for (let j = 0; j < txs[i].outs.length; j++) {
+            const to =        txs[i].outs[j];
             if (to.spkType === "NN") {
                 const workingKey = keysCopy.shift();
                 realtxs[i].applyKey(workingKey, "outs", j, cp);
 
                 // search for the inpoint of the *next* transaction (assumption)
-                for (let k = 0; k < template.txs[i + 1].ins.length; k++) {
-                    const tin = template.txs[i + 1].ins[k];
+                for (let k = 0; k < txs[i + 1].ins.length; k++) {
+                    const tin = txs[i + 1].ins[k];
                     if (tin.amount === to.amount && tin.spkType === "NN") {
                         realtxs[i + 1].applyKey(workingKey, "ins", k, cp);
                     }
@@ -803,8 +803,8 @@ function applyKeys(wallet, template, realtxs, realbackouttxs, promiseIns, keys, 
                 // do the same for any backout txs
                 // assumption of matching amount, as no other
                 // current way of finding backout's parents
-                for (let l = 0; l < template.backoutTxs.length; l++) {
-                    const btx = template.backoutTxs[l];
+                for (let l = 0; l < backoutTxs.length; l++) {
+                    const btx = backoutTxs[l];
                     for (let k = 0; k < btx.ins.length; k++) {
                         const tin = btx.ins[k];
                         if (tin.amount === to.amount) {
@@ -818,8 +818,8 @@ function applyKeys(wallet, template, realtxs, realbackouttxs, promiseIns, keys, 
 
     // Step 3 above
     for (let i = 0; i < template.txs.length; i++) {
-        for (let j = 0; j < template.txs[i].outs.length; j++) {
-            const to = template.txs[i].outs[j];
+        for (let j = 0; j < txs[i].outs.length; j++) {
+            const to = txs[i].outs[j];
             if (to.spkType === "p2tr-p2wsh" && to.counterparty === cp) {
                 realtxs[i].applyKey(keysCopy.shift(), "outs", j, cp);
             }
@@ -827,9 +827,9 @@ function applyKeys(wallet, template, realtxs, realbackouttxs, promiseIns, keys, 
     }
 
     // Step 4 above
-    for (let i = 0; i < template.backoutTxs.length; i++) {
-        for (let j = 0; j < template.backoutTxs[i].outs.length; j++) {
-            const to = template.backoutTxs[i].outs[j];
+    for (let i = 0; i < backoutTxs.length; i++) {
+        for (let j = 0; j < backoutTxs[i].outs.length; j++) {
+            const to = backoutTxs[i].outs[j];
             if (to.counterparty === cp) {
                 realbackouttxs[i].applyKey(keysCopy.shift(), "outs", j, cp);
             }
@@ -874,8 +874,8 @@ class DummyWallet {
     }
 }
 
-function getDataset(intendedIns, templateInputs, counterpartyIns) {
-    const Round1InTotal = templateInputs.reduce((acc, x) => acc + btcToSatoshis(x[1]), 0);
+function getDataset(intendedIns, Inputs, counterpartyIns) {
+    const Round1InTotal = Inputs.reduce((acc, x) => acc + btcToSatoshis(x[1]), 0);
     const Round2InTotal = counterpartyIns.reduce((acc, x) => acc + btcToSatoshis(x[1]), 0);
     const Round1Tweak = aliceInTotal - intendedIns[0].reduce((acc, x) => acc + x, 0);
     const Round2Tweak = bobInTotal - intendedIns[1].reduce((acc, x) => acc + x, 0);
@@ -890,9 +890,9 @@ function getDataset(intendedIns, templateInputs, counterpartyIns) {
             [4, 1, 1, 3], [4, 2, 1, 4]
         ],
         "inflows": [
-            [0, 0, templateInputs[0][1], templateInputs[0][0], templateInputs[0][3]],
+            [0, 0, Inputs[0][1], Inputs[0][0], Inputs[0][3]],
             [0, 1, counterpartyIns[0][1], counterpartyIns[0][0], counterpartyIns[0][3]],
-            [2, 0, templateInputs[1][1], templateInputs[1][0], templateInputs[1][3]],
+            [2, 0, Inputs[1][1], Inputs[1][0], Inputs[1][3]],
             [3, 1, counterpartyIns[1][1], counterpartyIns[1][0], counterpartyIns[1][3]]
         ]
     };
