@@ -874,7 +874,7 @@ class DummyWallet {
     }
 }
 
-function getTemplateDataset(intendedIns, templateInputs, counterpartyIns) {
+function getDataset(intendedIns, templateInputs, counterpartyIns) {
     const Round1InTotal = templateInputs.reduce((acc, x) => acc + btcToSatoshis(x[1]), 0);
     const Round2InTotal = counterpartyIns.reduce((acc, x) => acc + btcToSatoshis(x[1]), 0);
     const Round1Tweak = aliceInTotal - intendedIns[0].reduce((acc, x) => acc + x, 0);
@@ -901,7 +901,7 @@ function getTemplateDataset(intendedIns, templateInputs, counterpartyIns) {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         DummyWallet,
-        getTemplateDataset
+        getDataset
     };
 }
 
