@@ -770,7 +770,7 @@ class Keys {
     }
 
 }
-function applyKeysToTemplate(wallet, template, realtxs, realbackouttxs, promiseIns, keys, ncp, cp) {
+function applyKeys(wallet, template, realtxs, realbackouttxs, promiseIns, keys, ncp, cp) {
     // Step 1 as above
     const promiseInsCopy = [...promiseIns];
     const keysCopy = [...keys];
