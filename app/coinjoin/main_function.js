@@ -762,7 +762,7 @@ class Keys {
         }
     }
 
-    createRealTxsFromTemplate(wallet, template, ncp, cp, lt) {
+    createRealTxs(wallet, template, ncp, cp, lt) {
         const realTxs = template.txs.map(tx => new OCCTx(tx, wallet, ncp, cp));
         const realBackoutTxs = template.backoutTxs.map(tx => new OCCTx(tx, wallet, ncp, cp, { locktime: lt }));
 
