@@ -1,4 +1,4 @@
-const {UTXO, PublicKey, PrivateKey, PSBT} = require('bitcoinjs-lib');
+const {UTXO, PublicKey, PrivateKey, PSBT, Taproot} = require('bitcoinjs-lib');
 const {Balance, Amount,PaymentFee}  = require('ldk-garbagecollected');
 const testnet = bitcoin.network.testnet;
 const { Round1, Round2, Round3,Round4, Round5 } = require('./wallets.json')
