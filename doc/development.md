@@ -1,4 +1,3 @@
-
-# Firebolt Development
+# Firebolt Development ⚡
 
 TBD
