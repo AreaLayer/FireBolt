@@ -4,7 +4,7 @@
 [![Bitcoin-only](https://img.shields.io/badge/bitcoin-only-FF9900?logo=bitcoin)](https://twentyone.world)
 [![LN](https://img.shields.io/badge/lightning-792EE5?logo=lightning)](https://mempool.space/lightning)
 
-App wallet for Android, iOs and PWA with Nostr,Lightning Network,CoinJoin and PayJoin
+App wallet for Androi and iOs with Nostr,Lightning Network,CoinJoin and PayJoin
 
 <p align="center">
   <a href="https://github.com/AreaLayer/FireBolt" title="AreaLayer">
