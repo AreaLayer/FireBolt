@@ -18,4 +18,3 @@ Discover files present into wallet
 - Components:  Main components on app
 - Constants:  Main constants on app
 - iOs:  Main functions on iOs
-- PWA:  Main functions on PWA
