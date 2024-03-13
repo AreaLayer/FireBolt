@@ -66,7 +66,7 @@ The other main features Firebolt supports are as follows:
 
 ## Feature
 
-- Lightning Network (LDK)
+- Lightning Network (Breez)
 
 - Nostr
 
