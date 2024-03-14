@@ -13,7 +13,6 @@ Discover files present into wallet
 - Pages:  Main functions for pages
 - Payjoin:  Main functions on Payjoin
 - Server:  Main functions on server
-- UI:  Main functions on UI
 - Android:  Main functions on Android
 - Components:  Main components on app
 - Constants:  Main constants on app
