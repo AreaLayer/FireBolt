@@ -161,7 +161,7 @@ class apply_key {
 if (insouts === "ins") {
     // if all keys are available for this input,
     // we can set the signing redeem script
-    const tp = this.template.ins[idx].spk_type;
+    const tp = this.t.ins[idx].spk_type;
 
     if (tp === "p2tr-p2wsh") {
         // only one signer: apply immediately
@@ -181,7 +181,7 @@ class signature_form {
     throw new Error("Signing redeem script not available");
 }
 
-return btc.segwit_signature_form(
+return btc.taproot_signature_form(
     btc.deserialize(this.base_form),
     index,
     this.signing_redeem_scripts[index],
