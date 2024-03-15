@@ -605,9 +605,9 @@ toString() {
     return `Transaction: pre-tx balances: ${this.preTxBalances}\ninputs: ${this.ins}, outputs ${this.outs}\npost-tx balances: ${this.postTxBalances}`;
 }
 class DataSet {
-    constructor(templateDataSet) {
-        this.n = templateDataSet.n;
-        this.N = templateDataSet.N;
+    constructor(DataSet) {
+        this.n = DataSet.n;
+        this.N = DataSet.N;
         this.outList = templateDataSet.out_list;
         this.inflows = templateDataSet.inflows;
         this.txs = [];
