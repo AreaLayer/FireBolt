@@ -114,15 +114,10 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Paynym
 
-- [x] Complete PRs (WIP)
 
 - [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
     
 - [ ] Compile code
-
-- [x] UI design
-
-- [x] Fix Nostr, Lightning and Bitcoin cross libraries
 
 - [ ] Unit Tests with Coinjoin and PayJoin
 
@@ -134,7 +129,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Integration with Peach APIs
 
-- [ ] Set final LSP (Breez, Voltage or Zeus)
+- [x] Set final LSP (Breez, Voltage or Zeus)
 
 
 ## Run App
