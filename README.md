@@ -104,8 +104,6 @@ The other main features Firebolt supports are as follows:
   
 - [x] Finish modules Android and Swift (WIP)
 
-- [x] RBF (WIP)
-
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
 
 - [ ] Submarine Swap
