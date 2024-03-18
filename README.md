@@ -126,7 +126,7 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Integration with Peach APIs
 
-- [ ] Create Firebolt++ (Subscription plan for users help in the development project)
+- [x] Create Firebolt++ (Subscription plan for users help in the development project)
 
 - [x] Set final LSP (Breez, Voltage or Zeus)
 
