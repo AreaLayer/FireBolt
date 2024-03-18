@@ -102,8 +102,6 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Mainnet
   
-- [x] Finish modules Android and Swift (WIP)
-
 - [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
 
 - [ ] Submarine Swap
@@ -113,7 +111,6 @@ The other main features Firebolt supports are as follows:
 - [ ] Hardwallets (Trezor, Bitbox, Ledger)
 
 - [ ] Paynym
-
 
 - [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
     
