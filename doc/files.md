@@ -14,6 +14,5 @@ Discover files present into wallet
 - Payjoin:  Main functions on Payjoin
 - Server:  Main functions on server
 - Android:  Main functions on Android
-- Components:  Main components on app
 - Constants:  Main constants on app
 - iOs:  Main functions on iOs
