@@ -76,10 +76,7 @@ class CXJT {
         this.locktime = locktime;
         this.keyset = keyset;
     };
-  class build_tx {
-    txid = t.txid;
-    utxo_in = t.utxo_in;
-    class Transaction {
+    constructor Transaction {
         constructor(txid, utxo_in) {
             this.txid = txid;
             this.utxo_in = utxo_in;
@@ -135,9 +132,20 @@ class CXJT {
         });
     }
 }
-class mktx {
-this.build_ins_from_template();
-this.build_outs_from_template();
+class Mktx {
+    constructor() {
+        this.build_ins_from_template();
+        this.build_outs_from_template();
+    }
+
+    build_ins_from_template() {
+        // implementation goes here
+    }
+
+    build_outs_from_template() {
+        // implementation goes here
+    }
+}
 
 if (!(this.ins.length && this.outs.length)) {
     throw new Error("Invalid inputs or outputs");
