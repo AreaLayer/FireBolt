@@ -52,6 +52,7 @@ const PTG() {
     'output_amount', 'change_amount', 'locktime', 'outs', 'pay_out_index',
     'base_form', 'fully_signed_tx', 'completed', 'txid', 'is_spent',
     'is_confirmed', 'is_broadcast', 'spending_tx', 'amount', 'paymentfee', 'balance',
+    'paymenthash'
 ];
 };
 class CXJT {
@@ -69,12 +70,15 @@ class CXJT {
             throw new Error("n_counterparties and n must be integers");
         }
 
-        this.tx = tx;
-        this.wallet = wallet;
-        this.n_counterparties = n_counterparties;
-        this.n = n;
-        this.locktime = locktime;
-        this.keyset = keyset;
+        class Transaction {
+            constructor(txid, utxo_in, locktime, keyset) {
+              this.txid = txid;
+              this.utxo_in = utxo_in;
+              this.locktime = locktime;
+              this.keyset = keyset;
+            }
+          }
+          
     };
     constructor Transaction {
         constructor(txid, utxo_in) {
@@ -109,7 +113,7 @@ class CXJT {
     if (t.spk_type === "p2wsh-p2tr") {
         const address = btc.pubkey_to_p2tr_p2wsh_address(
             this.keys["outs"][i][t.counterparty],
-            get_p2sh_vbyte()
+            get_p2tr_vbyte()
         );
         this.outs.push({
             "address": t.address,
