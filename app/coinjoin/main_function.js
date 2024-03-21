@@ -77,9 +77,24 @@ class CXJT {
         this.keyset = keyset;
     };
   class build_tx {
-    for (let i = 0; i < this.template.ins.length; i++) {
-    const t = this.template.ins[i];
-    let txid, utxo_in;
+    txid = t.txid;
+    utxo_in = t.utxo_in;
+    class Transaction {
+        constructor(txid, utxo_in) {
+            this.txid = txid;
+            this.utxo_in = utxo_in;
+        }
+    }
+    
+    function createTransaction(t) {
+        let utxo_in = t.utxo_in;
+        let transaction = new Transaction(t.txid, utxo_in);
+        // Add the transaction to the list of transactions
+        // Assuming you have a 'transactions' array
+        transactions.push(transaction);
+    }
+    
+    }    
 
     if (t.txid) {
         txid = t.txid;
