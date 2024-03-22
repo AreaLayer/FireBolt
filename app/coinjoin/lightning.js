@@ -6,5 +6,9 @@ PaymentMethodChangeEvent: String;
 
 }
 const hash = {
+
+}
+
+const txid = {
     
 }
