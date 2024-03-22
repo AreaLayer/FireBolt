@@ -5,3 +5,6 @@ Invoice: String;
 PaymentMethodChangeEvent: String;
 
 }
+const hash = {
+    
+}
