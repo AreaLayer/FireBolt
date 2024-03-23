@@ -1,4 +1,4 @@
-const {PaymentHash, Payment} from 'react-native-breez';
+const {PaymentHash, Payment, TXID, UTXO} from 'react-native-breez';
 
 const Payment = {
 Invoice: String;
@@ -11,4 +11,8 @@ const hash = {
 
 const txid = {
     
+}
+
+const uxto = {
+
 }
