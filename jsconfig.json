@@ -1,11 +1,7 @@
 {
 "Nostr":"Event",
 "Npub":"Event",
-"Note",
-"Relay",
-"ID",
-"DWN",
-"Payjoin",
-"sender",
-"receiver",
+"Note": "Note",
+"Relay": "Relay"
+"Payjoin": "Payjoin",
 }
