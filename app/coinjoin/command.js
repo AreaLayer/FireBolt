@@ -3,8 +3,7 @@ const { Command, Boolean } = require('twisted.protocols.amp');
 const SETUP_COMMAND = 'Setup';
 const KEYS_COMMAND = 'Keys';
 const SIGS_COMMAND = 'Sigs';
-const SETUP_RESPONSE_COMMAND = 'SetupResponse';
-const KEYS_RESPONSE_COMMAND = 'KeysResponse';
+const SETUP_RESPONSE_COMMAND = newFunction();
 const SIGS_RESPONSE_COMMAND = 'SigsResponse';
 
 class DaemonNotReady extends Error {}
@@ -70,7 +69,7 @@ const commands = {
     [KEYS_COMMAND]: Keys,
     [SIGS_COMMAND]: Sigs,
     [SETUP_RESPONSE_COMMAND]: SetupResponse,
-    [KEYS_RESPONSE_COMMAND]: KeysResponse,
+    ['KeysResponse']: KeysResponse,
     [SIGS_RESPONSE_COMMAND]: SigsResponse,
 };
 
@@ -84,4 +83,8 @@ module.exports = {
     SigsResponse,
     commands,
 };
+
+function newFunction() {
+    return 'SetupResponse';
+}
 
