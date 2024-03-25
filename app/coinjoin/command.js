@@ -1,11 +1,11 @@
 const {Keys,Sigs } = require('bitcoinjs-lib');
 const { Command, Boolean } = require('twisted.protocols.amp');
-const OC_SETUP_COMMAND = 'Setup';
-const OC_KEYS_COMMAND = 'Keys';
-const OC_SIGS_COMMAND = 'Sigs';
-const OC_SETUP_RESPONSE_COMMAND = 'SetupResponse';
-const OC_KEYS_RESPONSE_COMMAND = 'KeysResponse';
-const OC_SIGS_RESPONSE_COMMAND = 'SigsResponse';
+const SETUP_COMMAND = 'Setup';
+const KEYS_COMMAND = 'Keys';
+const SIGS_COMMAND = 'Sigs';
+const SETUP_RESPONSE_COMMAND = 'SetupResponse';
+const KEYS_RESPONSE_COMMAND = 'KeysResponse';
+const SIGS_RESPONSE_COMMAND = 'SigsResponse';
 
 class DaemonNotReady extends Error {}
 
