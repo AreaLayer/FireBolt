@@ -2,5 +2,6 @@
 "Nostr":"Event",
 "Npub":"Event",
 "Note": "Note",
-"Relay": "Relay"
+"Relay": "Relay",
+"CoinjoinDemo": "CoinjoinDemo"
 }
