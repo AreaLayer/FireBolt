@@ -25,7 +25,7 @@
       }
     },
     "platforms": ["ios", "android"],
-    "description": "Non custodial wallet with LN, Coinjoin, Payjoin, Nostr and more",
+    "description": "Non custodial wallet with LN, Coinjoin, Payjoin, Nostr",
     "extra": {
       "someCustomConfig": true
     }
