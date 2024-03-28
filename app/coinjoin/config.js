@@ -108,4 +108,5 @@ function getBlockchainInterfaceInstance(_config) {
 }
 
 // Load the coinjoinxt config and perform necessary setup
+let LoadCoinjoinxtConfig =  const loadCoinjoinxtConfig;
 loadCoinjoinxtConfig();
