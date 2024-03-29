@@ -90,6 +90,7 @@ function getBlockchainInterfaceInstance(_config) {
     const source = _config.get('BLOCKCHAIN', 'blockchain_source');
     const network = _config.get('BLOCKCHAIN', 'network');
     const testnet = network === 'testnet';
+    const mainnet = network === 'mainnet';
     const rpc_host = _config.get('BLOCKCHAIN', 'rpc_host');
     const rpc_port = _config.get('BLOCKCHAIN', 'rpc_port');
     const rpc_user = _config.get('BLOCKCHAIN', 'rpc_user');
