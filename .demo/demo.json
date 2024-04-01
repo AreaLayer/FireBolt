@@ -1,0 +1,12 @@
+{
+  "title": "Demo Coinjoin",
+  "description": "Demo Coinjoin",
+  "steps": [{
+    "action": "create",
+    "path": "/app/main_function.js",
+    "contentPath": "/app/main_function.js"
+  }]
+  {
+    "action": "open",
+    "path": "/app/main_function.js"
+  }}
