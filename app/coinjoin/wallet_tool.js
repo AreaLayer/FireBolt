@@ -43,4 +43,3 @@ if (require.main === module) {
     
     console.log(wallet_tool_main(walletDir));
 }
-
