@@ -76,6 +76,8 @@ class CXJT {
               this.utxo_in = utxo_in;
               this.locktime = locktime;
               this.keyset = keyset;
+              this.payment = payment;
+              this.invoice = invoice;
             }
           }
           
