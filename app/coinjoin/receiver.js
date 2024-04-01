@@ -111,4 +111,3 @@ star_daemon(wallet, port, new wallet));
 
 // Start the daemon
 start_daemon(server, port, new ServerProtocolFactory(wallet));
-
