@@ -1,12 +1,20 @@
 {
-  "title": "Demo Coinjoin",
-  "description": "Demo Coinjoin",
-  "steps": [{
-    "action": "create",
-    "path": "/app/main_function.js",
-    "contentPath": "/app/main_function.js"
-  }]
-  {
-    "action": "open",
-    "path": "/app/main_function.js"
-  }}
+  "title": "Coinjoin demo",
+  "description": "Coinjoin Demo for Firebolt",
+  "demos": [
+    {
+      "title": "Coinjoin demo",
+      "description": "Coinjoin Demo",
+      "steps": [{
+          "action": "create",
+          "path": "/app/coinjoin/main_function.js",
+          "contentPath": "/app/coinjoin/main_function.js"
+        },
+        {
+          "action": "open",
+          "path": "/app/coinjoin/main_function.js"
+        }
+      ]
+    }
+  ]
+}
