@@ -19,7 +19,7 @@ function get_p2wsh_vbyte() {
     return 5;
 }
 
-// Simulate Bitcoin blockchain interface
+// Bitcoin blockchain interface
 const blockchainInterface = {
     jsonRpc: {
         call: (method, params) => {
