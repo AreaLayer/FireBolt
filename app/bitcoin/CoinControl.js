@@ -3,6 +3,7 @@ import * as bitcoin from 'bitcoinjs-lib';
 interface UTXO {
     txid: string;
     index: number;
+    amount: number;
     txout: bitcoin.TxOut;
     address: bitcoin.Address;
 }
