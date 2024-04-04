@@ -1,4 +1,4 @@
-import * as UTXO, amount from 'bitcoinjs-lib';
+import * as bitcoin from 'bitcoinjs-lib';
 
 interface UTXO {
     txid: string;
@@ -14,7 +14,7 @@ interface Wallet {
 }
 
 function addUTXO(wallet: Wallet, txid: string, index: number, txout: bitcoin.TxOut, address: bitcoin.Address) {
-    wallet.utxos.push({ txid, index, txout, address });
+    wallet.utxos.push({amount});
 }
 
 function removeUTXO(wallet: Wallet, txid: string) {
