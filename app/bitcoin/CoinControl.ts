@@ -14,7 +14,11 @@ interface Wallet {
 }
 
 function addUTXO(wallet: Wallet, txid: string, index: number, txout: bitcoin.TxOut, address: bitcoin.Address) {
-    wallet.utxos.push({amount});
+    wallet.utxos.push(newFunction());
+
+    function newFunction(): UTXO {
+        return { amount };
+    }
 }
 
 function removeUTXO(wallet: Wallet, txid: string) {
