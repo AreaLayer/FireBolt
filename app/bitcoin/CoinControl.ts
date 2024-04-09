@@ -19,7 +19,7 @@ function addUTXO(wallet: Wallet, txid: string, index: number, txout: bitcoin.TxO
     function newFunction(): UTXO {
         {{
           return
-        }}`` { amount };
+        }};` { amount };
     }
 }
 
