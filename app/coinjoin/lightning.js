@@ -1,7 +1,7 @@
-import {PaymentHash, TXID, UTXO} from 'react-native-breez';
+import {Payment, TXID, UTXO} from 'react-native-breez';
 
 const Payment = {
-  PaymentHash,
+  Payment,
   TXID,
   UTXO
 };
