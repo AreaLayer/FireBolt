@@ -9,6 +9,7 @@ const network = bitcoin.network.testnet;
     constructor(factory, wallet) {
         this.wallet = wallet;
         this.factory = factory;
+        this.lightning = lightning;
     }
 
     checkClientResponse(response) {
