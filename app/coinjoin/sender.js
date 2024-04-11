@@ -16,10 +16,10 @@ const network = bitcoin.network.testnet;
         if (!response.hasOwnProperty('accepted') || !response.accepted) {
             process.exit(1); // Consider using an appropriate exit code
         }
-    }
+    };
 
     defaultErrback(failure) {
-    }
+    };
 
     defaultCallbacks(promise) {
         promise.then(this.checkClientResponse).catch(this.defaultErrback);
