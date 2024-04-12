@@ -10,7 +10,7 @@ const network = bitcoin.network.testnet;
         this.wallet = wallet;
         this.factory = factory;
         this.lightning = lightning;
-    }
+    };
 
     checkClientResponse(response) {
         if (!response.hasOwnProperty('accepted') || !response.accepted) {
@@ -23,12 +23,12 @@ const network = bitcoin.network.testnet;
 
     defaultCallbacks(promise) {
         promise.then(this.checkClientResponse).catch(this.defaultErrback);
-    }
+    };
 
     connectionMade() {
         console.log('connection was made, starting client');
         this.clientStart();
-    }
+    };
 
     async clientStart() {
         const amtdata = [[0.8, 1.2], [0.2, 0.4]];
