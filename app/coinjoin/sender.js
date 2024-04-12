@@ -1,4 +1,4 @@
-const bitcoin = require('bitcoinjs-lib');
+import as * bitcoin = require('bitcoinjs-lib');
 const { get_utxos_from_wallet, get_our_keys, get_current_blockheight } = require('main_function'); 
 
 
