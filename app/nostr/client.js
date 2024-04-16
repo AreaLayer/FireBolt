@@ -19,7 +19,6 @@ async function main() {
     await client.addRelay("wss://relay.damus.io");
     await client.addRelay("wss://nostr.oxtr.dev");
     await client.addRelay("wss://nostr.bitcoiner.social");
-    await client.addRelay("wss://nostr.openchain.fr");
 
     await client.connect();
 
