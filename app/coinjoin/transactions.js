@@ -3,7 +3,8 @@ const bitcoin = require('bitcoinjs-lib');
 async function transaction(input, output) {
   input,
   output,
-  utxo
+  utxo,
+  p2tr
 };
 async function validation(input, utxo, ouput, p2tr) {
     utxo,{}
