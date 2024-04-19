@@ -131,6 +131,9 @@ The other main features Firebolt supports are as follows:
 - [x] Set final LSP (Breez, Voltage or Zeus)
 
  - [ ] Watch-only (Segwit and Taproot support)
+       
+ - [ ] Full RBF
+ 
 
 
 ## Run App
