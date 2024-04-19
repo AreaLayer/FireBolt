@@ -20,7 +20,7 @@ async function getUTXOs(address) {
 }
 
 // Create and sign the swap transaction
-async function createSwapTransaction(inputAddress, outputAddress, amount, fee) {
+async function createSwapTransaction(inputAddress, outputAddress, amount, fee, rbf) {
   const utxos = await getUTXOs(inputAddress);
   const keyPair = bitcoin.ECPair.fromWIF(inputAddress.privateKey, network);
 
