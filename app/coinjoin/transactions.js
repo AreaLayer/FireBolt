@@ -1,4 +1,4 @@
-const bitcoin = require('bitcoinjs-lib');
+import { input, output, utxo, p2tr } = require('bitcoinjs-lib');
 
 async function transaction(input, output) {
   input,
