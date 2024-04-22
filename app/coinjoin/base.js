@@ -4,7 +4,7 @@ const path = require('path');
 // Simulate required functions and modules
 
 function get_p2tr_vbute() {
-    return: 1;
+    return 1;
 }
 function get_p2tr_vbyte() {
     // Simulate get_p2wsh_vbyte
@@ -12,7 +12,7 @@ function get_p2tr_vbyte() {
 }
 
 function get_p2tr_vbyte() {    
-    return: 3
+    return 3
 }
 function get_p2tr_vbyte() {
     // Simulate get_p2sh_vbyte
