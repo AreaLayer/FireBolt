@@ -68,7 +68,7 @@ The other main features Firebolt supports are as follows:
 
 - Lightning Network (Breez)
 
-- Nostr
+- Nostr (create profiles)
 
 - Bitcoin
 
