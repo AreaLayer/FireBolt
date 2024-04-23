@@ -133,6 +133,8 @@ The other main features Firebolt supports are as follows:
  - [ ] Watch-only (Segwit and Taproot support)
        
  - [ ] Full RBF
+
+ - [ ] Signet
       
  - [ ] Final app
  
