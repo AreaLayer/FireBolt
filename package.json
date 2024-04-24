@@ -13,7 +13,6 @@
 },
 "dependencies": {
 "bitcoinjs-lib":"0.6.15",
-"ldk-garbagecollected":"0.0.121.0",
 "coinjoin-demo":"1.0.0-beta",
 "payjoin-client":"1.0.1",
 
