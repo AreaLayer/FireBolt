@@ -96,7 +96,7 @@ The other main features Firebolt supports are as follows:
 
 - User friendly
 
-- Klotin and Swift
+- Klotin and Swift (iOS and Android)
 
 ## Roadmap
 
