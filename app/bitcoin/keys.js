@@ -1,4 +1,4 @@
-import {PrivateKey, Random, PublicKey} = require('bitcoinjs-lib');
+import {PrivateKey, Random, PublicKey} from ''bitcoinjs-lib';
 
 // Generate three key pairs
 const key1 = bitcoin.ECPair.makeRandom();
