@@ -2,7 +2,15 @@
 
 See last development around Firebolt wallet
 
+
 ## Releases
+
+### Beta - v1.0.0.rc15
+
+**Higlights**
+
+- Fixed README
+- Fixed bugs
 
 
 ### Beta - v1.0.0.rc13
