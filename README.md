@@ -138,8 +138,6 @@ The other main features Firebolt supports are as follows:
       
  - [ ] Final app
  
-
-
 ## Run App
 
 [Run](https://github.com/AreaLayer/FireBolt/blob/main/doc/run.md)
