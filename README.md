@@ -102,8 +102,6 @@ The other main features Firebolt supports are as follows:
 
 - [ ] Mainnet
   
-- [x] Buy Bitcoin via P2P apps (PeachBitcoin, Bisq, RobotSats) with links to the apps
-
 - [ ] Submarine Swap with Breez
 
 - [ ] Neutrino
@@ -119,18 +117,10 @@ The other main features Firebolt supports are as follows:
 - [ ] Unit Tests with Coinjoin and PayJoin
 
 - [ ] BIP-329
-    
-- [x] PTG complete integration (CoinjoinXT)
-  
-- [x] [Converted to React Native](https://github.com/AreaLayer/firebolt-react-native)
 
 - [ ] Integration with Peach APIs
 
-- [x] Create Firebolt++ (Subscription plan for users help in the development project)
-
-- [x] Set final LSP (Breez, Voltage or Zeus)
-
- - [ ] Watch-only (Segwit and Taproot support)
+- [ ] Watch-only (Segwit and Taproot support)
        
  - [ ] Full RBF
 
