@@ -25,7 +25,7 @@ App wallet for Androi and iOs with Nostr,Lightning Network,CoinJoin and PayJoin
 
 **⚠️ No use this BIP-39 in others wallets**
 
-**⚠️ Use small amounts for test Coinjoin**
+**⚠️ Use small amounts for test Coinjoin/Payjoin**
 
 - **Android - Download latest APK (TBA)**
 
