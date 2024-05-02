@@ -131,6 +131,7 @@ The other main features Firebolt supports are as follows:
 ## Run App
 
 [Run](https://github.com/AreaLayer/FireBolt/blob/main/doc/run.md)
+
 ## Contribution
 
 [Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
