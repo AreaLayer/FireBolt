@@ -25,8 +25,8 @@ App wallet for Androi and iOs with Nostr,Lightning Network,CoinJoin and PayJoin
 
 **⚠️ No use this BIP-39 in others wallets**
 
-**⚠️ Use small amounts for test Coinjoin/Payjoin**
-**⚠️Moved to Firebolt React Native**
+**⚠️ Use small amounts for test Coinjoin/Payjoin**           
+                                      **⚠️Moved to Firebolt React Native**
 - **Android - Download latest APK (TBA)**
 
 - **iPhone - Download latest TestFlight app (Soon)**
