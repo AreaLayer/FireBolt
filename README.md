@@ -114,7 +114,7 @@ The other main features Firebolt supports are as follows:
     
 - [x] Compile code (WIP)
 
-- [ ] Unit Tests with Coinjoin and PayJoin
+- [x] Unit Tests with Coinjoin and PayJoin (WIP)
 
 - [ ] BIP-329
 
