@@ -90,7 +90,7 @@ The other main features Firebolt supports are as follows:
 
 ## Firebolt Electrum Plugin
 
-[Firebolt Electrum: Electrum plugin for coinjoin](https://github.com/AreaLayer/firebolt-electrum)
+[Firebolt Electrum](https://github.com/AreaLayer/firebolt-electrum)
 
 ## Contributors
 
