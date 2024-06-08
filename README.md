@@ -84,44 +84,6 @@ The other main features Firebolt supports are as follows:
 
 - Klotin and Swift (iOS and Android)
 
-## Roadmap
-
-- [ ] Mainnet
-  
-- [ ] Submarine Swap with Breez
-
-- [ ] Neutrino
-
-- [ ] Hardwallets (Trezor, Bitbox, Ledger)
-
-- [ ] Paynym
-
-- [ ] Release Beta wallet in 2024 (Android, Testnet and Payjoin)
-    
-- [x] Compile code (WIP)
-
-- [x] Unit Tests with Coinjoin and PayJoin (WIP)
-
-- [ ] BIP-329
-
-- [ ] Integration with Peach APIs
-
-- [ ] Watch-only (Segwit and Taproot support)
-       
- - [ ] Full RBF
-
- - [ ] Signet
-      
- - [ ] Final app
- 
-## Run App
-
-[Run](https://github.com/AreaLayer/FireBolt/blob/main/doc/run.md)
-
-## Contribution
-
-[Check the details here](https://github.com/AreaLayer/FireBolt/blob/main/CONTRIBUTING.md)
-
 ## React Native and Cross Platform
 
 [App](https://github.com/AreaLayer/firebolt-react-native)
