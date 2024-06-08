@@ -17,23 +17,7 @@ App wallet for Androi and iOs with Nostr,Lightning Network,CoinJoin and PayJoin
 
 ---
 
-**⚠️ Beta software may put your money at risk**
-
-**⚠️This wallet is WIP**
-
-**⚠️ We recommend using only small amounts**
-
-**⚠️ No use this BIP-39 in others wallets**
-
-**⚠️ Use small amounts for test Coinjoin/Payjoin** 
-
-**⚠️Moved to Firebolt React Native**
-
-- **Android - Download latest APK (TBA)**
-
-- **iPhone - Download latest TestFlight app (Soon)**
-
-- **PWA (Soon)**
+**⚠️ We moved our development to Firebolt React Native**
 
 ---
 ## Overview
@@ -141,6 +125,10 @@ The other main features Firebolt supports are as follows:
 ## React Native and Cross Platform
 
 [App](https://github.com/AreaLayer/firebolt-react-native)
+
+## Firebolt Electrum Plugin
+
+[Firebolt Electrum: Electrum plugin for coinjoin](https://github.com/AreaLayer/firebolt-electrum)
 
 ## Contributors
 
